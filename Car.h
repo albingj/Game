@@ -11,7 +11,8 @@
 
 class Car {
 public:
-    virtual void vis()=0;
+
+
     void Test();
 
 };

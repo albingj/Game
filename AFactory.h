@@ -14,13 +14,15 @@ class AFactory {
 public:
    // AFactory();
 
-   virtual Car* CreateCar() =0;
+   //virtual Car* CreateCar() =0;
 
     virtual void CreateWindow()=0;
-    virtual void CreateBackground()=0;
-    virtual void Draw()=0;
+    virtual void LoadBackground()=0;
+    virtual void CreatePlayer()=0;
+    virtual void ClearScreen()=0;
     virtual void Update()=0;
-    virtual SDL_Renderer* getGRenderer()=0;
+    virtual void Draw()=0;
+
 };
 
 #endif //GAME_AFACTORY_H

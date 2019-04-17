@@ -2,8 +2,7 @@
 // Created by admin on 11/03/2019.
 //
 
-#ifndef GAME_GAME_H
-#define GAME_GAME_H
+
 
 
 #include "AFactory.h"
@@ -16,8 +15,14 @@ public:
     Game(AFactory *pFactory);
 
     void start();
+
+
+private:
+
+
 };
 
 
 
-#endif //GAME_GAME_H
+
+//#endif //GAME_GAME_H

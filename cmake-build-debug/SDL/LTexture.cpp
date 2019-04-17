@@ -4,11 +4,11 @@
 
 #include "LTexture.h"
 #include "SDLFactory.h"
-#include "Game.h"
+#include "../../Game.h"
 
 
-LTexture::LTexture(SDL_Renderer* sdlRenderer){
-    this->sdlRenderer = sdlRenderer;
+LTexture::LTexture(){
+
     //Initialize
     mTexture = NULL;
     mWidth = 0;
@@ -39,7 +39,7 @@ bool LTexture::loadFromFile( std::string path){
         SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, 0, 0xFF, 0xFF ) );
 
         //Create texture from surface pixels
-        newTexture = SDL_CreateTextureFromSurface(sdlRenderer, loadedSurface );
+        newTexture = SDL_CreateTextureFromSurface(gRenderer, loadedSurface );
         if( newTexture == NULL )
         {
             printf( "Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError() );
@@ -71,13 +71,14 @@ void LTexture::free(){
     }
 }
 
-void LTexture::render(int x, int y, SDL_Renderer *pRenderer) {
+void LTexture::render(int x, int y) {
     //Set rendering space and render to screen
-    SDL_Rect* renderQuad = new SDL_Rect{ x, y, mWidth, mHeight };
+    SDL_Rect renderQuad = {x, y, mWidth, mHeight};
+    SDL_RenderCopy(gRenderer,mTexture,NULL,&renderQuad);
 
-    SDL_RenderCopy( pRenderer, mTexture, NULL, /*renderQuad*/ new SDL_Rect() );
+
+
 }
-
 int LTexture::getWidth(){
     return mWidth;
 }

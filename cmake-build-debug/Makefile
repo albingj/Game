@@ -149,6 +149,33 @@ AFactory.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/AFactory.cpp.s
 .PHONY : AFactory.cpp.s
 
+Background.obj: Background.cpp.obj
+
+.PHONY : Background.obj
+
+# target to build an object file
+Background.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Background.cpp.obj
+.PHONY : Background.cpp.obj
+
+Background.i: Background.cpp.i
+
+.PHONY : Background.i
+
+# target to preprocess a source file
+Background.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Background.cpp.i
+.PHONY : Background.cpp.i
+
+Background.s: Background.cpp.s
+
+.PHONY : Background.s
+
+# target to generate assembly for a file
+Background.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Background.cpp.s
+.PHONY : Background.cpp.s
+
 Car.obj: Car.cpp.obj
 
 .PHONY : Car.obj
@@ -175,6 +202,33 @@ Car.s: Car.cpp.s
 Car.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Car.cpp.s
 .PHONY : Car.cpp.s
+
+Entity.obj: Entity.cpp.obj
+
+.PHONY : Entity.obj
+
+# target to build an object file
+Entity.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Entity.cpp.obj
+.PHONY : Entity.cpp.obj
+
+Entity.i: Entity.cpp.i
+
+.PHONY : Entity.i
+
+# target to preprocess a source file
+Entity.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Entity.cpp.i
+.PHONY : Entity.cpp.i
+
+Entity.s: Entity.cpp.s
+
+.PHONY : Entity.s
+
+# target to generate assembly for a file
+Entity.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Entity.cpp.s
+.PHONY : Entity.cpp.s
 
 Game.obj: Game.cpp.obj
 
@@ -203,86 +257,221 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
-LTexture.obj: LTexture.cpp.obj
+Player.obj: Player.cpp.obj
 
-.PHONY : LTexture.obj
-
-# target to build an object file
-LTexture.cpp.obj:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/LTexture.cpp.obj
-.PHONY : LTexture.cpp.obj
-
-LTexture.i: LTexture.cpp.i
-
-.PHONY : LTexture.i
-
-# target to preprocess a source file
-LTexture.cpp.i:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/LTexture.cpp.i
-.PHONY : LTexture.cpp.i
-
-LTexture.s: LTexture.cpp.s
-
-.PHONY : LTexture.s
-
-# target to generate assembly for a file
-LTexture.cpp.s:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/LTexture.cpp.s
-.PHONY : LTexture.cpp.s
-
-SDLFactory.obj: SDLFactory.cpp.obj
-
-.PHONY : SDLFactory.obj
+.PHONY : Player.obj
 
 # target to build an object file
-SDLFactory.cpp.obj:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDLFactory.cpp.obj
-.PHONY : SDLFactory.cpp.obj
+Player.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Player.cpp.obj
+.PHONY : Player.cpp.obj
 
-SDLFactory.i: SDLFactory.cpp.i
+Player.i: Player.cpp.i
 
-.PHONY : SDLFactory.i
+.PHONY : Player.i
 
 # target to preprocess a source file
-SDLFactory.cpp.i:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDLFactory.cpp.i
-.PHONY : SDLFactory.cpp.i
+Player.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Player.cpp.i
+.PHONY : Player.cpp.i
 
-SDLFactory.s: SDLFactory.cpp.s
+Player.s: Player.cpp.s
 
-.PHONY : SDLFactory.s
+.PHONY : Player.s
 
 # target to generate assembly for a file
-SDLFactory.cpp.s:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDLFactory.cpp.s
-.PHONY : SDLFactory.cpp.s
+Player.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Player.cpp.s
+.PHONY : Player.cpp.s
 
-SDLcar.obj: SDLcar.cpp.obj
+SDL/LTexture.obj: SDL/LTexture.cpp.obj
 
-.PHONY : SDLcar.obj
+.PHONY : SDL/LTexture.obj
 
 # target to build an object file
-SDLcar.cpp.obj:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDLcar.cpp.obj
-.PHONY : SDLcar.cpp.obj
+SDL/LTexture.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/LTexture.cpp.obj
+.PHONY : SDL/LTexture.cpp.obj
 
-SDLcar.i: SDLcar.cpp.i
+SDL/LTexture.i: SDL/LTexture.cpp.i
 
-.PHONY : SDLcar.i
+.PHONY : SDL/LTexture.i
 
 # target to preprocess a source file
-SDLcar.cpp.i:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDLcar.cpp.i
-.PHONY : SDLcar.cpp.i
+SDL/LTexture.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/LTexture.cpp.i
+.PHONY : SDL/LTexture.cpp.i
 
-SDLcar.s: SDLcar.cpp.s
+SDL/LTexture.s: SDL/LTexture.cpp.s
 
-.PHONY : SDLcar.s
+.PHONY : SDL/LTexture.s
 
 # target to generate assembly for a file
-SDLcar.cpp.s:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDLcar.cpp.s
-.PHONY : SDLcar.cpp.s
+SDL/LTexture.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/LTexture.cpp.s
+.PHONY : SDL/LTexture.cpp.s
+
+SDL/SDLBackground.obj: SDL/SDLBackground.cpp.obj
+
+.PHONY : SDL/SDLBackground.obj
+
+# target to build an object file
+SDL/SDLBackground.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj
+.PHONY : SDL/SDLBackground.cpp.obj
+
+SDL/SDLBackground.i: SDL/SDLBackground.cpp.i
+
+.PHONY : SDL/SDLBackground.i
+
+# target to preprocess a source file
+SDL/SDLBackground.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLBackground.cpp.i
+.PHONY : SDL/SDLBackground.cpp.i
+
+SDL/SDLBackground.s: SDL/SDLBackground.cpp.s
+
+.PHONY : SDL/SDLBackground.s
+
+# target to generate assembly for a file
+SDL/SDLBackground.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLBackground.cpp.s
+.PHONY : SDL/SDLBackground.cpp.s
+
+SDL/SDLEntity.obj: SDL/SDLEntity.cpp.obj
+
+.PHONY : SDL/SDLEntity.obj
+
+# target to build an object file
+SDL/SDLEntity.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLEntity.cpp.obj
+.PHONY : SDL/SDLEntity.cpp.obj
+
+SDL/SDLEntity.i: SDL/SDLEntity.cpp.i
+
+.PHONY : SDL/SDLEntity.i
+
+# target to preprocess a source file
+SDL/SDLEntity.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLEntity.cpp.i
+.PHONY : SDL/SDLEntity.cpp.i
+
+SDL/SDLEntity.s: SDL/SDLEntity.cpp.s
+
+.PHONY : SDL/SDLEntity.s
+
+# target to generate assembly for a file
+SDL/SDLEntity.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLEntity.cpp.s
+.PHONY : SDL/SDLEntity.cpp.s
+
+SDL/SDLFactory.obj: SDL/SDLFactory.cpp.obj
+
+.PHONY : SDL/SDLFactory.obj
+
+# target to build an object file
+SDL/SDLFactory.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj
+.PHONY : SDL/SDLFactory.cpp.obj
+
+SDL/SDLFactory.i: SDL/SDLFactory.cpp.i
+
+.PHONY : SDL/SDLFactory.i
+
+# target to preprocess a source file
+SDL/SDLFactory.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLFactory.cpp.i
+.PHONY : SDL/SDLFactory.cpp.i
+
+SDL/SDLFactory.s: SDL/SDLFactory.cpp.s
+
+.PHONY : SDL/SDLFactory.s
+
+# target to generate assembly for a file
+SDL/SDLFactory.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLFactory.cpp.s
+.PHONY : SDL/SDLFactory.cpp.s
+
+SDL/SDLPlayer.obj: SDL/SDLPlayer.cpp.obj
+
+.PHONY : SDL/SDLPlayer.obj
+
+# target to build an object file
+SDL/SDLPlayer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj
+.PHONY : SDL/SDLPlayer.cpp.obj
+
+SDL/SDLPlayer.i: SDL/SDLPlayer.cpp.i
+
+.PHONY : SDL/SDLPlayer.i
+
+# target to preprocess a source file
+SDL/SDLPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.i
+.PHONY : SDL/SDLPlayer.cpp.i
+
+SDL/SDLPlayer.s: SDL/SDLPlayer.cpp.s
+
+.PHONY : SDL/SDLPlayer.s
+
+# target to generate assembly for a file
+SDL/SDLPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.s
+.PHONY : SDL/SDLPlayer.cpp.s
+
+SDL/SDLcar.obj: SDL/SDLcar.cpp.obj
+
+.PHONY : SDL/SDLcar.obj
+
+# target to build an object file
+SDL/SDLcar.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj
+.PHONY : SDL/SDLcar.cpp.obj
+
+SDL/SDLcar.i: SDL/SDLcar.cpp.i
+
+.PHONY : SDL/SDLcar.i
+
+# target to preprocess a source file
+SDL/SDLcar.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLcar.cpp.i
+.PHONY : SDL/SDLcar.cpp.i
+
+SDL/SDLcar.s: SDL/SDLcar.cpp.s
+
+.PHONY : SDL/SDLcar.s
+
+# target to generate assembly for a file
+SDL/SDLcar.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLcar.cpp.s
+.PHONY : SDL/SDLcar.cpp.s
+
+SDL/SDLinput.obj: SDL/SDLinput.cpp.obj
+
+.PHONY : SDL/SDLinput.obj
+
+# target to build an object file
+SDL/SDLinput.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj
+.PHONY : SDL/SDLinput.cpp.obj
+
+SDL/SDLinput.i: SDL/SDLinput.cpp.i
+
+.PHONY : SDL/SDLinput.i
+
+# target to preprocess a source file
+SDL/SDLinput.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLinput.cpp.i
+.PHONY : SDL/SDLinput.cpp.i
+
+SDL/SDLinput.s: SDL/SDLinput.cpp.s
+
+.PHONY : SDL/SDLinput.s
+
+# target to generate assembly for a file
+SDL/SDLinput.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLinput.cpp.s
+.PHONY : SDL/SDLinput.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -323,21 +512,42 @@ help:
 	@echo ... AFactory.obj
 	@echo ... AFactory.i
 	@echo ... AFactory.s
+	@echo ... Background.obj
+	@echo ... Background.i
+	@echo ... Background.s
 	@echo ... Car.obj
 	@echo ... Car.i
 	@echo ... Car.s
+	@echo ... Entity.obj
+	@echo ... Entity.i
+	@echo ... Entity.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
-	@echo ... LTexture.obj
-	@echo ... LTexture.i
-	@echo ... LTexture.s
-	@echo ... SDLFactory.obj
-	@echo ... SDLFactory.i
-	@echo ... SDLFactory.s
-	@echo ... SDLcar.obj
-	@echo ... SDLcar.i
-	@echo ... SDLcar.s
+	@echo ... Player.obj
+	@echo ... Player.i
+	@echo ... Player.s
+	@echo ... SDL/LTexture.obj
+	@echo ... SDL/LTexture.i
+	@echo ... SDL/LTexture.s
+	@echo ... SDL/SDLBackground.obj
+	@echo ... SDL/SDLBackground.i
+	@echo ... SDL/SDLBackground.s
+	@echo ... SDL/SDLEntity.obj
+	@echo ... SDL/SDLEntity.i
+	@echo ... SDL/SDLEntity.s
+	@echo ... SDL/SDLFactory.obj
+	@echo ... SDL/SDLFactory.i
+	@echo ... SDL/SDLFactory.s
+	@echo ... SDL/SDLPlayer.obj
+	@echo ... SDL/SDLPlayer.i
+	@echo ... SDL/SDLPlayer.s
+	@echo ... SDL/SDLcar.obj
+	@echo ... SDL/SDLcar.i
+	@echo ... SDL/SDLcar.s
+	@echo ... SDL/SDLinput.obj
+	@echo ... SDL/SDLinput.i
+	@echo ... SDL/SDLinput.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

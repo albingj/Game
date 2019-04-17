@@ -86,10 +86,22 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/AFactory.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Background.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Background.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Car.cpp">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Car.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Entity.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Entity.h">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Game.cpp">
@@ -98,22 +110,52 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Game.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/LTexture.cpp">
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Player.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/LTexture.h">
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Player.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/SDLFactory.cpp">
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/SDLFactory.h">
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/SDLcar.cpp">
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/SDLcar.h">
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLEntity.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLEntity.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/main.cpp">

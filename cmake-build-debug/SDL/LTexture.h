@@ -4,8 +4,8 @@
 
 #ifndef GAME_LTEXTURE_H
 #define GAME_LTEXTURE_H
-#include <sdl2/SDL.h>
-#include <sdl2/SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include <string>
 
@@ -17,13 +17,13 @@ const int SCREEN_HEIGHT = 650;
 
 
 
-//Texture wrapper class
+//texture wrapper class
 class LTexture{
 private:
-    SDL_Renderer* sdlRenderer = nullptr;
+
 public:
     //Initializes variables
-    LTexture(SDL_Renderer* sdlRenderer);
+    LTexture();
 
     //Deallocates memory
     ~LTexture();
@@ -35,7 +35,7 @@ public:
     void free();
 
     //Renders texture at given point
-    void render(int x, int y, SDL_Renderer *pRenderer);
+    void render(int x, int y);
 
     //Gets image dimensions
     int getWidth();
@@ -45,7 +45,7 @@ public:
 
 private:
     //The actual hardware texture
-    SDL_Texture* mTexture = nullptr;
+    SDL_Texture* mTexture;
 
     //Image dimensions
     int mWidth;

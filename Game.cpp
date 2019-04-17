@@ -5,6 +5,7 @@
 #include <chrono>
 #include <zconf.h>
 #include <SDL2/SDL_events.h>
+#include <SDL2/SDL_timer.h>
 #include "Game.h"
 #include "Car.h"
 
@@ -19,14 +20,16 @@ void Game::start(){
     bool stop = false;
 
     std::cout << ">>>>>> Start <<<<<<" << std::endl;
-    pFactory->CreateWindow();
+    pFactory->CreateWindow();  //initialisatie van SDL
+
 
     //Create game objects
-    Car* car = pFactory->CreateCar();
+    //Car* car = pFactory->CreateCar();
 
 
     std::cout << ">>>>>> Create Background <<<<<<" << std::endl;
-    pFactory->CreateBackground();
+    pFactory->LoadBackground();
+    pFactory->CreatePlayer();
     //car->vis();
 
 
@@ -44,14 +47,20 @@ void Game::start(){
 
 
             }
+
+            //oude items weg doen van scherm
+            pFactory->ClearScreen();
+
+            //locaties van entities updaten
             pFactory->Draw();
-            car->vis();
+
+            //alles tonen op scherm
             pFactory->Update();
-            //usleep(500);
+
         }
 
 
-
+        SDL_Delay(30);
     }
 
 

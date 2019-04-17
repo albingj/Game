@@ -4,7 +4,9 @@
 
 #include "SDLFactory.h"
 #include "SDLcar.h"
-#include "Game.h"
+#include "../../Game.h"
+#include "SDLBackground.h"
+#include "SDLPlayer.h"
 
 //Using SDL and standard IO
 
@@ -14,12 +16,14 @@
 
 //Scene textures
 
+SDLBackground* background = new SDLBackground();
+SDLcar* car = new SDLcar();
+SDLPlayer* player = new SDLPlayer();
+
+SDL_Renderer* gRenderer = NULL;
+
 SDLFactory::SDLFactory() {
 
-}
-
-SDL_Renderer* SDLFactory::getGRenderer() {
-    return gRenderer;
 }
 
 void SDLFactory::CreateWindow() {
@@ -27,28 +31,9 @@ void SDLFactory::CreateWindow() {
     init();
 }
 
-
-Car * SDLFactory::CreateCar() {
-    return new SDLcar(this, gRenderer);
-}
-
-void SDLFactory::CreateBackground(){
-
-
-
-    //Load background texture
-    gBackgroundTexture = new LTexture(gRenderer);
-    if( !gBackgroundTexture->loadFromFile( "image/road.png") )
-    {
-        printf( "Failed to load background texture image!\n" );
-
-    }
-    std::cout << ">>>>>> loadFromFile Background - done <<<<<<" << std::endl;
-}
-
-
 void SDLFactory::init(){
     std::cout << ">>>>>> SDL init() <<<<<<" << std::endl;
+
     //Initialize SDL
     if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
     {
@@ -65,7 +50,7 @@ void SDLFactory::init(){
         }
 
         //Create window
-        gWindow = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+        gWindow = SDL_CreateWindow( "SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
         if( gWindow == NULL )
         {
             printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -85,7 +70,7 @@ void SDLFactory::init(){
             {
                 std::cout << ">>>>>> SDL init - Initialize renderer color" << std::endl;
                 //Initialize renderer color
-                SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
+                SDL_SetRenderDrawColor( gRenderer, 96, 128, 255, 255 );
 
                 //Initialize PNG loading
                 int imgFlags = IMG_INIT_PNG;
@@ -102,11 +87,25 @@ void SDLFactory::init(){
 }
 
 
+
+void SDLFactory::LoadBackground(){
+
+    background->LoadImage();
+    std::cout << ">>>>>> loadImageFromFile Background - done <<<<<<" << std::endl;
+}
+
+void SDLFactory::CreatePlayer(){
+    player->LoadImage();
+    std::cout << ">>>>>> loadImageFromFile car - done <<<<<<" << std::endl;
+}
+
+
+
 void SDLFactory::close()
 {
     //Free loaded images
 
-    gBackgroundTexture->free();
+    background->Free();
 
     //Destroy window
     SDL_DestroyRenderer( gRenderer );
@@ -120,29 +119,35 @@ void SDLFactory::close()
 }
 
 
-void SDLFactory::Draw(){
-
-
-
-
+void SDLFactory::ClearScreen(){
 
             //Clear screen
             SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
             SDL_RenderClear(gRenderer);
-
-            //Render background texture to screen
-            gBackgroundTexture->render(0, 0, gRenderer);
-
-        std::cout << ">>>>>> SDL Draw()" << std::endl;
+            //std::cout << ">>>>>> SDL ClearScreen()" << std::endl;
 
 
 }
 
-void SDLFactory::Update(){
-    //Update screen
+void SDLFactory::Draw() {
 
+    //Render background texture to screen
+
+    background->Visualize();
+    player->Visualize();
+
+
+
+
+
+
+
+}
+
+
+void SDLFactory::Update(){
+    //Update screen, alles op scherm tekenen.
     SDL_RenderPresent(gRenderer);
-    std::cout << ">>>>>> SDL update() <<<<<<" << std::endl;
 }
 
 

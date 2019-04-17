@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Game.h"
-#include "SDLFactory.h"
+#include "cmake-build-debug/SDL/SDLFactory.h"
 
 int main( int argc, char* args[]) {
     std::cout << ">>>>>> Program Started <<<<<<" << std::endl;
@@ -14,3 +14,4 @@ int main( int argc, char* args[]) {
 
     return 0;
 }
+

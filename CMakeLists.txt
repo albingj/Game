@@ -12,11 +12,11 @@ include_directories(${SDL2_INCLUDE_DIR})
 add_executable(
         Game
         main.cpp
-        SDLcar.cpp SDLcar.h
+        cmake-build-debug/SDL/SDLcar.cpp cmake-build-debug/SDL/SDLcar.h
         AFactory.cpp AFactory.h
-        SDLFactory.cpp SDLFactory.h
+        cmake-build-debug/SDL/SDLFactory.cpp cmake-build-debug/SDL/SDLFactory.h
         Game.cpp Game.h
-        SDLFactory.cpp SDLFactory.h
-        Car.cpp Car.cpp Car.h LTexture.cpp LTexture.h)
+        cmake-build-debug/SDL/SDLFactory.cpp cmake-build-debug/SDL/SDLFactory.h
+        Car.cpp Car.cpp Car.h cmake-build-debug/SDL/LTexture.cpp cmake-build-debug/SDL/LTexture.h cmake-build-debug/SDL/SDLinput.cpp cmake-build-debug/SDL/SDLinput.h Entity.cpp Entity.h cmake-build-debug/SDL/SDLEntity.cpp cmake-build-debug/SDL/SDLEntity.h Background.cpp Background.h cmake-build-debug/SDL/SDLBackground.cpp cmake-build-debug/SDL/SDLBackground.h Player.cpp Player.h cmake-build-debug/SDL/SDLPlayer.cpp cmake-build-debug/SDL/SDLPlayer.h)
 
 target_link_libraries(Game ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image)
