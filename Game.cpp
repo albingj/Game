@@ -15,7 +15,8 @@ Game::Game(AFactory *pFactory) {
 }
 
 void Game::start(){
-bool stop = false;
+
+    bool stop = false;
 
     std::cout << ">>>>>> Start <<<<<<" << std::endl;
     pFactory->CreateWindow();
