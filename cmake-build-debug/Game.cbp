@@ -116,6 +116,12 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Player.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Singleton.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Singleton.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.cpp">
 			<Option target="Game"/>
 		</Unit>

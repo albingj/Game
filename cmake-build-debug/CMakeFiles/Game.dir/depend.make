@@ -18,6 +18,7 @@ CMakeFiles/Game.dir/Game.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/Game.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/Game.dir/Game.cpp.obj: ../Game.h
+CMakeFiles/Game.dir/Game.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/Game.cpp.obj: SDL/SDLinput.h
 
 CMakeFiles/Game.dir/Player.cpp.obj: ../Entity.h
@@ -34,6 +35,7 @@ CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: SDL/SDLinput.h
 
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj: ../Background.h
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj: ../Entity.h
+CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj: SDL/SDLBackground.cpp
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj: SDL/SDLBackground.h
@@ -48,6 +50,7 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Game.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Player.h
+CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLBackground.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLFactory.cpp
@@ -59,6 +62,7 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLinput.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Player.h
+CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.cpp
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.h
@@ -74,6 +78,9 @@ CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: SDL/SDLinput.h
 
 CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj: SDL/SDLinput.cpp
 CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj: SDL/SDLinput.h
+
+CMakeFiles/Game.dir/Singleton.cpp.obj: ../Singleton.cpp
+CMakeFiles/Game.dir/Singleton.cpp.obj: ../Singleton.h
 
 CMakeFiles/Game.dir/main.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/main.cpp.obj: ../Car.h

@@ -5,7 +5,6 @@
 #ifndef GAME_SDLPLAYER_H
 #define GAME_SDLPLAYER_H
 
-
 #include "../../Entity.h"
 #include "../../Player.h"
 #include "LTexture.h"
@@ -50,7 +49,8 @@ public:
     void removeSpeed(bool);
     void goLeft(bool);
     void goRight(bool);
-
+    int getX();
+    int getY();
 
 
 

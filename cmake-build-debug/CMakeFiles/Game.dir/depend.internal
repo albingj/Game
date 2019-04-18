@@ -19,6 +19,7 @@ CMakeFiles/Game.dir/Game.cpp.obj
  C:/Users/bini/CLionProjects/Game/Car.h
  C:/Users/bini/CLionProjects/Game/Game.cpp
  C:/Users/bini/CLionProjects/Game/Game.h
+ C:/Users/bini/CLionProjects/Game/Singleton.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h
 CMakeFiles/Game.dir/Player.cpp.obj
  C:/Users/bini/CLionProjects/Game/Entity.h
@@ -35,6 +36,7 @@ CMakeFiles/Game.dir/SDL/LTexture.cpp.obj
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj
  C:/Users/bini/CLionProjects/Game/Background.h
  C:/Users/bini/CLionProjects/Game/Entity.h
+ C:/Users/bini/CLionProjects/Game/Singleton.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.cpp
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.h
@@ -49,6 +51,7 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj
  C:/Users/bini/CLionProjects/Game/Entity.h
  C:/Users/bini/CLionProjects/Game/Game.h
  C:/Users/bini/CLionProjects/Game/Player.h
+ C:/Users/bini/CLionProjects/Game/Singleton.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.cpp
@@ -60,6 +63,7 @@ CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj
  C:/Users/bini/CLionProjects/Game/Car.h
  C:/Users/bini/CLionProjects/Game/Entity.h
  C:/Users/bini/CLionProjects/Game/Player.h
+ C:/Users/bini/CLionProjects/Game/Singleton.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.cpp
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
@@ -75,6 +79,9 @@ CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj
 CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.cpp
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h
+CMakeFiles/Game.dir/Singleton.cpp.obj
+ C:/Users/bini/CLionProjects/Game/Singleton.cpp
+ C:/Users/bini/CLionProjects/Game/Singleton.h
 CMakeFiles/Game.dir/main.cpp.obj
  C:/Users/bini/CLionProjects/Game/AFactory.h
  C:/Users/bini/CLionProjects/Game/Car.h

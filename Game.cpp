@@ -8,10 +8,13 @@
 #include <SDL2/SDL_timer.h>
 #include "Game.h"
 #include "Car.h"
+#include "Singleton.h"
 
 
 Game::Game(AFactory *pFactory) {
     this->pFactory = pFactory;
+
+    //Singleton* s = Singleton::getInstance(); // Ok
 
 }
 

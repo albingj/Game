@@ -3,23 +3,26 @@
 //
 
 #include "SDLPlayer.h"
+#include "../../Singleton.h"
 
 
 SDLPlayer::SDLPlayer() {
+
     texture = new LTexture();
 
     //Initialize the offsets
-    mPosX = 0;
-    mPosY = 0;
+    mPosX = 180;
+    mPosY = 400;
 
     //Initialize the velocity
-    mVelX = 4;  //dit is reaction, hoe snel de auto reageert
-    mVelY = 1;
+    mVelX = 10;  //dit is reaction, hoe snel de auto reageert links en rechts
+    mVelY = 1;   //snelheid auto
 
 }
 
 void SDLPlayer::SetSpeed(int velocity){
     this->mVelY==velocity;
+
 
 }
 int SDLPlayer::GetSpeed(){
@@ -28,26 +31,37 @@ int SDLPlayer::GetSpeed(){
 
 void SDLPlayer::addSpeed(bool key){
     if(key){
-        this->mVelY +=mVelY;
+
+        this->mVelY +=1;
+        Singleton::getInstance()->setPlayerSpeed(this->mVelY) ;
     }
 };
 void SDLPlayer::removeSpeed(bool key){
-    if(key){
-        this->mVelY -=mVelY;
+    if(key) {
+        if(this->mVelY > 0){
+            this->mVelY -= 1;
+            Singleton::getInstance()->setPlayerSpeed(this->mVelY);
+        }
+
     }
-};
+}
+
 
 
 
 
 void SDLPlayer::goLeft(bool key) {
     if(key){
-        this->mPosX -= mVelX;
+        if (mPosX!=-50) {
+            this->mPosX -= mVelX;
+        }
     }
 }
 void SDLPlayer::goRight(bool key) {
     if(key) {
-        this->mPosX += mVelX;
+        if (mPosX!=420) {
+            this->mPosX += mVelX;
+        }
     }
 }
 void SDLPlayer::SetReaction(int reaction){
@@ -63,7 +77,8 @@ void SDLPlayer::setPosY(int y){
 
 }
 
-
+int SDLPlayer::getX() {return this->mPosX;}
+int SDLPlayer::getY() {return this->mPosY;}
 
 
 

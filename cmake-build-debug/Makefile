@@ -473,6 +473,33 @@ SDL/SDLinput.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLinput.cpp.s
 .PHONY : SDL/SDLinput.cpp.s
 
+Singleton.obj: Singleton.cpp.obj
+
+.PHONY : Singleton.obj
+
+# target to build an object file
+Singleton.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Singleton.cpp.obj
+.PHONY : Singleton.cpp.obj
+
+Singleton.i: Singleton.cpp.i
+
+.PHONY : Singleton.i
+
+# target to preprocess a source file
+Singleton.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Singleton.cpp.i
+.PHONY : Singleton.cpp.i
+
+Singleton.s: Singleton.cpp.s
+
+.PHONY : Singleton.s
+
+# target to generate assembly for a file
+Singleton.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Singleton.cpp.s
+.PHONY : Singleton.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -548,6 +575,9 @@ help:
 	@echo ... SDL/SDLinput.obj
 	@echo ... SDL/SDLinput.i
 	@echo ... SDL/SDLinput.s
+	@echo ... Singleton.obj
+	@echo ... Singleton.i
+	@echo ... Singleton.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -1,12 +1,14 @@
 //
 // Created by admin on 11/03/2019.
 //
-
+#include <string>
+#include <sstream>
 #include "SDLFactory.h"
 #include "SDLcar.h"
 #include "../../Game.h"
 #include "SDLBackground.h"
 #include "SDLPlayer.h"
+#include "../../Singleton.h"
 
 //Using SDL and standard IO
 
@@ -22,6 +24,8 @@ SDLPlayer* player = new SDLPlayer();
 
 SDL_Renderer* gRenderer = NULL;
 
+
+//keypress booleans
 bool playerLeft=false,playerRight=false,playerAddSpeed=false,playerRemoveSpeed=false;
 
 
@@ -54,7 +58,7 @@ void SDLFactory::init(){
         }
 
         //Create window
-        gWindow = SDL_CreateWindow( "SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+        gWindow = SDL_CreateWindow( "SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 620, 850, SDL_WINDOW_SHOWN );
         if( gWindow == NULL )
         {
             printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -260,7 +264,9 @@ bool SDLFactory::Input()
     player->addSpeed(playerAddSpeed);
     player->removeSpeed(playerRemoveSpeed);
 
-
+    std::ostringstream oss;
+    oss << "player x:" << player->getX() << " y:" << player->getY() << " speed:" << Singleton::getInstance()->getPlayerSpeed();
+    std::cout << oss.str() << std::endl;
 
 
 

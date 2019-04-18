@@ -12,6 +12,8 @@
 #include "LTexture.h"
 extern SDL_Renderer* gRenderer;
 
+
+
 class SDLFactory : public AFactory {
 
 

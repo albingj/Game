@@ -16,6 +16,7 @@ class SDLBackground:  public Background, public Entity{
 
     //The velocity of the dot
     int mVelX, mVelY;
+    int scrollingOffset;
 
 public:
     SDLBackground();
@@ -26,8 +27,6 @@ public:
     void setPosX(int x);
     void setPosY(int y);
     void SetSpeed(int velocity);
-
-
 
 
 
