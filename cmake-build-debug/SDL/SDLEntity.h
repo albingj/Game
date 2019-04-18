@@ -9,6 +9,11 @@
 
 class SDLEntity : public Entity{
 
+
+public:
+
+
+
 };
 
 

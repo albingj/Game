@@ -17,7 +17,7 @@
 //Scene textures
 
 SDLBackground* background = new SDLBackground();
-SDLcar* car = new SDLcar();
+//SDLcar* car = new SDLcar();
 SDLPlayer* player = new SDLPlayer();
 
 SDL_Renderer* gRenderer = NULL;
@@ -152,3 +152,76 @@ void SDLFactory::Update(){
 
 
 
+
+
+
+//Zolang stop op false blijft gaan we alles blijven loopen.
+//Als we X drukken stopt het spel
+bool SDLFactory::Input()
+{
+    bool stop=false;
+    SDL_Event event;
+
+    while (SDL_PollEvent(&event))
+    {
+        switch (event.type)
+        {
+            case SDL_QUIT:  // press X
+                stop=true;
+                break;
+
+            case SDLK_ESCAPE:
+                stop = true;
+                ///Spel eindigen
+
+
+                break;
+
+            case SDL_KEYDOWN:
+
+                switch (event.key.keysym.sym){
+                    case SDLK_UP:
+                        player->SetSpeed(+1);
+                        break;
+                    case SDLK_DOWN:
+                        player->SetSpeed(-1);
+                        break;
+                    case SDLK_LEFT:
+                        player->GoLeft();
+                        break;
+                    case SDLK_RIGHT:
+                        player->GoRight();
+                        break;
+                    case SDLK_SPACE:
+
+
+
+                        break;
+                    default:
+                        break;
+
+                }
+
+
+                break;
+
+
+            case SDL_KEYUP:
+
+
+                break;
+
+
+
+
+
+
+            default:
+                break;
+        }
+    }
+
+
+
+    return stop;
+}

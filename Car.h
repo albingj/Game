@@ -10,10 +10,19 @@
 
 
 class Car {
+
 public:
 
 
-    void Test();
+
+    virtual int GetSpeed()=0;
+    virtual void SetReaction(int reaction)=0;
+
+
+
+
+
+
 
 };
 

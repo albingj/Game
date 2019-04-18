@@ -10,14 +10,12 @@
 #include "Car.h"
 
 
-
 Game::Game(AFactory *pFactory) {
     this->pFactory = pFactory;
+
 }
 
 void Game::start(){
-
-    bool stop = false;
 
     std::cout << ">>>>>> Start <<<<<<" << std::endl;
     pFactory->CreateWindow();  //initialisatie van SDL
@@ -34,19 +32,12 @@ void Game::start(){
 
 
 
-
-    SDL_Event e;
-
-
-    while(!stop) {
+    //zolang er niet op X gedrukt wordt in de loop blijven
+    //Input update ook user input voor Player
+    while(!pFactory->Input()) {
         //Handle events on queue
-        while (SDL_PollEvent(&e) != 0) {
-            //User requests quit
-            if (e.type == SDL_QUIT) {
-                stop = true;
 
 
-            }
 
             //oude items weg doen van scherm
             pFactory->ClearScreen();
@@ -57,7 +48,6 @@ void Game::start(){
             //alles tonen op scherm
             pFactory->Update();
 
-        }
 
 
         SDL_Delay(30);

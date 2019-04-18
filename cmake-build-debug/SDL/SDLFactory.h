@@ -32,7 +32,7 @@ public:
     void ClearScreen();
     void Update();
     void Draw();
-
+    bool Input();
 
 
 private:

@@ -7,7 +7,9 @@
 
 
 class SDLinput {
-
+public:
+    SDLinput();
+    bool Input();
 };
 
 

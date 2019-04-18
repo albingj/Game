@@ -14,6 +14,12 @@ class Entity {
     virtual void LoadImage() = 0;
     virtual void Free()=0;
 
+    virtual void setPosX(int x) = 0;
+    virtual void setPosY(int y) = 0;
+
+    virtual void SetSpeed(int velocity) = 0;
+
+
 };
 
 

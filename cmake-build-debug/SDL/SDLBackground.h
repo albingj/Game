@@ -11,12 +11,26 @@
 
 class SDLBackground:  public Background, public Entity{
     LTexture* texture;
+    //The X and Y offsets of the dot
+    int mPosX, mPosY;
+
+    //The velocity of the dot
+    int mVelX, mVelY;
+
 public:
     SDLBackground();
     void Free();
     void LoadImage();
     void Visualize();
-    void Movebackground(int s);
+
+    void setPosX(int x);
+    void setPosY(int y);
+    void SetSpeed(int velocity);
+
+
+
+
+
 };
 
 

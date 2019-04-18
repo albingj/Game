@@ -16,12 +16,27 @@ class SDLcar : public Car, public Entity{
 
 private:
     LTexture* texture;
+    //The X and Y offsets of the dot
+    int mPosX, mPosY;
+
+    //The velocity of the dot
+    int mVelX, mVelY;
 public:
     SDLcar();
     std::string img;
     void Free();
     void LoadImage();
     void Visualize();
+
+    void setPosX(int x);
+    void setPosY(int y);
+
+    void SetSpeed(int velocity);
+
+    void SetReaction(int reaction);
+    int GetSpeed();
+    void GoLeft();
+    void GoRight();
 
 
 
