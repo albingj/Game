@@ -35,6 +35,7 @@ void Game::start(){
     //zolang er niet op X gedrukt wordt in de loop blijven
     //Input update ook user input voor Player
     while(!pFactory->Input()) {
+
         //Handle events on queue
 
 

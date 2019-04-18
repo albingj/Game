@@ -13,8 +13,6 @@ class Car {
 
 public:
 
-
-
     virtual int GetSpeed()=0;
     virtual void SetReaction(int reaction)=0;
 

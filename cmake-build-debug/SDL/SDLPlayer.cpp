@@ -13,8 +13,8 @@ SDLPlayer::SDLPlayer() {
     mPosY = 0;
 
     //Initialize the velocity
-    mVelX = 1;  //dit is reaction, hoe snel de auto reageert
-    mVelY = 0;
+    mVelX = 4;  //dit is reaction, hoe snel de auto reageert
+    mVelY = 1;
 
 }
 
@@ -26,11 +26,29 @@ int SDLPlayer::GetSpeed(){
     return this->mVelY;
 }
 
-void SDLPlayer::GoLeft() {
-    this->mPosX -= mVelX;
+void SDLPlayer::addSpeed(bool key){
+    if(key){
+        this->mVelY +=mVelY;
+    }
+};
+void SDLPlayer::removeSpeed(bool key){
+    if(key){
+        this->mVelY -=mVelY;
+    }
+};
+
+
+
+
+void SDLPlayer::goLeft(bool key) {
+    if(key){
+        this->mPosX -= mVelX;
+    }
 }
-void SDLPlayer::GoRight() {
-    this->mPosX += mVelX;
+void SDLPlayer::goRight(bool key) {
+    if(key) {
+        this->mPosX += mVelX;
+    }
 }
 void SDLPlayer::SetReaction(int reaction){
     this->mVelX==reaction;
@@ -44,6 +62,11 @@ void SDLPlayer::setPosX(int x){
 void SDLPlayer::setPosY(int y){
 
 }
+
+
+
+
+
 
 
 

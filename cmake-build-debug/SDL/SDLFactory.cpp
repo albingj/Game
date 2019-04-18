@@ -22,7 +22,11 @@ SDLPlayer* player = new SDLPlayer();
 
 SDL_Renderer* gRenderer = NULL;
 
+bool playerLeft=false,playerRight=false,playerAddSpeed=false,playerRemoveSpeed=false;
+
+
 SDLFactory::SDLFactory() {
+
 
 }
 
@@ -159,9 +163,9 @@ void SDLFactory::Update(){
 //Als we X drukken stopt het spel
 bool SDLFactory::Input()
 {
+
     bool stop=false;
     SDL_Event event;
-
     while (SDL_PollEvent(&event))
     {
         switch (event.type)
@@ -179,22 +183,21 @@ bool SDLFactory::Input()
 
             case SDL_KEYDOWN:
 
-                switch (event.key.keysym.sym){
+                switch (event.key.keysym.sym ){
                     case SDLK_UP:
-                        player->SetSpeed(+1);
+                        playerAddSpeed=true;
                         break;
                     case SDLK_DOWN:
-                        player->SetSpeed(-1);
+                        playerRemoveSpeed=true;
                         break;
                     case SDLK_LEFT:
-                        player->GoLeft();
+                        playerLeft=true;
+
                         break;
                     case SDLK_RIGHT:
-                        player->GoRight();
+                        playerRight= true;
                         break;
                     case SDLK_SPACE:
-
-
 
                         break;
                     default:
@@ -207,7 +210,29 @@ bool SDLFactory::Input()
 
 
             case SDL_KEYUP:
+                switch (event.key.keysym.sym ){
+                    case SDLK_UP:
+                        playerAddSpeed=false;
+                        break;
+                    case SDLK_DOWN:
+                        playerRemoveSpeed=false;
+                        break;
+                    case SDLK_LEFT:
+                        playerLeft=false;
 
+                        break;
+                    case SDLK_RIGHT:
+                        playerRight= false;
+                        break;
+                    case SDLK_SPACE:
+
+
+
+                        break;
+                    default:
+                        break;
+
+                }
 
                 break;
 
@@ -220,6 +245,23 @@ bool SDLFactory::Input()
                 break;
         }
     }
+
+
+    if(playerLeft){
+
+    }
+
+
+
+
+    //moest booleans gebruiken want ik kreeg een delay bij lange keypress dus boolean zetten bij elke keypress en aanpassen als er keyup of keydown is geregistreerd.
+    player->goLeft(playerLeft);
+    player->goRight(playerRight);
+    player->addSpeed(playerAddSpeed);
+    player->removeSpeed(playerRemoveSpeed);
+
+
+
 
 
 

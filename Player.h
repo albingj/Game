@@ -11,13 +11,13 @@
 class Player{
 public:
     virtual ~Player();
-    virtual void SetSpeed()=0;
-    virtual void setPosX()=0;
-    virtual void setPosY()=0;
     virtual int GetSpeed()=0;
     virtual void SetReaction(int reaction)=0;
-    virtual void setPosX(int x)=0;
-    virtual void setPosY(int y)=0;
+    virtual void addSpeed(bool) =0;
+    virtual void removeSpeed(bool)=0;
+    virtual void goLeft(bool)=0;
+    virtual void goRight(bool)=0;
+
 
 };
 

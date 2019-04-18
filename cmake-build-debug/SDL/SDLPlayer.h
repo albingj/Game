@@ -11,7 +11,7 @@
 #include "LTexture.h"
 #include "../../Car.h"
 
-class SDLPlayer :public Entity, public Car {
+class SDLPlayer :public Entity, public Car,public Player {
     LTexture* texture;
 
     //The X and Y offsets of the dot
@@ -24,6 +24,9 @@ class SDLPlayer :public Entity, public Car {
 public:
     SDLPlayer();
 
+
+
+    //Entity
     void Free();
     void LoadImage();
     void Visualize();
@@ -31,12 +34,28 @@ public:
     void setPosX(int x);
     void setPosY(int y);
 
+
+
+    //car
     void SetSpeed(int velocity);
 
-    void SetReaction(int reaction);
+
+
+
+    //player
     int GetSpeed();
-    void GoLeft();
-    void GoRight();
+    void SetReaction(int reaction);
+
+    void addSpeed(bool);
+    void removeSpeed(bool);
+    void goLeft(bool);
+    void goRight(bool);
+
+
+
+
+
+
 
 
 
