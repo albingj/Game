@@ -18,7 +18,7 @@ class SDLPlayer :public Entity, public Car,public Player {
 
     //The velocity of the dot
     int mVelX, mVelY;
-
+    int speed;
 
 public:
     SDLPlayer();

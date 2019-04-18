@@ -57,6 +57,7 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.cpp
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj
@@ -67,6 +68,9 @@ CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.cpp
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
+CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.cpp
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.h
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj
  C:/Users/bini/CLionProjects/Game/AFactory.h
  C:/Users/bini/CLionProjects/Game/Car.h

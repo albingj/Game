@@ -12,36 +12,54 @@ SDLPlayer::SDLPlayer() {
 
     //Initialize the offsets
     mPosX = 180;
-    mPosY = 400;
+    mPosY = 560;
 
     //Initialize the velocity
     mVelX = 10;  //dit is reaction, hoe snel de auto reageert links en rechts
     mVelY = 1;   //snelheid auto
+    speed = 0;
+
 
 }
 
 void SDLPlayer::SetSpeed(int velocity){
-    this->mVelY==velocity;
-
+    this->speed==velocity;
 
 }
 int SDLPlayer::GetSpeed(){
-    return this->mVelY;
+    return this->speed;
 }
 
 void SDLPlayer::addSpeed(bool key){
     if(key){
+        if(this->speed < 70) {
+            this->speed += mVelY;
+            Singleton::getInstance()->setPlayerSpeed(this->speed);
 
-        this->mVelY +=1;
-        Singleton::getInstance()->setPlayerSpeed(this->mVelY) ;
+        }
+
+        if(this->speed > 20 && this->speed < 60) {
+            this->mPosY -=1;
+        }
+
+
+
+
     }
 };
 void SDLPlayer::removeSpeed(bool key){
     if(key) {
-        if(this->mVelY > 0){
-            this->mVelY -= 1;
-            Singleton::getInstance()->setPlayerSpeed(this->mVelY);
+        if(this->speed > 0){
+            this->speed -= mVelY;
+            Singleton::getInstance()->setPlayerSpeed(this->speed);
+
         }
+
+        if(mPosY<559){
+            this->mPosY +=1;
+        }
+
+
 
     }
 }

@@ -419,6 +419,33 @@ SDL/SDLPlayer.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.s
 .PHONY : SDL/SDLPlayer.cpp.s
 
+SDL/SDLTimer.obj: SDL/SDLTimer.cpp.obj
+
+.PHONY : SDL/SDLTimer.obj
+
+# target to build an object file
+SDL/SDLTimer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj
+.PHONY : SDL/SDLTimer.cpp.obj
+
+SDL/SDLTimer.i: SDL/SDLTimer.cpp.i
+
+.PHONY : SDL/SDLTimer.i
+
+# target to preprocess a source file
+SDL/SDLTimer.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLTimer.cpp.i
+.PHONY : SDL/SDLTimer.cpp.i
+
+SDL/SDLTimer.s: SDL/SDLTimer.cpp.s
+
+.PHONY : SDL/SDLTimer.s
+
+# target to generate assembly for a file
+SDL/SDLTimer.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLTimer.cpp.s
+.PHONY : SDL/SDLTimer.cpp.s
+
 SDL/SDLcar.obj: SDL/SDLcar.cpp.obj
 
 .PHONY : SDL/SDLcar.obj
@@ -569,6 +596,9 @@ help:
 	@echo ... SDL/SDLPlayer.obj
 	@echo ... SDL/SDLPlayer.i
 	@echo ... SDL/SDLPlayer.s
+	@echo ... SDL/SDLTimer.obj
+	@echo ... SDL/SDLTimer.i
+	@echo ... SDL/SDLTimer.s
 	@echo ... SDL/SDLcar.obj
 	@echo ... SDL/SDLcar.i
 	@echo ... SDL/SDLcar.s

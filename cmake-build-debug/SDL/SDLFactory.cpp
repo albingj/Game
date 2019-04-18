@@ -9,6 +9,7 @@
 #include "SDLBackground.h"
 #include "SDLPlayer.h"
 #include "../../Singleton.h"
+#include "../SDL/SDLTimer.h"
 
 //Using SDL and standard IO
 
@@ -17,7 +18,6 @@
 #include <iostream>
 
 //Scene textures
-
 SDLBackground* background = new SDLBackground();
 //SDLcar* car = new SDLcar();
 SDLPlayer* player = new SDLPlayer();
@@ -27,6 +27,12 @@ SDL_Renderer* gRenderer = NULL;
 
 //keypress booleans
 bool playerLeft=false,playerRight=false,playerAddSpeed=false,playerRemoveSpeed=false;
+
+
+//Frames maximum
+const int SCREEN_FPS = 60;
+const int SCREEN_TICKS_PER_FRAME = 1000/SCREEN_FPS;
+
 
 
 SDLFactory::SDLFactory() {
@@ -40,6 +46,7 @@ void SDLFactory::CreateWindow() {
 }
 
 void SDLFactory::init(){
+
     std::cout << ">>>>>> SDL init() <<<<<<" << std::endl;
 
     //Initialize SDL
@@ -69,6 +76,18 @@ void SDLFactory::init(){
             std::cout << ">>>>>> SDL init - Create renderer for window" << std::endl;
             //Create renderer for window
             gRenderer = SDL_CreateRenderer( gWindow, -1, SDL_RENDERER_ACCELERATED );
+
+
+
+            //Set text color as black
+            SDL_Color textColor = { 0, 0, 0, 255 };
+
+
+
+
+
+
+
             if( gRenderer == NULL )
             {
                 printf( "Renderer could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -167,6 +186,23 @@ void SDLFactory::Update(){
 //Als we X drukken stopt het spel
 bool SDLFactory::Input()
 {
+
+
+    //The frames per second timer
+    SDLTimer fpsTimer;
+
+    //The frames per second cap timer
+    SDLTimer capTimer;
+
+    //In memory text stream
+    std::stringstream timeText;
+
+    //Start counting frames per second
+    int countedFrames = 0;
+    fpsTimer.start();
+
+
+
 
     bool stop=false;
     SDL_Event event;
@@ -269,6 +305,26 @@ bool SDLFactory::Input()
     std::cout << oss.str() << std::endl;
 
 
+
+
+    //Calculate and correct fps
+    float avgFPS = countedFrames / ( fpsTimer.getTicks() / 1000.f );
+    if( avgFPS > 2000000 )
+    {
+        avgFPS = 0;
+    }
+
+    //Update screen
+    SDL_RenderPresent( gRenderer );
+    ++countedFrames;
+
+    //If frame finished early
+    int frameTicks = capTimer.getTicks();
+    if( frameTicks < SCREEN_TICKS_PER_FRAME )
+    {
+        //Wait remaining time
+        SDL_Delay( SCREEN_TICKS_PER_FRAME - frameTicks );
+    }
 
 
     return stop;

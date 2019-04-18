@@ -35,6 +35,11 @@ void Game::start(){
 
 
 
+
+
+
+
+
     //zolang er niet op X gedrukt wordt in de loop blijven
     //Input update ook user input voor Player
     while(!pFactory->Input()) {
@@ -54,7 +59,7 @@ void Game::start(){
 
 
 
-        SDL_Delay(30);
+        //SDL_Delay(30);
     }
 
 

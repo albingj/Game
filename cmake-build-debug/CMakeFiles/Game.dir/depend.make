@@ -56,6 +56,7 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLBackground.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLFactory.cpp
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLFactory.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLPlayer.h
+CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLTimer.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLcar.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLinput.h
 
@@ -66,6 +67,9 @@ CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.cpp
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.h
+
+CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj: SDL/SDLTimer.cpp
+CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj: SDL/SDLTimer.h
 
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: ../Car.h

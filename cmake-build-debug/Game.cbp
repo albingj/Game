@@ -152,6 +152,12 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.cpp">
 			<Option target="Game"/>
 		</Unit>
