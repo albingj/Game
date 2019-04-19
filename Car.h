@@ -15,7 +15,8 @@ public:
 
     virtual int GetSpeed()=0;
     virtual void SetReaction(int reaction)=0;
-
+    virtual void GoLeft()=0;
+    virtual void GoRight()=0;
 
 
 

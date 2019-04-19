@@ -24,7 +24,7 @@ SDLBackground::SDLBackground() {
 }
 
 void SDLBackground::LoadImage() {
-    texture->loadFromFile("image/road.png");
+    texture->loadFromFile("image/road2.png");
 }
 
 void SDLBackground::Visualize()
@@ -32,15 +32,17 @@ void SDLBackground::Visualize()
    // texture->render( scrollingOffset + Singleton::getInstance()->getPlayerSpeed(), 0 );
     //texture->render( scrollingOffset + texture->getWidth(), 0 );
 
-    if (scrollingOffset<texture->getHeight()){
-        scrollingOffset+=Singleton::getInstance()->getPlayerSpeed()/2;
+    if (scrollingOffset<850){
+        scrollingOffset+=(Singleton::getInstance()->getPlayerSpeed()/4)+10;
     }else{
         scrollingOffset=0;
     }
 
+
+    //texture->render( 0, scrollingOffset - (2*texture->getHeight()));
     texture->render( 0, scrollingOffset - texture->getHeight());
     texture->render( 0, scrollingOffset);
-    texture->render( 0, scrollingOffset + texture->getHeight());
+    //texture->render( 0, scrollingOffset + texture->getHeight());
 
 
 

@@ -2,8 +2,8 @@ class Singleton
 {
 private:
 
-    int PlayerSpeed=0;
-
+    int PlayerSpeed;
+    int ScreenBottom;
 
     /* Here will be the instance stored. */
     static Singleton* instance;
@@ -16,6 +16,7 @@ public:
     static Singleton* getInstance();
     void setPlayerSpeed(int Speed);
     int getPlayerSpeed();
+    int getScreenBottom();
 };
 
 

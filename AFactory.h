@@ -23,9 +23,12 @@ public:
     virtual void LoadBackground()=0;
     virtual void CreatePlayer()=0;
     virtual void ClearScreen()=0;
+    virtual void CreateCars()=0;
+    virtual void Collision()=0;
     virtual void Update()=0;
     virtual void Draw()=0;
     virtual bool Input()=0;
+
 
 };
 

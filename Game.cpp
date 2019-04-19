@@ -31,6 +31,9 @@ void Game::start(){
     std::cout << ">>>>>> Create Background <<<<<<" << std::endl;
     pFactory->LoadBackground();
     pFactory->CreatePlayer();
+
+    //Create other cars / enemies
+    pFactory->CreateCars();
     //car->vis();
 
 
@@ -50,6 +53,9 @@ void Game::start(){
 
             //oude items weg doen van scherm
             pFactory->ClearScreen();
+
+            //Check for collisions
+            pFactory->Collision();
 
             //locaties van entities updaten
             pFactory->Draw();

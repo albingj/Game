@@ -10,17 +10,19 @@
 #include "../../Car.h"
 #include "../../AFactory.h"
 #include "LTexture.h"
-#include "../../Entity.h"
+#include "SDLEntity.h"
 
-class SDLcar : public Car, public Entity{
+class SDLcar : public Car, public SDLEntity{
 
 private:
     LTexture* texture;
     //The X and Y offsets of the dot
     int mPosX, mPosY;
-
+    SDL_Rect box;
     //The velocity of the dot
     int mVelX, mVelY;
+
+
 public:
     SDLcar();
     std::string img;
@@ -37,6 +39,8 @@ public:
     int GetSpeed();
     void GoLeft();
     void GoRight();
+
+    void ResetCar();
 
 
 

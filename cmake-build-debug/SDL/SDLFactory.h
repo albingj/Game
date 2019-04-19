@@ -36,6 +36,8 @@ public:
     void Draw();
     bool Input();
 
+    void Collision();
+    void CreateCars();
 
 private:
     void close();

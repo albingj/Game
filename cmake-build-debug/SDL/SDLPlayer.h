@@ -8,17 +8,21 @@
 #include "../../Entity.h"
 #include "../../Player.h"
 #include "LTexture.h"
-#include "../../Car.h"
+#include "SDLcar.h"
 
-class SDLPlayer :public Entity, public Car,public Player {
+class SDLPlayer : public SDLcar ,public Player {
     LTexture* texture;
 
-    //The X and Y offsets of the dot
+    //The X and Y offsets of the car
     int mPosX, mPosY;
+    SDL_Rect box;
 
-    //The velocity of the dot
+    //The velocity of the car
     int mVelX, mVelY;
     int speed;
+
+
+   // SDL_Rect collisionBox;
 
 public:
     SDLPlayer();

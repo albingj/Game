@@ -20,6 +20,16 @@ SDLPlayer::SDLPlayer() {
     speed = 0;
 
 
+    box.x = mPosX;
+    box.y = mPosY;
+    box.w = texture->getWidth();
+    box.h = texture->getHeight();
+
+
+
+    setCollisionBox(box);
+
+
 }
 
 void SDLPlayer::SetSpeed(int velocity){
@@ -32,7 +42,7 @@ int SDLPlayer::GetSpeed(){
 
 void SDLPlayer::addSpeed(bool key){
     if(key){
-        if(this->speed < 70) {
+        if(this->speed < 101) {
             this->speed += mVelY;
             Singleton::getInstance()->setPlayerSpeed(this->speed);
 
@@ -70,15 +80,23 @@ void SDLPlayer::removeSpeed(bool key){
 
 void SDLPlayer::goLeft(bool key) {
     if(key){
-        if (mPosX!=-50) {
-            this->mPosX -= mVelX;
+        if (mPosX>=-50) {
+            if ((int)((double)mVelX * (((double)speed/100))<20)){
+                this->mPosX -= 10;
+            }else{
+                this->mPosX -= (int)((double)mVelX * (((double)speed/100)));
+            }
+
         }
     }
 }
+
 void SDLPlayer::goRight(bool key) {
     if(key) {
-        if (mPosX!=420) {
-            this->mPosX += mVelX;
+        if ((int)((double)mVelX * (((double)speed/100))<20)){
+            this->mPosX += 10;
+        }else{
+            this->mPosX += (int)((double)mVelX * (((double)speed/100)));
         }
     }
 }

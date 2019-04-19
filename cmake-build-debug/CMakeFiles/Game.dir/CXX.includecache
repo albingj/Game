@@ -6,13 +6,21 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/bini/CLionProjects/Game/AFactory.h
+SDL2/SDL_render.h
+-
+Car.h
+C:/Users/bini/CLionProjects/Game/Car.h
+
 C:/Users/bini/CLionProjects/Game/Car.h
 
 C:/Users/bini/CLionProjects/Game/Entity.h
 
-C:/Users/bini/CLionProjects/Game/Player.h
-Entity.h
-C:/Users/bini/CLionProjects/Game/Entity.h
+C:/Users/bini/CLionProjects/Game/Game.h
+AFactory.h
+C:/Users/bini/CLionProjects/Game/AFactory.h
+cmake-build-debug/SDL/SDLinput.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h
 
 C:/Users/bini/CLionProjects/Game/Singleton.h
 
@@ -24,19 +32,37 @@ SDL2/SDL_image.h
 string
 -
 
-C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.cpp
-SDLPlayer.h
-C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLEntity.h
+SDL2/SDL_rect.h
+-
+../../Entity.h
+C:/Users/bini/CLionProjects/Game/Entity.h
+
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.cpp
+iostream
+-
+SDLcar.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h
+LTexture.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
+../../Game.h
+C:/Users/bini/CLionProjects/Game/Game.h
 ../../Singleton.h
 C:/Users/bini/CLionProjects/Game/Singleton.h
 
-C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
-../../Entity.h
-C:/Users/bini/CLionProjects/Game/Entity.h
-../../Player.h
-C:/Users/bini/CLionProjects/Game/Player.h
-LTexture.h
-C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h
+stdio.h
+-
+SDL2/SDL_render.h
+-
 ../../Car.h
 C:/Users/bini/CLionProjects/Game/Car.h
+../../AFactory.h
+C:/Users/bini/CLionProjects/Game/AFactory.h
+LTexture.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
+SDLEntity.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLEntity.h
+
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h
 

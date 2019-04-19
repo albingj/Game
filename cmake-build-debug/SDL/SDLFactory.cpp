@@ -11,6 +11,7 @@
 #include "../../Singleton.h"
 #include "../SDL/SDLTimer.h"
 
+
 //Using SDL and standard IO
 
 #include <stdio.h>
@@ -19,7 +20,12 @@
 
 //Scene textures
 SDLBackground* background = new SDLBackground();
+
+
+//Create 10 enemies
 //SDLcar* car = new SDLcar();
+SDLcar* cars = new SDLcar[9];
+
 SDLPlayer* player = new SDLPlayer();
 
 SDL_Renderer* gRenderer = NULL;
@@ -65,7 +71,7 @@ void SDLFactory::init(){
         }
 
         //Create window
-        gWindow = SDL_CreateWindow( "SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 620, 850, SDL_WINDOW_SHOWN );
+        gWindow = SDL_CreateWindow( "SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 569, 850, SDL_WINDOW_SHOWN );
         if( gWindow == NULL )
         {
             printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -163,6 +169,19 @@ void SDLFactory::Draw() {
     background->Visualize();
     player->Visualize();
 
+    for(int i =0 ; i < 9; i++){
+
+        if(cars[i].getCollisionBox().y > Singleton::getInstance()->getScreenBottom()){
+            std::cout << ">>>>>> SDL FREE car" << std::endl;
+            cars[i].ResetCar();
+        }else if(cars[i].getCollisionBox().y > -1000){
+            cars[i].Visualize();
+        }else{
+
+        }
+
+
+    }
 
 
 
@@ -176,8 +195,6 @@ void SDLFactory::Update(){
     //Update screen, alles op scherm tekenen.
     SDL_RenderPresent(gRenderer);
 }
-
-
 
 
 
@@ -301,8 +318,8 @@ bool SDLFactory::Input()
     player->removeSpeed(playerRemoveSpeed);
 
     std::ostringstream oss;
-    oss << "player x:" << player->getX() << " y:" << player->getY() << " speed:" << Singleton::getInstance()->getPlayerSpeed();
-    std::cout << oss.str() << std::endl;
+    //oss << "player x:" << player->getX() << " y:" << player->getY() << " speed:" << Singleton::getInstance()->getPlayerSpeed();
+    //std::cout << oss.str() << std::endl;
 
 
 
@@ -328,4 +345,42 @@ bool SDLFactory::Input()
 
 
     return stop;
+}
+
+
+
+
+void SDLFactory::CreateCars(){
+
+
+
+    for(int i = 0 ; i < 9; i++) {
+
+        //cars[i].SetSpeed(-2);
+        cars[i].LoadImage();
+
+    }
+
+
+
+
+}
+
+
+
+void SDLFactory::Collision() {
+
+   // if (CheckCollision)
+
+}
+
+
+bool checkCollision( SDL_Rect a, SDL_Rect b ) {
+
+
+
+
+
+    return true;
+
 }
