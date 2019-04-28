@@ -11,6 +11,8 @@
 
 class Car {
 
+    int road;
+
 public:
 
     virtual int GetSpeed()=0;
@@ -18,7 +20,7 @@ public:
     virtual void GoLeft()=0;
     virtual void GoRight()=0;
 
-
+    virtual void ResetCar()=0;
 
 
 

@@ -364,23 +364,67 @@ void SDLFactory::CreateCars(){
 
 
 
+
+
 }
 
 
+
+bool checkCollision(SDL_Rect objectA, SDL_Rect objectB ) {
+
+    /*
+
+     elke object heeft 4 hoeken
+     a - b
+     |   |
+     c - d
+
+     Als een andere object zijn hoekpunt in de andere komt wordt dit beschoud als een botsing
+
+     */
+
+//The sides of the rectangles
+
+
+    if (
+            //objectB.y < objectA.y && objectB.y > objectA.x+objectA.h
+            objectB.x <= objectA.x //&& objectB.x < objectA.x+objectA.w
+
+
+            ){
+        return true;
+    }
+
+     std::string text = "By: " + std::to_string(objectB.x) + " Ay: " + std::to_string(objectA.x);
+    std::cout << text  << std::endl;
+
+
+    return false;
+}
 
 void SDLFactory::Collision() {
 
    // if (CheckCollision)
 
+
+    for(int i = 0 ; i < 9; i++) {
+
+        //cars[i].ResetCar();
+
+
+
+
+        if (checkCollision(cars[i].getCollisionBox(),player->getCollisionBox())){
+           // cars[i].ResetCar();
+        }
+
+
+    }
+
+
+
+
 }
 
 
-bool checkCollision( SDL_Rect a, SDL_Rect b ) {
 
-
-
-
-
-    return true;
-
-}

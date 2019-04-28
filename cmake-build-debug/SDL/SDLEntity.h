@@ -11,7 +11,6 @@
 class SDLEntity : public Entity{
 
     SDL_Rect collisionBox;
-    SDL_Rect box;
 
 
 public:
@@ -23,10 +22,11 @@ public:
     SDL_Rect getCollisionBox();
 
 
+
+
     void setPosX(int x) = 0;
     void setPosY(int y) = 0;
-
-    void SetSpeed(int velocity) = 0;
+    //void SetSpeed(int velocity) = 0;
 
 
 

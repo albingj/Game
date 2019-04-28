@@ -19,9 +19,13 @@ SDLcar::SDLcar() {
 
     box.w = texture->getWidth();
     box.h = texture->getHeight();
+    box.x = 0;
+    box.y  =0;
     setCollisionBox(box);
 
     SDLcar::ResetCar();
+
+
 
 
 
@@ -64,6 +68,7 @@ void SDLcar::Visualize()
     setCollisionBox(box);
     texture->render( box.x, box.y);
 
+    texture->renderDebug(box.x, box.y);
 
 }
 
@@ -105,10 +110,39 @@ void SDLcar::ResetCar(){
    // this->Free();
 
     this->LoadImage();
-    box.x = (rand() % 400);
+
+
+    road = (rand() % 4);
+
+
+    switch(road){
+
+        case 0:
+            box.x =35;
+            break;
+
+        case 1:
+            box.x =140;
+            break;
+
+        case 2:
+            box.x =280;
+            break;
+
+        case 3:
+            box.x =420;
+            break;
+
+    }
+
+
+
+
+
+
     box.y = -((rand() % 500)+200);
 
     setCollisionBox(box);
-    mVelY =((rand() % 10)) ;
+    mVelY =((rand() % 5)) ;
 }
 

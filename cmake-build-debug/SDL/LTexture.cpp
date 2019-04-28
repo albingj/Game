@@ -75,10 +75,21 @@ void LTexture::render(int x, int y) {
     //Set rendering space and render to screen
     SDL_Rect renderQuad = {x, y, mWidth, mHeight};
     SDL_RenderCopy(gRenderer,mTexture,NULL,&renderQuad);
-
-
-
 }
+
+void LTexture::renderDebug(int x, int y) {
+    //Set rendering space and render to screen
+    SDL_Rect renderQuad = {x, y, mWidth, mHeight};
+    SDL_SetRenderDrawColor(gRenderer, 255 , 255 , 255, 255);
+    SDL_RenderDrawRect(gRenderer, &renderQuad);
+
+
+
+
+    //SDL_RenderCopy(gRenderer,SDL_CreateColorCursor(255),NULL,&renderQuad);
+}
+
+
 int LTexture::getWidth(){
     return mWidth;
 }

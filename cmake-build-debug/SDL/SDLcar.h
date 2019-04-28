@@ -22,6 +22,8 @@ private:
     //The velocity of the dot
     int mVelX, mVelY;
 
+    //car.h
+    int road;
 
 public:
     SDLcar();
@@ -35,6 +37,8 @@ public:
 
     void SetSpeed(int velocity);
 
+
+    //car.h
     void SetReaction(int reaction);
     int GetSpeed();
     void GoLeft();

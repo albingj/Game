@@ -128,6 +128,11 @@ void SDLPlayer::LoadImage() {
 void SDLPlayer::Visualize()
 {
     texture->render( mPosX, mPosY);
+    texture->renderDebug(mPosX,mPosY);
+
+
+
+
 }
 
 void SDLPlayer::Free(){

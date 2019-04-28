@@ -49,8 +49,6 @@ void Game::start(){
 
         //Handle events on queue
 
-
-
             //oude items weg doen van scherm
             pFactory->ClearScreen();
 

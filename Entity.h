@@ -17,7 +17,7 @@ class Entity {
     virtual void setPosX(int x) = 0;
     virtual void setPosY(int y) = 0;
 
-    virtual void SetSpeed(int velocity) = 0;
+    //virtual void SetSpeed(int velocity) = 0;
 
 
 };
