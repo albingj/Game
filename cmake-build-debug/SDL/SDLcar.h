@@ -4,7 +4,7 @@
 
 #ifndef GAME_SDLCAR_H
 #define GAME_SDLCAR_H
-#include <stdio.h>
+//#include <stdio.h>
 #include <SDL2/SDL_render.h>
 
 #include "../../Car.h"

@@ -54,7 +54,9 @@ void SDLcar::LoadImage() {
             , "truck.png"
     };
     texture->loadFromFile("image/cars/"+ car[(rand() % 9)]);
-
+    box.w = texture->getWidth();
+    box.h = texture->getHeight();
+    setCollisionBox(box);
 
 
 
@@ -66,9 +68,9 @@ void SDLcar::Visualize()
 
     box.y +=(mVelY + Singleton::getInstance()->getPlayerSpeed()) ;
     setCollisionBox(box);
-    texture->render( box.x, box.y);
+    texture->render( getCollisionBox().x , getCollisionBox().y);
 
-    texture->renderDebug(box.x, box.y);
+    texture->renderDebug(getCollisionBox().x , getCollisionBox().y);
 
 }
 
@@ -112,6 +114,7 @@ void SDLcar::ResetCar(){
     this->LoadImage();
 
 
+
     road = (rand() % 4);
 
 
@@ -141,6 +144,11 @@ void SDLcar::ResetCar(){
 
 
     box.y = -((rand() % 500)+200);
+    box.w = texture->getWidth();
+    box.h = texture->getHeight();
+
+
+
 
     setCollisionBox(box);
     mVelY =((rand() % 5)) ;

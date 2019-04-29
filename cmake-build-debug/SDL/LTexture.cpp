@@ -13,6 +13,7 @@ LTexture::LTexture(){
     mTexture = NULL;
     mWidth = 0;
     mHeight = 0;
+
 }
 
 LTexture::~LTexture(){
@@ -31,7 +32,7 @@ bool LTexture::loadFromFile( std::string path){
     SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
     if( loadedSurface == NULL )
     {
-        printf( "Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError() );
+        //printf( "Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError() );
     }
     else
     {
@@ -42,7 +43,7 @@ bool LTexture::loadFromFile( std::string path){
         newTexture = SDL_CreateTextureFromSurface(gRenderer, loadedSurface );
         if( newTexture == NULL )
         {
-            printf( "Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError() );
+            //printf( "Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError() );
         }
         else
         {
@@ -83,10 +84,28 @@ void LTexture::renderDebug(int x, int y) {
     SDL_SetRenderDrawColor(gRenderer, 255 , 255 , 255, 255);
     SDL_RenderDrawRect(gRenderer, &renderQuad);
 
+//SDL_RenderCopy(gRenderer,SDL_CreateColorCursor(255),NULL,&renderQuad);
 
 
 
-    //SDL_RenderCopy(gRenderer,SDL_CreateColorCursor(255),NULL,&renderQuad);
+
+
+/*
+    gFont = TTF_OpenFont( "fonts/lazy.ttf", 16 );
+    std::string score_text = "score: " + std::to_string(mWidth);
+    SDL_Color textColor = { 255, 255, 255, 0 };
+    SDL_Surface* textSurface = TTF_RenderText_Solid(gFont, score_text.c_str(), textColor);
+    SDL_Texture* text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
+    int text_width = textSurface->w;
+    int text_height = textSurface->h;
+    SDL_FreeSurface(textSurface);
+    SDL_Rect renderQuadd = { 20, 30 - 30, text_width, text_height };
+    SDL_RenderCopy(gRenderer, text, NULL, &renderQuadd);
+    SDL_DestroyTexture(text);
+*/
+
+
+
 }
 
 

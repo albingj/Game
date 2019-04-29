@@ -19,4 +19,4 @@ add_executable(
         cmake-build-debug/SDL/SDLFactory.cpp cmake-build-debug/SDL/SDLFactory.h
         Car.cpp Car.cpp Car.h cmake-build-debug/SDL/LTexture.cpp cmake-build-debug/SDL/LTexture.h cmake-build-debug/SDL/SDLinput.cpp cmake-build-debug/SDL/SDLinput.h Entity.cpp Entity.h cmake-build-debug/SDL/SDLEntity.cpp cmake-build-debug/SDL/SDLEntity.h Background.cpp Background.h cmake-build-debug/SDL/SDLBackground.cpp cmake-build-debug/SDL/SDLBackground.h Player.cpp Player.h cmake-build-debug/SDL/SDLPlayer.cpp cmake-build-debug/SDL/SDLPlayer.h Singleton.cpp Singleton.h cmake-build-debug/SDL/SDLTimer.cpp cmake-build-debug/SDL/SDLTimer.h)
 
-target_link_libraries(Game ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image)
+target_link_libraries(Game ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image  )

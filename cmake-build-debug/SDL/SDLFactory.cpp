@@ -14,7 +14,7 @@
 
 //Using SDL and standard IO
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <string>
 #include <iostream>
 
@@ -58,7 +58,7 @@ void SDLFactory::init(){
     //Initialize SDL
     if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
     {
-        printf( "SDL could not initialize! SDL Error: %s\n", SDL_GetError() );
+        //printf( "SDL could not initialize! SDL Error: %s\n", SDL_GetError() );
 
     }
     else
@@ -67,14 +67,14 @@ void SDLFactory::init(){
         //Set texture filtering to linear
         if( !SDL_SetHint( SDL_HINT_RENDER_SCALE_QUALITY, "1" ) )
         {
-            printf( "Warning: Linear texture filtering not enabled!" );
+            //printf( "Warning: Linear texture filtering not enabled!" );
         }
 
         //Create window
         gWindow = SDL_CreateWindow( "SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 569, 850, SDL_WINDOW_SHOWN );
         if( gWindow == NULL )
         {
-            printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
+            //printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
 
         }
         else
@@ -96,7 +96,7 @@ void SDLFactory::init(){
 
             if( gRenderer == NULL )
             {
-                printf( "Renderer could not be created! SDL Error: %s\n", SDL_GetError() );
+                //printf( "Renderer could not be created! SDL Error: %s\n", SDL_GetError() );
 
             }
             else
@@ -109,7 +109,7 @@ void SDLFactory::init(){
                 int imgFlags = IMG_INIT_PNG;
                 if( !( IMG_Init( imgFlags ) & imgFlags ) )
                 {
-                    printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError() );
+                    //printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError() );
 
                 }
             }
@@ -169,10 +169,10 @@ void SDLFactory::Draw() {
     background->Visualize();
     player->Visualize();
 
-    for(int i =0 ; i < 9; i++){
+    for(int i =0 ; i < 1; i++){
 
         if(cars[i].getCollisionBox().y > Singleton::getInstance()->getScreenBottom()){
-            std::cout << ">>>>>> SDL FREE car" << std::endl;
+            //std::cout << ">>>>>> SDL FREE car" << std::endl;
             cars[i].ResetCar();
         }else if(cars[i].getCollisionBox().y > -1000){
             cars[i].Visualize();
@@ -388,15 +388,32 @@ bool checkCollision(SDL_Rect objectA, SDL_Rect objectB ) {
 
     if (
             //objectB.y < objectA.y && objectB.y > objectA.x+objectA.h
-            objectB.x <= objectA.x //&& objectB.x < objectA.x+objectA.w
+
+
+
+            /*
+            //check of object B zijn lengte langs de Yas objectA overlapt
+                objectB.y < objectA.y+objectA.h && objectB.y > objectA.y  //By tussen Ay+h en Ay  ??
+             && objectB.y +objectB.h < objectA.y+objectA.h && objectB.y +objectB.h > objectA.y  // By+h tussen Ay+h en Ay ??
+*/
+
+
+
+
+        && objectB.x <= objectA.x //&& objectB.x < objectA.x+objectA.w
 
 
             ){
+        printf("true\n");
         return true;
     }
 
-     std::string text = "By: " + std::to_string(objectB.x) + " Ay: " + std::to_string(objectA.x);
-    std::cout << text  << std::endl;
+    //std::string text = "By: " + std::to_string(objectB.x) + " Ay: " + std::to_string(objectA.x);
+    //std::cout << "By: " + std::to_string(objectB.x) + " Ay: " + std::to_string(objectA.x)  << std::endl;
+
+    //printf("By: %d | Ay: %d\n",objectB.x,objectA.x);
+
+
 
 
     return false;
@@ -406,8 +423,12 @@ void SDLFactory::Collision() {
 
    // if (CheckCollision)
 
+    printf("Ay: %d | Ay+h: %d | By: %d\n",cars[0].getCollisionBox().y,cars[0].getCollisionBox().h,player->getCollisionBox().y);
+    //checkCollision(cars[0].getCollisionBox(),player->getCollisionBox());
 
-    for(int i = 0 ; i < 9; i++) {
+
+
+    for(int i = 0 ; i < 1; i++) {
 
         //cars[i].ResetCar();
 
@@ -415,7 +436,7 @@ void SDLFactory::Collision() {
 
 
         if (checkCollision(cars[i].getCollisionBox(),player->getCollisionBox())){
-           // cars[i].ResetCar();
+           cars[i].ResetCar();
         }
 
 
