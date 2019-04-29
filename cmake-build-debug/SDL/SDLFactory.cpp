@@ -354,7 +354,7 @@ void SDLFactory::CreateCars(){
 
 
 
-    for(int i = 0 ; i < 9; i++) {
+    for(int i = 0 ; i < 1; i++) {
 
         //cars[i].SetSpeed(-2);
         cars[i].LoadImage();
@@ -391,28 +391,24 @@ bool checkCollision(SDL_Rect objectA, SDL_Rect objectB ) {
 
 
 
-            /*
+
             //check of object B zijn lengte langs de Yas objectA overlapt
-                objectB.y < objectA.y+objectA.h && objectB.y > objectA.y  //By tussen Ay+h en Ay  ??
-             && objectB.y +objectB.h < objectA.y+objectA.h && objectB.y +objectB.h > objectA.y  // By+h tussen Ay+h en Ay ??
-*/
+            ( objectB.y <= objectA.y+objectA.h && objectB.y >= objectA.y  //By tussen Ay+h en Ay  ??
+             || objectB.y +objectB.h <= objectA.y+objectA.h && objectB.y +objectB.h >= objectA.y) &&  // By+h tussen Ay+h en Ay ??
 
 
 
 
-        && objectB.x <= objectA.x //&& objectB.x < objectA.x+objectA.w
+
+             (objectB.x <= objectA.x+objectA.w && objectB.x >= objectA.x
+             ||(objectB.x+objectB.w) <= objectA.x+objectA.w && objectB.x+objectB.w >= objectA.x)
+
 
 
             ){
         printf("true\n");
         return true;
     }
-
-    //std::string text = "By: " + std::to_string(objectB.x) + " Ay: " + std::to_string(objectA.x);
-    //std::cout << "By: " + std::to_string(objectB.x) + " Ay: " + std::to_string(objectA.x)  << std::endl;
-
-    //printf("By: %d | Ay: %d\n",objectB.x,objectA.x);
-
 
 
 
@@ -423,12 +419,12 @@ void SDLFactory::Collision() {
 
    // if (CheckCollision)
 
-    printf("Ay: %d | Ay+h: %d | By: %d\n",cars[0].getCollisionBox().y,cars[0].getCollisionBox().h,player->getCollisionBox().y);
+    printf("Ax: %d | Ax+h: %d | Bx: %d\n",cars[0].getCollisionBox().x,cars[0].getCollisionBox().x+cars[0].getCollisionBox().w,player->getCollisionBox().x+player->getCollisionBox().w);
     //checkCollision(cars[0].getCollisionBox(),player->getCollisionBox());
 
 
 
-    for(int i = 0 ; i < 1; i++) {
+    for(int i = 0 ; i < 9; i++) {
 
         //cars[i].ResetCar();
 
