@@ -169,7 +169,7 @@ void SDLFactory::Draw() {
     background->Visualize();
     player->Visualize();
 
-    for(int i =0 ; i < 1; i++){
+    for(int i =0 ; i < 4; i++){
 
         if(cars[i].getCollisionBox().y > Singleton::getInstance()->getScreenBottom()){
             //std::cout << ">>>>>> SDL FREE car" << std::endl;
@@ -354,7 +354,7 @@ void SDLFactory::CreateCars(){
 
 
 
-    for(int i = 0 ; i < 1; i++) {
+    for(int i = 0 ; i < 4; i++) {
 
         //cars[i].SetSpeed(-2);
         cars[i].LoadImage();
