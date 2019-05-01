@@ -79,14 +79,14 @@ void SDLFactory::init(){
         }
         else
         {
-            std::cout << ">>>>>> SDL init - Create renderer for window" << std::endl;
-            //Create renderer for window
-            gRenderer = SDL_CreateRenderer( gWindow, -1, SDL_RENDERER_ACCELERATED );
+                std::cout << ">>>>>> SDL init - Create renderer for window" << std::endl;
+                //Create renderer for window
+                gRenderer = SDL_CreateRenderer( gWindow, -1, SDL_RENDERER_ACCELERATED );
 
 
 
-            //Set text color as black
-            SDL_Color textColor = { 0, 0, 0, 255 };
+                //Set text color as black
+                //SDL_Color textColor = { 0, 0, 0, 255 };
 
 
 
@@ -94,25 +94,27 @@ void SDLFactory::init(){
 
 
 
-            if( gRenderer == NULL )
-            {
-                //printf( "Renderer could not be created! SDL Error: %s\n", SDL_GetError() );
 
-            }
-            else
-            {
-                std::cout << ">>>>>> SDL init - Initialize renderer color" << std::endl;
-                //Initialize renderer color
-                SDL_SetRenderDrawColor( gRenderer, 96, 128, 255, 255 );
 
-                //Initialize PNG loading
-                int imgFlags = IMG_INIT_PNG;
-                if( !( IMG_Init( imgFlags ) & imgFlags ) )
+                if( gRenderer == NULL )
                 {
-                    //printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError() );
+                    //printf( "Renderer could not be created! SDL Error: %s\n", SDL_GetError() );
 
                 }
-            }
+                else
+                {
+                    std::cout << ">>>>>> SDL init - Initialize renderer color" << std::endl;
+                    //Initialize renderer color
+                    SDL_SetRenderDrawColor( gRenderer, 96, 128, 255, 255 );
+
+                    //Initialize PNG loading
+                    int imgFlags = IMG_INIT_PNG;
+                    if( !( IMG_Init( imgFlags ) & imgFlags ) )
+                    {
+                        //printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError() );
+
+                    }
+                }
         }
     }
     std::cout << ">>>>>> SDL init - done <<<<<<" << std::endl;
@@ -167,7 +169,7 @@ void SDLFactory::Draw() {
     //Render background texture to screen
 
     background->Visualize();
-    player->Visualize();
+
 
     for(int i =0 ; i < 4; i++){
 
@@ -184,7 +186,7 @@ void SDLFactory::Draw() {
     }
 
 
-
+    player->Visualize();
 
 
 

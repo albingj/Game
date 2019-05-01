@@ -27,7 +27,7 @@ public:
     void setPosX(int x);
     void setPosY(int y);
     void SetSpeed(int velocity);
-
+    void VisualizeSpeed();
 
 
 };

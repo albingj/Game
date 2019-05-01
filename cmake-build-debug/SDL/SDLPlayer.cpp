@@ -85,7 +85,7 @@ void SDLPlayer::removeSpeed(bool key){
 
 void SDLPlayer::goLeft(bool key) {
     if(key){
-        if (mPosX>=-50) {
+        if (mPosX>30) {
             if ((int)((double)mVelX * (((double)speed/100))<20)){
                 this->mPosX -= 10;
                 box.x  -=10;
@@ -102,14 +102,16 @@ void SDLPlayer::goLeft(bool key) {
 
 void SDLPlayer::goRight(bool key) {
     if(key) {
-        if ((int)((double)mVelX * (((double)speed/100))<20)){
-            this->mPosX += 10;
-            box.x  +=10;
-            setCollisionBox(box);
-        }else{
-            this->mPosX += (int)((double)mVelX * (((double)speed/100)));
-            box.x  += (int)((double)mVelX * (((double)speed/100)));
-            setCollisionBox(box);
+        if (mPosX+box.w<550) {
+            if ((int) ((double) mVelX * (((double) speed / 100)) < 20)) {
+                this->mPosX += 10;
+                box.x += 10;
+                setCollisionBox(box);
+            } else {
+                this->mPosX += (int) ((double) mVelX * (((double) speed / 100)));
+                box.x += (int) ((double) mVelX * (((double) speed / 100)));
+                setCollisionBox(box);
+            }
         }
     }
 }

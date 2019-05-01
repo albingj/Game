@@ -47,6 +47,13 @@ void SDLBackground::Visualize()
 
 
 }
+void SDLBackground::VisualizeSpeed(){
+    texture->render( 0, scrollingOffset);
+
+}
+
+
+
 
 void SDLBackground::Free(){
     texture->free();
