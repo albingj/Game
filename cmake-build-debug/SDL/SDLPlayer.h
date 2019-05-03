@@ -13,13 +13,6 @@
 class SDLPlayer :  public Player  {
     LTexture* texture;
 
-    //The velocity of the car
-    int mVelX, mVelY;
-    int speed;
-
-
-   // SDL_Rect collisionBox;
-
 public:
     SDLPlayer();
 
@@ -30,34 +23,6 @@ public:
     void LoadImage();
     void Visualize();
 
-    void setPosX(int x);
-    void setPosY(int y);
-
-
-
-    //car
-    void SetSpeed(int velocity);
-
-
-
-    //player
-    int GetSpeed();
-    void SetReaction(int reaction);
-
-    void addSpeed(bool);
-    void removeSpeed(bool);
-    void goLeft(bool);
-    void goRight(bool);
-    int getX();
-    int getY();
-
-
-
-    SDL_Rect getCollisionBox();
-
-    void setCollisionBox(const SDL_Rect &collisionBox);
-
-    void ResetCar();
 
 };
 

@@ -10,14 +10,22 @@
 #include "Car.h"
 
 class Player : public Car{
+    int speed=0;
+
+
 public:
-    virtual ~Player();
-    virtual int GetSpeed()=0;
-    virtual void SetReaction(int reaction)=0;
-    virtual void addSpeed(bool) =0;
-    virtual void removeSpeed(bool)=0;
-    virtual void goLeft(bool)=0;
-    virtual void goRight(bool)=0;
+    ~Player();
+
+    void SetReaction(int reaction);
+    void addSpeed(bool);
+    void removeSpeed(bool);
+    void goLeft(bool);
+    void goRight(bool);
+
+
+
+
+
 
 
 };

@@ -130,7 +130,7 @@ void SDLFactory::LoadBackground(){
 }
 
 void SDLFactory::CreatePlayer(){
-   // player->LoadImage();
+   player->LoadImage();
 
     std::cout << ">>>>>> loadImageFromFile car - done <<<<<<" << std::endl;
 }
@@ -381,7 +381,23 @@ void SDLFactory::CreateCars(){
 
 
 
-bool checkCollision(SDL_Rect objectA, SDL_Rect objectB ) {
+bool checkCollision(int * collisionBoxA, int * collisionBoxB ) {
+
+
+
+    SDL_Rect objectA,objectB;
+
+    objectA.x = (int)collisionBoxA[0];
+    objectA.y = (int)collisionBoxA[1];
+    objectA.h = (int) collisionBoxA[2];
+    objectA.w = (int)collisionBoxA[3];
+
+    objectB.x = (int) collisionBoxB[0];
+    objectB.y = (int) collisionBoxB[1];
+    objectB.h = (int) collisionBoxB[2];
+    objectB.w = (int) collisionBoxB[3];
+
+
 
     /*
 
@@ -400,15 +416,12 @@ bool checkCollision(SDL_Rect objectA, SDL_Rect objectB ) {
     if (
             //objectB.y < objectA.y && objectB.y > objectA.x+objectA.h
 
-
-
-
             //check of object B zijn lengte langs de Yas objectA overlapt
             ( objectB.y <= objectA.y+objectA.h && objectB.y >= objectA.y  //By tussen Ay+h en Ay  ??
-             || objectB.y +objectB.h <= objectA.y+objectA.h && objectB.y +objectB.h >= objectA.y) &&  // By+h tussen Ay+h en Ay ??
+             || objectB.y +objectB.h <= objectA.y+objectA.h && objectB.y +objectB.h >= objectA.y)
 
 
-
+             &&  // By+h tussen Ay+h en Ay ??
 
 
              (objectB.x <= objectA.x+objectA.w && objectB.x >= objectA.x
@@ -427,19 +440,10 @@ bool checkCollision(SDL_Rect objectA, SDL_Rect objectB ) {
 }
 
 void SDLFactory::Collision() {
-/*
-   // if (CheckCollision)
-
-    printf("Ax: %d | Ax+h: %d | Bx: %d\n",cars[0].getCollisionBox().x,cars[0].getCollisionBox().x+cars[0].getCollisionBox().w,player->getCollisionBox().x+player->getCollisionBox().w);
-    //checkCollision(cars[0].getCollisionBox(),player->getCollisionBox());
 
 
 
     for(int i = 0 ; i < 9; i++) {
-
-        //cars[i].ResetCar();
-
-
 
 
         if (checkCollision(cars[i].getCollisionBox(),player->getCollisionBox())){
@@ -450,7 +454,7 @@ void SDLFactory::Collision() {
     }
 
 
-*/
+
 
 }
 

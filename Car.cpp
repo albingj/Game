@@ -97,7 +97,7 @@ void Car::ResetCar(){
 }
 
 
-
+//to do Fix get collision
 int * Car::getCollisionBox(){
     int collisionBox[4] = {getMPosX(),getMPosY(),getHeight(),getWidth()};
 
@@ -118,12 +118,25 @@ int Car::getWidth(){
 int Car::getHeight(){
     return Height;
 }
-
+void Car::setVelY(int speed){
+    mVelY = speed;
+}
+int Car::getVelY(){
+    return mVelY;
+}
+void Car::setVelX(int x){
+    mVelX = x;
+}
+int Car::getVelX(){
+    return mVelX;
+}
 
 
 void Car::update() {
 
-    setMPosY(getMPosY() + Singleton::getInstance()->getPlayerSpeed() );
+    setMPosY(getMPosY()+ getMVelY() + Singleton::getInstance()->getPlayerSpeed() );
 
 
 }
+
+

@@ -37,8 +37,8 @@ void SDLcar::LoadImage() {
 void SDLcar::Visualize()
 {
 
-    texture->render( getMPosX() , getMVelY());
-    texture->renderDebug(getMPosX() , getMVelY());
+    texture->render( getMPosX() , getMPosY());
+    texture->renderDebug(getMPosX() , getMPosY());
 
 }
 

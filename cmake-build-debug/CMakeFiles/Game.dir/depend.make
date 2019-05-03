@@ -29,6 +29,7 @@ CMakeFiles/Game.dir/Player.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/Player.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/Player.cpp.obj: ../Player.cpp
 CMakeFiles/Game.dir/Player.cpp.obj: ../Player.h
+CMakeFiles/Game.dir/Player.cpp.obj: ../Singleton.h
 
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: ../Car.h

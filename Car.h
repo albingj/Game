@@ -66,6 +66,11 @@ public:
     int getWidth();
     int getHeight();
 
+    void setVelY(int speed);
+    int getVelY();
+    void setVelX(int speed);
+    int getVelX();
+
     void setCollisionBox( int collisionbox[4]);
 
 
