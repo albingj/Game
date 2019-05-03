@@ -25,8 +25,9 @@ SDLBackground* background = new SDLBackground();
 //Create 10 enemies
 //SDLcar* car = new SDLcar();
 SDLcar* cars = new SDLcar[9];
+//Car** cars = new Car[9];
 
-SDLPlayer* player = new SDLPlayer();
+Player* player = new SDLPlayer();
 
 SDL_Renderer* gRenderer = NULL;
 
@@ -47,7 +48,6 @@ SDLFactory::SDLFactory() {
 }
 
 void SDLFactory::CreateWindow() {
-    std::cout << ">>>>>> SDL CreateWindow() <<<<<<" << std::endl;
     init();
 }
 
@@ -130,7 +130,8 @@ void SDLFactory::LoadBackground(){
 }
 
 void SDLFactory::CreatePlayer(){
-    player->LoadImage();
+   // player->LoadImage();
+
     std::cout << ">>>>>> loadImageFromFile car - done <<<<<<" << std::endl;
 }
 
@@ -173,10 +174,10 @@ void SDLFactory::Draw() {
 
     for(int i =0 ; i < 4; i++){
 
-        if(cars[i].getCollisionBox().y > Singleton::getInstance()->getScreenBottom()){
+        if(cars[i].getMPosY() > Singleton::getInstance()->getScreenBottom()){
             //std::cout << ">>>>>> SDL FREE car" << std::endl;
             cars[i].ResetCar();
-        }else if(cars[i].getCollisionBox().y > -1000){
+        }else if(cars[i].getMPosY() > -1000){
             cars[i].Visualize();
         }else{
 
@@ -195,6 +196,13 @@ void SDLFactory::Draw() {
 
 void SDLFactory::Update(){
     //Update screen, alles op scherm tekenen.
+
+
+    for(int i =0 ; i < 4; i++){
+        cars[i].update();
+    }
+
+
     SDL_RenderPresent(gRenderer);
 }
 
@@ -358,6 +366,7 @@ void SDLFactory::CreateCars(){
 
     for(int i = 0 ; i < 4; i++) {
 
+
         //cars[i].SetSpeed(-2);
         cars[i].LoadImage();
 
@@ -418,7 +427,7 @@ bool checkCollision(SDL_Rect objectA, SDL_Rect objectB ) {
 }
 
 void SDLFactory::Collision() {
-
+/*
    // if (CheckCollision)
 
     printf("Ax: %d | Ax+h: %d | Bx: %d\n",cars[0].getCollisionBox().x,cars[0].getCollisionBox().x+cars[0].getCollisionBox().w,player->getCollisionBox().x+player->getCollisionBox().w);
@@ -441,7 +450,7 @@ void SDLFactory::Collision() {
     }
 
 
-
+*/
 
 }
 

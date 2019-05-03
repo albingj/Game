@@ -173,22 +173,9 @@ CMakeFiles/Game.dir/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/Entity.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bini\CLionProjects\Game\Entity.cpp -o CMakeFiles\Game.dir\Entity.cpp.s
 
-CMakeFiles/Game.dir/SDL/SDLEntity.cpp.obj: CMakeFiles/Game.dir/flags.make
-CMakeFiles/Game.dir/SDL/SDLEntity.cpp.obj: SDL/SDLEntity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Game.dir/SDL/SDLEntity.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\SDL\SDLEntity.cpp.obj -c C:\Users\bini\CLionProjects\Game\cmake-build-debug\SDL\SDLEntity.cpp
-
-CMakeFiles/Game.dir/SDL/SDLEntity.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/SDL/SDLEntity.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\bini\CLionProjects\Game\cmake-build-debug\SDL\SDLEntity.cpp > CMakeFiles\Game.dir\SDL\SDLEntity.cpp.i
-
-CMakeFiles/Game.dir/SDL/SDLEntity.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/SDL/SDLEntity.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\bini\CLionProjects\Game\cmake-build-debug\SDL\SDLEntity.cpp -o CMakeFiles\Game.dir\SDL\SDLEntity.cpp.s
-
 CMakeFiles/Game.dir/Background.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Background.cpp.obj: ../Background.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Game.dir/Background.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Game.dir/Background.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Background.cpp.obj -c C:\Users\bini\CLionProjects\Game\Background.cpp
 
 CMakeFiles/Game.dir/Background.cpp.i: cmake_force
@@ -201,7 +188,7 @@ CMakeFiles/Game.dir/Background.cpp.s: cmake_force
 
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj: SDL/SDLBackground.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\SDL\SDLBackground.cpp.obj -c C:\Users\bini\CLionProjects\Game\cmake-build-debug\SDL\SDLBackground.cpp
 
 CMakeFiles/Game.dir/SDL/SDLBackground.cpp.i: cmake_force
@@ -214,7 +201,7 @@ CMakeFiles/Game.dir/SDL/SDLBackground.cpp.s: cmake_force
 
 CMakeFiles/Game.dir/Player.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Player.cpp.obj: ../Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Game.dir/Player.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Game.dir/Player.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Player.cpp.obj -c C:\Users\bini\CLionProjects\Game\Player.cpp
 
 CMakeFiles/Game.dir/Player.cpp.i: cmake_force
@@ -227,7 +214,7 @@ CMakeFiles/Game.dir/Player.cpp.s: cmake_force
 
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\SDL\SDLPlayer.cpp.obj -c C:\Users\bini\CLionProjects\Game\cmake-build-debug\SDL\SDLPlayer.cpp
 
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.i: cmake_force
@@ -240,7 +227,7 @@ CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.s: cmake_force
 
 CMakeFiles/Game.dir/Singleton.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Singleton.cpp.obj: ../Singleton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Game.dir/Singleton.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Game.dir/Singleton.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\Singleton.cpp.obj -c C:\Users\bini\CLionProjects\Game\Singleton.cpp
 
 CMakeFiles/Game.dir/Singleton.cpp.i: cmake_force
@@ -253,7 +240,7 @@ CMakeFiles/Game.dir/Singleton.cpp.s: cmake_force
 
 CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj: SDL/SDLTimer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Game.dir\SDL\SDLTimer.cpp.obj -c C:\Users\bini\CLionProjects\Game\cmake-build-debug\SDL\SDLTimer.cpp
 
 CMakeFiles/Game.dir/SDL/SDLTimer.cpp.i: cmake_force
@@ -275,7 +262,6 @@ Game_OBJECTS = \
 "CMakeFiles/Game.dir/SDL/LTexture.cpp.obj" \
 "CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj" \
 "CMakeFiles/Game.dir/Entity.cpp.obj" \
-"CMakeFiles/Game.dir/SDL/SDLEntity.cpp.obj" \
 "CMakeFiles/Game.dir/Background.cpp.obj" \
 "CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj" \
 "CMakeFiles/Game.dir/Player.cpp.obj" \
@@ -295,7 +281,6 @@ Game.exe: CMakeFiles/Game.dir/Car.cpp.obj
 Game.exe: CMakeFiles/Game.dir/SDL/LTexture.cpp.obj
 Game.exe: CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj
 Game.exe: CMakeFiles/Game.dir/Entity.cpp.obj
-Game.exe: CMakeFiles/Game.dir/SDL/SDLEntity.cpp.obj
 Game.exe: CMakeFiles/Game.dir/Background.cpp.obj
 Game.exe: CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj
 Game.exe: CMakeFiles/Game.dir/Player.cpp.obj
@@ -306,7 +291,7 @@ Game.exe: CMakeFiles/Game.dir/build.make
 Game.exe: CMakeFiles/Game.dir/linklibs.rsp
 Game.exe: CMakeFiles/Game.dir/objects1.rsp
 Game.exe: CMakeFiles/Game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable Game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\bini\CLionProjects\Game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable Game.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Game.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

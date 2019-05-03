@@ -7,8 +7,9 @@
 
 
 #include "Entity.h"
+#include "Car.h"
 
-class Player{
+class Player : public Car{
 public:
     virtual ~Player();
     virtual int GetSpeed()=0;

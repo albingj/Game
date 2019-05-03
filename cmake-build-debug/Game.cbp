@@ -134,12 +134,6 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLEntity.cpp">
-			<Option target="Game"/>
-		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLEntity.h">
-			<Option target="Game"/>
-		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.cpp">
 			<Option target="Game"/>
 		</Unit>

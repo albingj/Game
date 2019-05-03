@@ -24,17 +24,12 @@ void Game::start(){
     pFactory->CreateWindow();  //initialisatie van SDL
 
 
-    //Create game objects
-    //Car* car = pFactory->CreateCar();
-
 
     std::cout << ">>>>>> Create Background <<<<<<" << std::endl;
     pFactory->LoadBackground();
     pFactory->CreatePlayer();
-
-    //Create other cars / enemies
     pFactory->CreateCars();
-    //car->vis();
+
 
 
 

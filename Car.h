@@ -9,20 +9,72 @@
 #define GAME_CAR_H
 
 
-class Car {
+#include <SDL2/SDL_rect.h>
+#include "Entity.h"
 
+class Car :public Entity{
+
+
+
+    int mVelX, mVelY;
+
+    int Height, Width;
+
+    //car.h
     int road;
+
+/*
+ * 0 = x
+ * 1 = y
+ * 2 = h
+ * 3 = w
+ */
+
 
 public:
 
-    virtual int GetSpeed()=0;
-    virtual void SetReaction(int reaction)=0;
-    virtual void GoLeft()=0;
-    virtual void GoRight()=0;
 
-    virtual void ResetCar()=0;
+public:
+    Car();
+    int GetSpeed();
+    void SetReaction(int reaction);
+    void GoLeft();
+    void GoRight();
+
+    void SetSpeed(int velocity);
+
+    int getMVelX() const;
+
+    void setMVelX(int mVelX);
+
+    int getMVelY() const;
+
+    void setMVelY(int mVelY);
+
+    int getRoad() const;
+
+    void setRoad(int road);
 
 
+
+
+    void ResetCar();
+
+    int * getCollisionBox();
+    void setWidth(int width);
+    void setHeight(int height);
+    int getWidth();
+    int getHeight();
+
+    void setCollisionBox( int collisionbox[4]);
+
+
+    void update();
+
+
+    //For Renderer / SDL
+    virtual void Visualize()=0;
+    virtual void LoadImage()=0;
 
 
 };

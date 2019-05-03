@@ -10,12 +10,8 @@
 #include "LTexture.h"
 #include "SDLcar.h"
 
-class SDLPlayer : public SDLcar ,public Player {
+class SDLPlayer :  public Player  {
     LTexture* texture;
-
-    //The X and Y offsets of the car
-    int mPosX, mPosY;
-    SDL_Rect box;
 
     //The velocity of the car
     int mVelX, mVelY;
@@ -44,7 +40,6 @@ public:
 
 
 
-
     //player
     int GetSpeed();
     void SetReaction(int reaction);
@@ -58,11 +53,11 @@ public:
 
 
 
+    SDL_Rect getCollisionBox();
 
+    void setCollisionBox(const SDL_Rect &collisionBox);
 
-
-
-
+    void ResetCar();
 
 };
 

@@ -11,8 +11,8 @@ SDLPlayer::SDLPlayer() {
     texture = new LTexture();
 
     //Initialize the offsets
-    mPosX = 180;
-    mPosY = 560;
+    setMPosX(180);
+    setMPosY(560);
 
     //Initialize the velocity
     mVelX = 10;  //dit is reaction, hoe snel de auto reageert links en rechts
@@ -20,14 +20,14 @@ SDLPlayer::SDLPlayer() {
     speed = 0;
 
 
-    box.x = mPosX;
-    box.y = mPosY;
-    box.w = texture->getWidth();
-    box.h = texture->getHeight();
+
+    setWidth(texture->getWidth());
+    setHeight(texture->getHeight());
 
 
 
-    setCollisionBox(box);
+
+   // this->setCollisionBox(box);
 
 
 }
@@ -49,10 +49,8 @@ void SDLPlayer::addSpeed(bool key){
         }
 
         if(this->speed > 20 && this->speed < 60) {
-            this->mPosY -=1;
+            setMPosY(getMPosY()-1);
 
-            box.y  -=1;
-            setCollisionBox(box);
         }
 
 
@@ -68,10 +66,9 @@ void SDLPlayer::removeSpeed(bool key){
 
         }
 
-        if(mPosY<559){
-            this->mPosY +=1;
-            box.y  +=1;
-            setCollisionBox(box);
+        if(getMPosY()<559){
+
+            setMPosY(getMPosY() + 1);
         }
 
 
@@ -85,15 +82,14 @@ void SDLPlayer::removeSpeed(bool key){
 
 void SDLPlayer::goLeft(bool key) {
     if(key){
-        if (mPosX>30) {
+        if (getMPosX()>30) {
             if ((int)((double)mVelX * (((double)speed/100))<20)){
-                this->mPosX -= 10;
-                box.x  -=10;
-                setCollisionBox(box);
+
+                setMPosX(getMPosX()-10);
             }else{
-                this->mPosX -= (int)((double)mVelX * (((double)speed/100)));
-                box.x  -= (int)((double)mVelX * (((double)speed/100)));
-                setCollisionBox(box);
+
+                setMPosX(getMPosX()-(int)((double)mVelX * (((double)speed/100))));
+
             }
 
         }
@@ -102,15 +98,15 @@ void SDLPlayer::goLeft(bool key) {
 
 void SDLPlayer::goRight(bool key) {
     if(key) {
-        if (mPosX+box.w<550) {
+        if (getMPosX()+getWidth()<550) {
             if ((int) ((double) mVelX * (((double) speed / 100)) < 20)) {
-                this->mPosX += 10;
-                box.x += 10;
-                setCollisionBox(box);
+
+                setMPosX(getMPosX()+10);
+
             } else {
-                this->mPosX += (int) ((double) mVelX * (((double) speed / 100)));
-                box.x += (int) ((double) mVelX * (((double) speed / 100)));
-                setCollisionBox(box);
+
+                setMPosX(getMPosX() + (int) ((double) mVelX * (((double) speed / 100))));
+
             }
         }
     }
@@ -120,20 +116,6 @@ void SDLPlayer::SetReaction(int reaction){
 
 }
 
-void SDLPlayer::setPosX(int x){
-
-}
-
-void SDLPlayer::setPosY(int y){
-
-}
-
-int SDLPlayer::getX() {return this->mPosX;}
-int SDLPlayer::getY() {return this->mPosY;}
-
-
-
-
 
 
 void SDLPlayer::LoadImage() {
@@ -142,12 +124,13 @@ void SDLPlayer::LoadImage() {
 
 void SDLPlayer::Visualize()
 {
-    texture->render( mPosX, mPosY);
-    texture->renderDebug(mPosX,mPosY);
+    texture->render( getMPosX(), getMPosY());
+    texture->renderDebug(getMPosX(), getMPosY());
 
-    box.w = texture->getWidth();
-    box.h = texture->getHeight();
-    setCollisionBox(box);
+    setWidth(texture->getWidth());
+    setHeight(texture->getHeight());
+
+
 
 
 
@@ -156,3 +139,5 @@ void SDLPlayer::Visualize()
 void SDLPlayer::Free(){
     texture->free();
 }
+
+

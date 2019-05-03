@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/SDL/LTexture.cpp.obj"
   "CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj"
   "CMakeFiles/Game.dir/Entity.cpp.obj"
-  "CMakeFiles/Game.dir/SDL/SDLEntity.cpp.obj"
   "CMakeFiles/Game.dir/Background.cpp.obj"
   "CMakeFiles/Game.dir/SDL/SDLBackground.cpp.obj"
   "CMakeFiles/Game.dir/Player.cpp.obj"

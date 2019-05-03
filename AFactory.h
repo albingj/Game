@@ -28,8 +28,6 @@ public:
     virtual void Update()=0;
     virtual void Draw()=0;
     virtual bool Input()=0;
-
-
 };
 
 #endif //GAME_AFACTORY_H

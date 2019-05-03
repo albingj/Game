@@ -338,33 +338,6 @@ SDL/SDLBackground.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLBackground.cpp.s
 .PHONY : SDL/SDLBackground.cpp.s
 
-SDL/SDLEntity.obj: SDL/SDLEntity.cpp.obj
-
-.PHONY : SDL/SDLEntity.obj
-
-# target to build an object file
-SDL/SDLEntity.cpp.obj:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLEntity.cpp.obj
-.PHONY : SDL/SDLEntity.cpp.obj
-
-SDL/SDLEntity.i: SDL/SDLEntity.cpp.i
-
-.PHONY : SDL/SDLEntity.i
-
-# target to preprocess a source file
-SDL/SDLEntity.cpp.i:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLEntity.cpp.i
-.PHONY : SDL/SDLEntity.cpp.i
-
-SDL/SDLEntity.s: SDL/SDLEntity.cpp.s
-
-.PHONY : SDL/SDLEntity.s
-
-# target to generate assembly for a file
-SDL/SDLEntity.cpp.s:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLEntity.cpp.s
-.PHONY : SDL/SDLEntity.cpp.s
-
 SDL/SDLFactory.obj: SDL/SDLFactory.cpp.obj
 
 .PHONY : SDL/SDLFactory.obj
@@ -587,9 +560,6 @@ help:
 	@echo ... SDL/SDLBackground.obj
 	@echo ... SDL/SDLBackground.i
 	@echo ... SDL/SDLBackground.s
-	@echo ... SDL/SDLEntity.obj
-	@echo ... SDL/SDLEntity.i
-	@echo ... SDL/SDLEntity.s
 	@echo ... SDL/SDLFactory.obj
 	@echo ... SDL/SDLFactory.i
 	@echo ... SDL/SDLFactory.s

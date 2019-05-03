@@ -12,13 +12,35 @@ SDL2/SDL_render.h
 Car.h
 C:/Users/bini/CLionProjects/Game/Car.h
 
+C:/Users/bini/CLionProjects/Game/Background.h
+
+C:/Users/bini/CLionProjects/Game/Car.cpp
+Car.h
 C:/Users/bini/CLionProjects/Game/Car.h
+iostream
+-
+Singleton.h
+C:/Users/bini/CLionProjects/Game/Singleton.h
+
+C:/Users/bini/CLionProjects/Game/Car.h
+SDL2/SDL_rect.h
+-
+Entity.h
+C:/Users/bini/CLionProjects/Game/Entity.h
 
 C:/Users/bini/CLionProjects/Game/Entity.h
+
+C:/Users/bini/CLionProjects/Game/Game.h
+AFactory.h
+C:/Users/bini/CLionProjects/Game/AFactory.h
+cmake-build-debug/SDL/SDLinput.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h
 
 C:/Users/bini/CLionProjects/Game/Player.h
 Entity.h
 C:/Users/bini/CLionProjects/Game/Entity.h
+Car.h
+C:/Users/bini/CLionProjects/Game/Car.h
 
 C:/Users/bini/CLionProjects/Game/Singleton.h
 
@@ -32,17 +54,47 @@ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDL2/SDL_ttf.h
 string
 -
 
-C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLEntity.h
-SDL2/SDL_rect.h
--
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.h
+../../Background.h
+C:/Users/bini/CLionProjects/Game/Background.h
 ../../Entity.h
 C:/Users/bini/CLionProjects/Game/Entity.h
+LTexture.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
 
-C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.cpp
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.cpp
+string
+-
+sstream
+-
+SDLFactory.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.h
+SDLcar.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h
+../../Game.h
+C:/Users/bini/CLionProjects/Game/Game.h
+SDLBackground.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.h
 SDLPlayer.h
 C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
 ../../Singleton.h
 C:/Users/bini/CLionProjects/Game/Singleton.h
+../SDL/SDLTimer.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.h
+string
+-
+iostream
+-
+
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.h
+string
+-
+SDL2/SDL_render.h
+-
+../../AFactory.h
+C:/Users/bini/CLionProjects/Game/AFactory.h
+LTexture.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
 
 C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
 ../../Entity.h
@@ -54,6 +106,10 @@ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
 SDLcar.h
 C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h
 
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.h
+SDL2/SDL_stdinc.h
+-
+
 C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h
 SDL2/SDL_render.h
 -
@@ -63,6 +119,6 @@ C:/Users/bini/CLionProjects/Game/Car.h
 C:/Users/bini/CLionProjects/Game/AFactory.h
 LTexture.h
 C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
-SDLEntity.h
-C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLEntity.h
+
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h
 
