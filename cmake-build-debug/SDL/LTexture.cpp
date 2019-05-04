@@ -90,31 +90,30 @@ void LTexture::renderDebug(int x, int y) {
 
 
 
-/*
-    gFont = TTF_OpenFont( "fonts/lazy.ttf", 16 );
-    std::string score_text = "score: " + std::to_string(mWidth);
-    SDL_Color textColor = { 255, 255, 255, 0 };
-    SDL_Surface* textSurface = TTF_RenderText_Solid(gFont, score_text.c_str(), textColor);
-    SDL_Texture* text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
-    int text_width = textSurface->w;
-    int text_height = textSurface->h;
-    SDL_FreeSurface(textSurface);
-    SDL_Rect renderQuadd = { 20, 30 - 30, text_width, text_height };
-    SDL_RenderCopy(gRenderer, text, NULL, &renderQuadd);
-    SDL_DestroyTexture(text);
-*/
-
-
 
 }
+void LTexture::renderHealth(int x, int y, int health) {
+    //Set rendering space and render to screen
+    SDL_Rect renderQuad = {x, y, 100, 10};
+    SDL_SetRenderDrawColor(gRenderer, 255 , 255 , 255, 255);
+    SDL_RenderDrawRect(gRenderer, &renderQuad);
+
+    renderQuad = {x+1, y+1, health-2, 10-2};
+
+    SDL_SetRenderDrawColor(gRenderer, 255 , 0 , 0, 0);
+    SDL_RenderFillRect(gRenderer, &renderQuad);
+    SDL_RenderDrawRect(gRenderer, &renderQuad);
+
+}
+
 
 
 int LTexture::getWidth(){
-    return mWidth;
+    return this->mWidth;
 }
 
 int LTexture::getHeight(){
-    return mHeight;
+    return this->mHeight;
 }
 
 

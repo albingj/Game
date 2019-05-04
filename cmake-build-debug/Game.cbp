@@ -116,6 +116,12 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Player.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Rocket.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/Rocket.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Singleton.cpp">
 			<Option target="Game"/>
 		</Unit>
@@ -144,6 +150,12 @@
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.cpp">

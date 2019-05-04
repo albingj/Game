@@ -10,6 +10,7 @@
 #include "SDLPlayer.h"
 #include "../../Singleton.h"
 #include "../SDL/SDLTimer.h"
+#include "SDLRocket.h"
 
 
 //Using SDL and standard IO
@@ -25,9 +26,12 @@ SDLBackground* background = new SDLBackground();
 //Create 10 enemies
 //SDLcar* car = new SDLcar();
 SDLcar* cars = new SDLcar[9];
+SDLRocket* pRocket = new SDLRocket[10];
+SDLRocket* cRocket = new SDLRocket[4];
+
 //Car** cars = new Car[9];
 
-Player* player = new SDLPlayer();
+SDLPlayer* player = new SDLPlayer();
 
 SDL_Renderer* gRenderer = NULL;
 
@@ -132,6 +136,7 @@ void SDLFactory::LoadBackground(){
 void SDLFactory::CreatePlayer(){
    player->LoadImage();
 
+
     std::cout << ">>>>>> loadImageFromFile car - done <<<<<<" << std::endl;
 }
 
@@ -203,6 +208,11 @@ void SDLFactory::Update(){
     }
 
 
+
+
+
+
+
     SDL_RenderPresent(gRenderer);
 }
 
@@ -265,7 +275,7 @@ bool SDLFactory::Input()
                         playerRight= true;
                         break;
                     case SDLK_SPACE:
-
+                        player->shoot(true);
                         break;
                     default:
                         break;
@@ -292,7 +302,7 @@ bool SDLFactory::Input()
                         playerRight= false;
                         break;
                     case SDLK_SPACE:
-
+                        player->shoot(false);
 
 
                         break;
@@ -385,17 +395,18 @@ bool checkCollision(int * collisionBoxA, int * collisionBoxB ) {
 
 
 
-    SDL_Rect objectA,objectB;
+    SDL_Rect objectA;
+    SDL_Rect objectB;
 
-    objectA.x = (int)collisionBoxA[0];
-    objectA.y = (int)collisionBoxA[1];
-    objectA.h = (int) collisionBoxA[2];
-    objectA.w = (int)collisionBoxA[3];
+    objectA.x = collisionBoxA[0];
+    objectA.y = collisionBoxA[1];
+    objectA.h = collisionBoxA[2];
+    objectA.w = collisionBoxA[3];
 
-    objectB.x = (int) collisionBoxB[0];
-    objectB.y = (int) collisionBoxB[1];
-    objectB.h = (int) collisionBoxB[2];
-    objectB.w = (int) collisionBoxB[3];
+    objectB.x = collisionBoxB[0];
+    objectB.y = collisionBoxB[1];
+    objectB.h = collisionBoxB[2];
+    objectB.w = collisionBoxB[3];
 
 
 
@@ -435,7 +446,7 @@ bool checkCollision(int * collisionBoxA, int * collisionBoxB ) {
     }
 
 
-
+    printf("false\n");
     return false;
 }
 

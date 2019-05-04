@@ -11,17 +11,32 @@
 
 #include <SDL2/SDL_rect.h>
 #include "Entity.h"
+#include "Rocket.h"
 
 class Car :public Entity{
 
+int health;
+public:
+    int getHealth() const;
 
+    void setHealth(int health);
 
+private:
+
+    int rockets;
+public:
+    int getRockets() const;
+
+    void setRockets(int rockets);
+
+private:
     int mVelX, mVelY;
 
     int Height, Width;
 
     //car.h
-    int road;
+    int road=0;
+    int oldRoad;
 
 /*
  * 0 = x

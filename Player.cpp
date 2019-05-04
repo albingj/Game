@@ -5,7 +5,10 @@
 #include "Player.h"
 #include "Singleton.h"
 
-Player::~Player() {}
+Player::~Player() {
+    setHealth(10);
+
+}
 
 
 
@@ -70,5 +73,11 @@ void Player::goRight(bool key) {
 void Player::SetReaction(int reaction){
 
     setMVelX(reaction);
+
+}
+
+void Player::shoot(bool b){
+
+
 
 }

@@ -9,7 +9,7 @@
 SDLPlayer::SDLPlayer() {
 
     texture = new LTexture();
-
+    setHealth(10);
     //Initialize the offsets
     setMPosX(180);
     setMPosY(560);
@@ -33,6 +33,8 @@ SDLPlayer::SDLPlayer() {
 
 void SDLPlayer::LoadImage() {
     texture->loadFromFile("image/cars/Audi.png");
+    setWidth(texture->getWidth());
+    setHeight(texture->getHeight());
 }
 
 void SDLPlayer::Visualize()
@@ -42,7 +44,7 @@ void SDLPlayer::Visualize()
 
     setWidth(texture->getWidth());
     setHeight(texture->getHeight());
-
+    texture->renderHealth(getMPosX(),getMPosY()+getHeight(), getWidth()/10*getHealth());
 
 
 

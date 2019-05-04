@@ -4,6 +4,13 @@ private:
 
     int PlayerSpeed;
     int ScreenBottom;
+    int Rocket;
+public:
+    int getRocket() const;
+
+    void setRocket(int rocket);
+
+private:
 
     /* Here will be the instance stored. */
     static Singleton* instance;

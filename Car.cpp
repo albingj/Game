@@ -10,8 +10,8 @@
 Car::Car() {
 //Initialize the velocity
     mVelX = 1;  //dit is reaction, hoe snel de auto reageert
-
-
+    rockets=0;
+health = 2;
 
 }
 
@@ -68,6 +68,9 @@ void Car::ResetCar(){
     LoadImage();
 
     this->setRoad(rand() % 4);
+    while (road == oldRoad){
+        this->setRoad(rand() % 4);
+    }
 
 
     switch(this->getRoad()){
@@ -90,16 +93,20 @@ void Car::ResetCar(){
 
     }
 
-    setMPosY( getMPosY() -((rand() % 500)+200));
+    oldRoad = road;
+    setMPosY(((rand() % 500)) - 600);
 
-    setMVelY((rand() % 5)) ;
+    //setMVelY((rand() % 5)) ;
+    setMVelY(2);
+
+    this->setRockets(rand() % 1); //of het een raket kan vuren
 
 }
 
 
 //to do Fix get collision
 int * Car::getCollisionBox(){
-    int collisionBox[4] = {getMPosX(),getMPosY(),getHeight(),getWidth()};
+    static int collisionBox[4] = {this->getMPosX(),this->getMPosY(),this->getHeight(),this->getWidth()};
 
     return collisionBox;
 }
@@ -137,6 +144,22 @@ void Car::update() {
     setMPosY(getMPosY()+ getMVelY() + Singleton::getInstance()->getPlayerSpeed() );
 
 
+}
+
+int Car::getRockets() const {
+    return rockets;
+}
+
+void Car::setRockets(int rockets) {
+    Car::rockets = rockets;
+}
+
+int Car::getHealth() const {
+    return health;
+}
+
+void Car::setHealth(int health) {
+    Car::health = health;
 }
 
 

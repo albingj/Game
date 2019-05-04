@@ -33,7 +33,7 @@ void SDLBackground::Visualize()
     //texture->render( scrollingOffset + texture->getWidth(), 0 );
 
     if (scrollingOffset<850){
-        scrollingOffset+=(Singleton::getInstance()->getPlayerSpeed()/4)+10;
+        scrollingOffset+=(Singleton::getInstance()->getPlayerSpeed()/4)+5;
     }else{
         scrollingOffset=0;
     }

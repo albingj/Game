@@ -8,6 +8,7 @@
 
 #include "Entity.h"
 #include "Car.h"
+#include "Rocket.h"
 
 class Player : public Car{
     int speed=0;
@@ -16,12 +17,13 @@ class Player : public Car{
 public:
     ~Player();
 
+
     void SetReaction(int reaction);
     void addSpeed(bool);
     void removeSpeed(bool);
     void goLeft(bool);
     void goRight(bool);
-
+    void shoot(bool);
 
 
 

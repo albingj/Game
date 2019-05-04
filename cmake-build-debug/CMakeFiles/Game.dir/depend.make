@@ -5,6 +5,7 @@ CMakeFiles/Game.dir/AFactory.cpp.obj: ../AFactory.cpp
 CMakeFiles/Game.dir/AFactory.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/AFactory.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/AFactory.cpp.obj: ../Entity.h
+CMakeFiles/Game.dir/AFactory.cpp.obj: ../Rocket.h
 
 CMakeFiles/Game.dir/Background.cpp.obj: ../Background.cpp
 CMakeFiles/Game.dir/Background.cpp.obj: ../Background.h
@@ -12,6 +13,7 @@ CMakeFiles/Game.dir/Background.cpp.obj: ../Background.h
 CMakeFiles/Game.dir/Car.cpp.obj: ../Car.cpp
 CMakeFiles/Game.dir/Car.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/Car.cpp.obj: ../Entity.h
+CMakeFiles/Game.dir/Car.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/Car.cpp.obj: ../Singleton.h
 
 CMakeFiles/Game.dir/Entity.cpp.obj: ../Entity.cpp
@@ -22,6 +24,7 @@ CMakeFiles/Game.dir/Game.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/Game.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/Game.dir/Game.cpp.obj: ../Game.h
+CMakeFiles/Game.dir/Game.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/Game.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/Game.cpp.obj: SDL/SDLinput.h
 
@@ -29,12 +32,19 @@ CMakeFiles/Game.dir/Player.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/Player.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/Player.cpp.obj: ../Player.cpp
 CMakeFiles/Game.dir/Player.cpp.obj: ../Player.h
+CMakeFiles/Game.dir/Player.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/Player.cpp.obj: ../Singleton.h
+
+CMakeFiles/Game.dir/Rocket.cpp.obj: ../Entity.h
+CMakeFiles/Game.dir/Rocket.cpp.obj: ../Rocket.cpp
+CMakeFiles/Game.dir/Rocket.cpp.obj: ../Rocket.h
+CMakeFiles/Game.dir/Rocket.cpp.obj: ../Singleton.h
 
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: ../Game.h
+CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: SDL/LTexture.cpp
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/LTexture.cpp.obj: SDL/SDLFactory.h
@@ -53,12 +63,14 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Game.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Player.h
+CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLBackground.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLFactory.cpp
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLFactory.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLPlayer.h
+CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLRocket.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLTimer.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLcar.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLinput.h
@@ -67,11 +79,18 @@ CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Player.h
+CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.cpp
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLcar.h
+
+CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: ../Entity.h
+CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: ../Rocket.h
+CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: SDL/LTexture.h
+CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: SDL/SDLRocket.cpp
+CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: SDL/SDLRocket.h
 
 CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj: SDL/SDLTimer.cpp
 CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj: SDL/SDLTimer.h
@@ -80,6 +99,7 @@ CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: ../Game.h
+CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj: SDL/SDLcar.cpp
@@ -96,6 +116,7 @@ CMakeFiles/Game.dir/main.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/main.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/main.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/main.cpp.obj: ../Game.h
+CMakeFiles/Game.dir/main.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/main.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/main.cpp.obj: SDL/SDLFactory.h
 CMakeFiles/Game.dir/main.cpp.obj: SDL/SDLinput.h

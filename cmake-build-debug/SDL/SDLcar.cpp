@@ -11,6 +11,7 @@
 SDLcar::SDLcar() {
 
     texture = new LTexture();
+    healthBar = new LTexture;
     SDLcar::ResetCar();
 
 }
@@ -39,6 +40,8 @@ void SDLcar::Visualize()
 
     texture->render( getMPosX() , getMPosY());
     texture->renderDebug(getMPosX() , getMPosY());
+
+
 
 }
 

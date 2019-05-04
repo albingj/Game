@@ -37,7 +37,7 @@ public:
     //Renders texture at given point
     void render(int x, int y);
     void renderDebug(int x, int y);
-
+    void renderHealth(int x, int y, int health);
     //Gets image dimensions
     int getWidth();
     int getHeight();

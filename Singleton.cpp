@@ -23,9 +23,9 @@ Singleton* Singleton::getInstance()
 
 Singleton::Singleton()
 {
-    ScreenBottom = 750;
+    ScreenBottom = 800;
     PlayerSpeed=0;
-
+    Rocket= 100;
 
 
 }
@@ -39,4 +39,12 @@ int Singleton::getPlayerSpeed(){
 
 int Singleton::getScreenBottom(){
     return this->ScreenBottom;
+}
+
+int Singleton::getRocket() const {
+    return Rocket;
+}
+
+void Singleton::setRocket(int rocket) {
+    Rocket = rocket;
 }

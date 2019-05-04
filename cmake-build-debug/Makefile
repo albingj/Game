@@ -284,6 +284,33 @@ Player.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
+Rocket.obj: Rocket.cpp.obj
+
+.PHONY : Rocket.obj
+
+# target to build an object file
+Rocket.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Rocket.cpp.obj
+.PHONY : Rocket.cpp.obj
+
+Rocket.i: Rocket.cpp.i
+
+.PHONY : Rocket.i
+
+# target to preprocess a source file
+Rocket.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Rocket.cpp.i
+.PHONY : Rocket.cpp.i
+
+Rocket.s: Rocket.cpp.s
+
+.PHONY : Rocket.s
+
+# target to generate assembly for a file
+Rocket.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Rocket.cpp.s
+.PHONY : Rocket.cpp.s
+
 SDL/LTexture.obj: SDL/LTexture.cpp.obj
 
 .PHONY : SDL/LTexture.obj
@@ -391,6 +418,33 @@ SDL/SDLPlayer.s: SDL/SDLPlayer.cpp.s
 SDL/SDLPlayer.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.s
 .PHONY : SDL/SDLPlayer.cpp.s
+
+SDL/SDLRocket.obj: SDL/SDLRocket.cpp.obj
+
+.PHONY : SDL/SDLRocket.obj
+
+# target to build an object file
+SDL/SDLRocket.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj
+.PHONY : SDL/SDLRocket.cpp.obj
+
+SDL/SDLRocket.i: SDL/SDLRocket.cpp.i
+
+.PHONY : SDL/SDLRocket.i
+
+# target to preprocess a source file
+SDL/SDLRocket.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLRocket.cpp.i
+.PHONY : SDL/SDLRocket.cpp.i
+
+SDL/SDLRocket.s: SDL/SDLRocket.cpp.s
+
+.PHONY : SDL/SDLRocket.s
+
+# target to generate assembly for a file
+SDL/SDLRocket.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLRocket.cpp.s
+.PHONY : SDL/SDLRocket.cpp.s
 
 SDL/SDLTimer.obj: SDL/SDLTimer.cpp.obj
 
@@ -554,6 +608,9 @@ help:
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s
+	@echo ... Rocket.obj
+	@echo ... Rocket.i
+	@echo ... Rocket.s
 	@echo ... SDL/LTexture.obj
 	@echo ... SDL/LTexture.i
 	@echo ... SDL/LTexture.s
@@ -566,6 +623,9 @@ help:
 	@echo ... SDL/SDLPlayer.obj
 	@echo ... SDL/SDLPlayer.i
 	@echo ... SDL/SDLPlayer.s
+	@echo ... SDL/SDLRocket.obj
+	@echo ... SDL/SDLRocket.i
+	@echo ... SDL/SDLRocket.s
 	@echo ... SDL/SDLTimer.obj
 	@echo ... SDL/SDLTimer.i
 	@echo ... SDL/SDLTimer.s
