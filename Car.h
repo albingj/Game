@@ -15,21 +15,8 @@
 
 class Car :public Entity{
 
-int health;
-public:
-    int getHealth() const;
-
-    void setHealth(int health);
-
-private:
-
     int rockets;
-public:
-    int getRockets() const;
-
-    void setRockets(int rockets);
-
-private:
+    int health;
     int mVelX, mVelY;
 
     int Height, Width;
@@ -38,18 +25,12 @@ private:
     int road=0;
     int oldRoad;
 
-/*
- * 0 = x
- * 1 = y
- * 2 = h
- * 3 = w
- */
-
-
 public:
+    int getHealth() const;
+    void setHealth(int health);
+    int getRockets() const;
+    void setRockets(int rockets);
 
-
-public:
     Car();
     int GetSpeed();
     void SetReaction(int reaction);
@@ -95,7 +76,7 @@ public:
     //For Renderer / SDL
     virtual void Visualize()=0;
     virtual void LoadImage()=0;
-
+    virtual void Free()=0;
 
 };
 

@@ -12,7 +12,7 @@
 
 class SDLPlayer :  public Player  {
     LTexture* texture;
-    Rocket* rocket = new Rocket();
+    Rocket* rocket;
 
 public:
     SDLPlayer();

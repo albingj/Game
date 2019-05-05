@@ -23,7 +23,6 @@ void Car::SetSpeed(int velocity){
 int Car::GetSpeed(){
     return this->mVelY;
 }
-
 void Car::GoLeft() {
     setMPosX(getMPosX() - mVelX);
 }
@@ -35,33 +34,24 @@ void Car::SetReaction(int reaction){
     this->mVelX==reaction;
 
 }
-
-
 int Car::getMVelX() const {
     return mVelX;
 }
-
 void Car::setMVelX(int mVelX) {
     Car::mVelX = mVelX;
 }
-
 int Car::getMVelY() const {
     return mVelY;
 }
-
 void Car::setMVelY(int mVelY) {
     Car::mVelY = mVelY;
 }
-
 int Car::getRoad() const {
     return road;
 }
-
 void Car::setRoad(int road) {
     Car::road = road;
 }
-
-
 void Car::ResetCar(){
 
 
@@ -102,17 +92,6 @@ void Car::ResetCar(){
     this->setRockets(rand() % 1); //of het een raket kan vuren
 
 }
-
-
-//to do Fix get collision
-int * Car::getCollisionBox(){
-    static int collisionBox[4] = {this->getMPosX(),this->getMPosY(),this->getHeight(),this->getWidth()};
-
-    return collisionBox;
-}
-
-
-
 void  Car::setWidth(int width){
     Width = width;
 }
@@ -137,7 +116,28 @@ void Car::setVelX(int x){
 int Car::getVelX(){
     return mVelX;
 }
+int Car::getRockets() const {
+    return rockets;
+}
+void Car::setRockets(int rockets) {
+    Car::rockets = rockets;
+}
+int Car::getHealth() const {
+    return health;
+}
+void Car::setHealth(int health) {
+    Car::health = health;
+}
 
+
+
+
+//to do Fix get collision
+int * Car::getCollisionBox(){
+    static int collisionBox[4] = {this->getMPosX(),this->getMPosY(),this->getHeight(),this->getWidth()};
+
+    return collisionBox;
+}
 
 void Car::update() {
 
@@ -145,21 +145,4 @@ void Car::update() {
 
 
 }
-
-int Car::getRockets() const {
-    return rockets;
-}
-
-void Car::setRockets(int rockets) {
-    Car::rockets = rockets;
-}
-
-int Car::getHealth() const {
-    return health;
-}
-
-void Car::setHealth(int health) {
-    Car::health = health;
-}
-
 

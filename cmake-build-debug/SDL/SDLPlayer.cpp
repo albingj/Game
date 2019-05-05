@@ -9,6 +9,9 @@
 SDLPlayer::SDLPlayer() {
 
     texture = new LTexture();
+    //rocket = new Rocket();
+
+
     setHealth(10);
     //Initialize the offsets
     setMPosX(180);

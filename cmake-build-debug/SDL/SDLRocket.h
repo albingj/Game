@@ -14,11 +14,11 @@ class SDLRocket : public Rocket{
 
 public:
     SDLRocket();
+
+
     void Visualize();
-     void LoadImage();
+    void LoadImage();
     void Free();
-
-
 
 };
 
