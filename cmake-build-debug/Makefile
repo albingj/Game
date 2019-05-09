@@ -203,6 +203,33 @@ Car.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Car.cpp.s
 .PHONY : Car.cpp.s
 
+DropedItem.obj: DropedItem.cpp.obj
+
+.PHONY : DropedItem.obj
+
+# target to build an object file
+DropedItem.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/DropedItem.cpp.obj
+.PHONY : DropedItem.cpp.obj
+
+DropedItem.i: DropedItem.cpp.i
+
+.PHONY : DropedItem.i
+
+# target to preprocess a source file
+DropedItem.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/DropedItem.cpp.i
+.PHONY : DropedItem.cpp.i
+
+DropedItem.s: DropedItem.cpp.s
+
+.PHONY : DropedItem.s
+
+# target to generate assembly for a file
+DropedItem.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/DropedItem.cpp.s
+.PHONY : DropedItem.cpp.s
+
 Entity.obj: Entity.cpp.obj
 
 .PHONY : Entity.obj
@@ -364,6 +391,33 @@ SDL/SDLBackground.s: SDL/SDLBackground.cpp.s
 SDL/SDLBackground.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLBackground.cpp.s
 .PHONY : SDL/SDLBackground.cpp.s
+
+SDL/SDLDropedItem.obj: SDL/SDLDropedItem.cpp.obj
+
+.PHONY : SDL/SDLDropedItem.obj
+
+# target to build an object file
+SDL/SDLDropedItem.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLDropedItem.cpp.obj
+.PHONY : SDL/SDLDropedItem.cpp.obj
+
+SDL/SDLDropedItem.i: SDL/SDLDropedItem.cpp.i
+
+.PHONY : SDL/SDLDropedItem.i
+
+# target to preprocess a source file
+SDL/SDLDropedItem.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLDropedItem.cpp.i
+.PHONY : SDL/SDLDropedItem.cpp.i
+
+SDL/SDLDropedItem.s: SDL/SDLDropedItem.cpp.s
+
+.PHONY : SDL/SDLDropedItem.s
+
+# target to generate assembly for a file
+SDL/SDLDropedItem.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLDropedItem.cpp.s
+.PHONY : SDL/SDLDropedItem.cpp.s
 
 SDL/SDLFactory.obj: SDL/SDLFactory.cpp.obj
 
@@ -599,6 +653,9 @@ help:
 	@echo ... Car.obj
 	@echo ... Car.i
 	@echo ... Car.s
+	@echo ... DropedItem.obj
+	@echo ... DropedItem.i
+	@echo ... DropedItem.s
 	@echo ... Entity.obj
 	@echo ... Entity.i
 	@echo ... Entity.s
@@ -617,6 +674,9 @@ help:
 	@echo ... SDL/SDLBackground.obj
 	@echo ... SDL/SDLBackground.i
 	@echo ... SDL/SDLBackground.s
+	@echo ... SDL/SDLDropedItem.obj
+	@echo ... SDL/SDLDropedItem.i
+	@echo ... SDL/SDLDropedItem.s
 	@echo ... SDL/SDLFactory.obj
 	@echo ... SDL/SDLFactory.i
 	@echo ... SDL/SDLFactory.s

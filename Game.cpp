@@ -29,7 +29,7 @@ void Game::start(){
     pFactory->LoadBackground();
     pFactory->CreatePlayer();
     pFactory->CreateCars();
-
+    pFactory->CreateItems();
 
 
 
@@ -48,7 +48,7 @@ void Game::start(){
             pFactory->ClearScreen();
 
             //Check for collisions
-            //pFactory->Collision(); //returned collisionboxes are the same :(
+            pFactory->Collision(); //returned collisionboxes are the same :(
 
             //locaties van entities updaten
             pFactory->Draw();
@@ -60,6 +60,9 @@ void Game::start(){
 
         //SDL_Delay(30);
     }
+
+
+   pFactory->close();
 
 
 

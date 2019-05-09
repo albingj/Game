@@ -19,3 +19,16 @@ int Entity::getMPosY() const {
 void Entity::setMPosY(int mPosY) {
     Entity::mPosY = mPosY;
 }
+
+void  Entity::setWidth(int width){
+    Width = width;
+}
+void  Entity::setHeight(int height){
+    Height = height;
+}
+int Entity::getWidth(){
+    return Width;
+}
+int Entity::getHeight(){
+    return Height;
+}

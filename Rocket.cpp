@@ -35,3 +35,5 @@ int Rocket::getHeight(){
 void Rocket::update(){
     setMPosY(getMPosY()+ velocity + Singleton::getInstance()->getPlayerSpeed());
 }
+
+

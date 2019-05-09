@@ -38,9 +38,11 @@ public:
 
     void Collision();
     void CreateCars();
+    void CreateItems();
+    void close();
 
 private:
-    void close();
+
     void init();
 
 

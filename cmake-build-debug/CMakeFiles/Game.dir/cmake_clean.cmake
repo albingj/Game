@@ -16,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj"
   "CMakeFiles/Game.dir/Rocket.cpp.obj"
   "CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj"
+  "CMakeFiles/Game.dir/DropedItem.cpp.obj"
+  "CMakeFiles/Game.dir/SDL/SDLDropedItem.cpp.obj"
   "Game.pdb"
   "Game.exe"
   "Game.exe.manifest"

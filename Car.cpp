@@ -9,6 +9,7 @@
 
 Car::Car() {
 //Initialize the velocity
+
     mVelX = 1;  //dit is reaction, hoe snel de auto reageert
     rockets=0;
 health = 2;
@@ -61,8 +62,6 @@ void Car::ResetCar(){
     while (road == oldRoad){
         this->setRoad(rand() % 4);
     }
-
-
     switch(this->getRoad()){
 
         case 0:
@@ -92,18 +91,7 @@ void Car::ResetCar(){
     this->setRockets(rand() % 1); //of het een raket kan vuren
 
 }
-void  Car::setWidth(int width){
-    Width = width;
-}
-void  Car::setHeight(int height){
-    Height = height;
-}
-int Car::getWidth(){
-    return Width;
-}
-int Car::getHeight(){
-    return Height;
-}
+
 void Car::setVelY(int speed){
     mVelY = speed;
 }
@@ -133,8 +121,14 @@ void Car::setHealth(int health) {
 
 
 //to do Fix get collision
-int * Car::getCollisionBox(){
-    static int collisionBox[4] = {this->getMPosX(),this->getMPosY(),this->getHeight(),this->getWidth()};
+int* Car::getCollisionBox(){
+    int* collisionBox = new int[4]; //zet in heap anders zijn we het kwijt
+
+    collisionBox[0] = getMPosX();
+    collisionBox[1] = getMPosY();
+    collisionBox[2] = getHeight();
+    collisionBox[3] = getWidth();
+
 
     return collisionBox;
 }

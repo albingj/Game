@@ -57,10 +57,7 @@ public:
     void ResetCar();
 
     int * getCollisionBox();
-    void setWidth(int width);
-    void setHeight(int height);
-    int getWidth();
-    int getHeight();
+
 
     void setVelY(int speed);
     int getVelY();

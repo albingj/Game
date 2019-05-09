@@ -98,6 +98,12 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Car.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/DropedItem.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/DropedItem.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/Entity.cpp">
 			<Option target="Game"/>
 		</Unit>
@@ -138,6 +144,12 @@
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLBackground.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLDropedItem.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLDropedItem.h">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.cpp">

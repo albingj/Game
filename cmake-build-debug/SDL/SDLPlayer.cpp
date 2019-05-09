@@ -4,12 +4,13 @@
 
 #include "SDLPlayer.h"
 #include "../../Singleton.h"
+#include "SDLRocket.h"
 
 
 SDLPlayer::SDLPlayer() {
 
     texture = new LTexture();
-    //rocket = new Rocket();
+    rocket = new SDLRocket();
 
 
     setHealth(10);

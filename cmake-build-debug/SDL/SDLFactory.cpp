@@ -11,6 +11,7 @@
 #include "../../Singleton.h"
 #include "../SDL/SDLTimer.h"
 #include "SDLRocket.h"
+#include "SDLDropedItem.h"
 
 
 //Using SDL and standard IO
@@ -26,8 +27,11 @@ SDLBackground* background = new SDLBackground();
 //Create 10 enemies
 //SDLcar* car = new SDLcar();
 SDLcar* cars = new SDLcar[9];
-SDLRocket* pRocket = new SDLRocket[10];
-SDLRocket* cRocket = new SDLRocket[4];
+SDLRocket* pRocket = new SDLRocket[10]; //player rockets
+SDLRocket* cRocket = new SDLRocket[4];  //enemy car rockets (max 4)
+SDLDropedItem* dropedItem = new SDLDropedItem[4];
+
+
 
 //Car** cars = new Car[9];
 
@@ -138,6 +142,20 @@ void SDLFactory::CreatePlayer(){
 
 
     std::cout << ">>>>>> loadImageFromFile car - done <<<<<<" << std::endl;
+}
+void SDLFactory::CreateCars(){
+    for(int i = 0 ; i < 4; i++) {
+
+        cars[i].LoadImage();
+
+    }
+}
+void SDLFactory::CreateItems() {
+
+    for(int i = 0 ; i < 4; i++) {
+        dropedItem[i].reset();  //randomize item and relocate above to be reused.
+     }
+
 }
 
 
@@ -370,33 +388,18 @@ bool SDLFactory::Input()
 
 
 
-void SDLFactory::CreateCars(){
-
-
-
-    for(int i = 0 ; i < 4; i++) {
-
-
-        //cars[i].SetSpeed(-2);
-        cars[i].LoadImage();
-
-    }
 
 
 
 
-
-
-}
-
-
-
-bool checkCollision(int * collisionBoxA, int * collisionBoxB ) {
+bool checkCollision( int* collisionBoxA, int* collisionBoxB ) {
 
 
 
     SDL_Rect objectA;
     SDL_Rect objectB;
+
+
 
     objectA.x = collisionBoxA[0];
     objectA.y = collisionBoxA[1];
@@ -408,6 +411,8 @@ bool checkCollision(int * collisionBoxA, int * collisionBoxB ) {
     objectB.h = collisionBoxB[2];
     objectB.w = collisionBoxB[3];
 
+    delete[] collisionBoxA; //Delete uit heap
+    delete[] collisionBoxB;
 
 
     /*
@@ -441,12 +446,12 @@ bool checkCollision(int * collisionBoxA, int * collisionBoxB ) {
 
 
             ){
-        printf("true\n");
+        //printf("true\n");
         return true;
     }
 
 
-    printf("false\n");
+   // printf("false\n");
     return false;
 }
 
@@ -454,7 +459,7 @@ void SDLFactory::Collision() {
 
 
 
-    for(int i = 0 ; i < 9; i++) {
+    for(int i = 0 ; i < 4; i++) {
 
 
         if (checkCollision(cars[i].getCollisionBox(),player->getCollisionBox())){

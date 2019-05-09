@@ -12,7 +12,7 @@ class Entity {
 
     //The X and Y offsets of the dot
     int mPosX=0, mPosY=0;
-
+    int Height, Width;
 
 
     //Elke entity moet onderstaande functies hebben!!!
@@ -30,6 +30,11 @@ public:
 
     int getMPosY() const;
     void setMPosY(int mPosY);
+
+    void setWidth(int width);
+    void setHeight(int height);
+    int getWidth();
+    int getHeight();
 
 
 };

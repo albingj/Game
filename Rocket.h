@@ -22,10 +22,14 @@ public:
     void setHeight(int);
     void update();
 
-//For Renderer / SDL
-    virtual void Visualize()=0;
-    virtual void LoadImage()=0;
-    virtual void Free()=0;
+private:
+    virtual void Visualize() = 0;
+
+    virtual void LoadImage() = 0 ;
+
+    virtual void Free() = 0;
+
+
 };
 
 
