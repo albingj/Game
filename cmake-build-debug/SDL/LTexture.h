@@ -49,6 +49,10 @@ public:
 private:
     //The actual hardware texture
     SDL_Texture* mTexture;
+    SDL_Texture* text;
+    TTF_Font * font;
+
+
 
     //Image dimensions
     int mWidth;

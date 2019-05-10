@@ -71,6 +71,8 @@ void LTexture::free(){
         mTexture = NULL;
         mWidth = 0;
         mHeight = 0;
+
+
     }
 }
 
@@ -105,7 +107,7 @@ void LTexture::renderHealth( int health) {
 
 //------------------------------------------------------------------
 
-    TTF_Font * font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
+    font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
     if (font==NULL){
         printf("font error");
     }
@@ -128,7 +130,7 @@ void LTexture::renderHealth( int health) {
 }
 void LTexture::renderItem( int rockets){
 
-    TTF_Font * font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
+    font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
     if (font==NULL){
         printf("font error");
     }
@@ -154,7 +156,7 @@ void LTexture::renderItem( int rockets){
 
 void LTexture::renderScore( int score){
 
-    TTF_Font * font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
+    font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
     if (font==NULL){
         printf("font error");
     }

@@ -23,7 +23,7 @@ public:
 
 public:
     void reset();
-
+    DropedItem();
 
     //For Renderer / SDL
     virtual void Visualize()=0;

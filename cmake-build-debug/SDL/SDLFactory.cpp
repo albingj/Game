@@ -209,7 +209,7 @@ void SDLFactory::Draw() {
     for(int i =0 ; i < 4; i++){
         if(dropedItem[i].getMPosY() > Singleton::getInstance()->getScreenBottom()){
             dropedItem[i].reset();
-        }else if(dropedItem[i].getMPosY() > -1000 && dropedItem[i].getType()<4){ // als type groter dan 3 is niets doen
+        }else if(dropedItem[i].getMPosY() > -1000 && dropedItem[i].getType()<4 && dropedItem->getType()<3){ // als type groter dan 3 is niets doen
             dropedItem[i].Visualize();
         }
 
@@ -249,6 +249,8 @@ void SDLFactory::Update(){
 
     for(int i =0 ; i < 4; i++){
         cars[i].update();
+
+
         dropedItem[i].update();
 
         if (cars[i].getMPosY() > 20){
@@ -515,15 +517,15 @@ bool checkCollision( int* collisionBoxA, int* collisionBoxB ) {
             //objectB.y < objectA.y && objectB.y > objectA.x+objectA.h
 
             //check of object B zijn lengte langs de Yas objectA overlapt
-            ( objectB.y <= objectA.y+objectA.h && objectB.y >= objectA.y  //By tussen Ay+h en Ay  ??
-             || objectB.y +objectB.h <= objectA.y+objectA.h && objectB.y +objectB.h >= objectA.y)
+            ( objectB.y < objectA.y+objectA.h && objectB.y > objectA.y  //By tussen Ay+h en Ay  ??
+             || objectB.y +objectB.h < objectA.y+objectA.h && objectB.y +objectB.h > objectA.y)
 
 
              &&  // By+h tussen Ay+h en Ay ??
 
 
-             (objectB.x <= objectA.x+objectA.w && objectB.x >= objectA.x
-             ||(objectB.x+objectB.w) <= objectA.x+objectA.w && objectB.x+objectB.w >= objectA.x)
+             (objectB.x < objectA.x+objectA.w && objectB.x > objectA.x
+             ||(objectB.x+objectB.w) < objectA.x+objectA.w && objectB.x+objectB.w > objectA.x)
 
 
 
@@ -535,7 +537,7 @@ bool checkCollision( int* collisionBoxA, int* collisionBoxB ) {
 
    // printf("false\n");
     return false;
-}
+ }
 
 void SDLFactory::Collision() {
 

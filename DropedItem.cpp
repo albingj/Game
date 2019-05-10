@@ -7,6 +7,10 @@
 #include "Singleton.h"
 
 
+DropedItem::DropedItem(){
+   // reset();
+}
+
 void DropedItem::reset(){
 
 
