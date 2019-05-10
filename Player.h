@@ -25,7 +25,8 @@ public:
     void goRight(bool);
     void shoot(bool);
 
-
+    void goUp(bool);
+    void goDown(bool);
 
 
 

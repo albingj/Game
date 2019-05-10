@@ -17,7 +17,14 @@
 class Car :public Entity{
 
     int rockets;
+    bool isPlayer;
+public:
 
+bool getIsPlayer();
+    void setIsPlayer(bool isPlayer);
+
+private:
+    //check if car is the player or not  (true => player)
 
     int health;
     int mVelX, mVelY;
@@ -71,7 +78,6 @@ public:
 
 
     void update();
-    void FireRocket(bool);
 
     //For Renderer / SDL
     virtual void Visualize()=0;

@@ -12,9 +12,9 @@ Car::Car() {
 //Initialize the velocity
 
     mVelX = 1;  //dit is reaction, hoe snel de auto reageert
-    rockets=100;
+    rockets=1;
     health = 2;
-
+    isPlayer=false;
 
 
 
@@ -145,10 +145,12 @@ void Car::update() {
 }
 
 
-void Car::FireRocket(bool direction){
 
+bool Car::getIsPlayer() {
+    return isPlayer;
+}
 
-
-
+void Car::setIsPlayer(bool isPlayer) {
+    Car::isPlayer = isPlayer;
 }
 

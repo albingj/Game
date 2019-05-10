@@ -15,6 +15,8 @@ extern SDL_Renderer* gRenderer;
 
 
 class SDLFactory : public AFactory {
+//keypress booleans
+    bool playerLeft=false,playerRight=false,playerAddSpeed=false,playerRemoveSpeed=false,playerGoUp=false,playerGoDown=false;
 
 
 

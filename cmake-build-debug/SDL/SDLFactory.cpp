@@ -38,8 +38,6 @@ SDLPlayer* player = new SDLPlayer();
 SDL_Renderer* gRenderer = NULL;
 
 
-//keypress booleans
-bool playerLeft=false,playerRight=false,playerAddSpeed=false,playerRemoveSpeed=false;
 
 
 //Frames maximum
@@ -196,14 +194,24 @@ void SDLFactory::Draw() {
     for(int i =0 ; i < 4; i++){
 
         if(cars[i].getMPosY() > Singleton::getInstance()->getScreenBottom()){
-            dropedItem[i].reset();
+
             cars[i].ResetCar();
         }else if(cars[i].getMPosY() > -1000){
             cars[i].Visualize();
+
+        }
+
+    }
+
+    for(int i =0 ; i < 4; i++){
+        if(dropedItem[i].getMPosY() > Singleton::getInstance()->getScreenBottom()){
+            dropedItem[i].reset();
+        }else if(dropedItem[i].getMPosY() > -1000 && dropedItem[i].getType()<4){ // als type groter dan 3 is niets doen
             dropedItem[i].Visualize();
         }
 
     }
+
 
 
     for(std::list<SDLRocket*>::iterator it = lstRocket.begin(); it != lstRocket.end();) {
@@ -220,19 +228,7 @@ void SDLFactory::Draw() {
 
     }
 
-    for(int i =0 ; i < 4; i++){
 
-        if(dropedItem[i].getMPosY() > Singleton::getInstance()->getScreenBottom()){
-            //std::cout << ">>>>>> SDL FREE car" << std::endl;
-            dropedItem[i].reset();
-        }else if(dropedItem[i].getMPosY() > -1000){
-            dropedItem[i].Visualize();
-        }else{
-
-        }
-
-
-    }
 
 
 
@@ -268,7 +264,7 @@ void SDLFactory::Update(){
 
 
     if(player->getHealth()<1){
-        close();
+        //close();
     }
 
     SDL_RenderPresent(gRenderer);
@@ -304,7 +300,7 @@ void SDLFactory::shootRocket(bool playerCar,int posX, int posY,int car){
             }catch (const char *e) { printf((const char *) e); }
 
 
-            printf("car fire\n");
+
 
         }
 
@@ -356,10 +352,13 @@ bool SDLFactory::Input()
 
                 switch (event.key.keysym.sym ){
                     case SDLK_UP:
-                        playerAddSpeed=true;
+                        //playerAddSpeed=true;
+                        playerGoUp = true;
+
                         break;
                     case SDLK_DOWN:
-                        playerRemoveSpeed=true;
+                       // playerRemoveSpeed=true;
+                       playerGoDown= true;
                         break;
                     case SDLK_LEFT:
                         playerLeft=true;
@@ -369,7 +368,7 @@ bool SDLFactory::Input()
                         playerRight= true;
                         break;
                     case SDLK_SPACE:
-                        shootRocket(true,player->getMPosX(),player->getMPosY(),NULL);
+                        shootRocket(true,player->getMPosX(),player->getMPosY(),0);
                         break;
                     default:
                         break;
@@ -383,10 +382,12 @@ bool SDLFactory::Input()
             case SDL_KEYUP:
                 switch (event.key.keysym.sym ){
                     case SDLK_UP:
-                        playerAddSpeed=false;
+                        //playerAddSpeed=false;
+                        playerGoUp=false;
                         break;
                     case SDLK_DOWN:
-                        playerRemoveSpeed=false;
+                       // playerRemoveSpeed=false;
+                        playerGoDown=false;
                         break;
                     case SDLK_LEFT:
                         playerLeft=false;
@@ -430,6 +431,8 @@ bool SDLFactory::Input()
     player->goRight(playerRight);
     player->addSpeed(playerAddSpeed);
     player->removeSpeed(playerRemoveSpeed);
+    player->goUp(playerGoUp);
+    player->goDown(playerGoDown);
 
     std::ostringstream oss;
     //oss << "player x:" << player->getX() << " y:" << player->getY() << " speed:" << Singleton::getInstance()->getPlayerSpeed();
@@ -568,32 +571,34 @@ void SDLFactory::Collision() {
 
 
 
-        if(checkCollision(dropedItem[i].getCollisionBox(),player->getCollisionBox())){
-            switch(dropedItem[i].getType()){
+
+
+    }
+    for(int i = 0 ; i < 4; i++) {
+        if(checkCollision(dropedItem[i].getCollisionBox(),player->getCollisionBox())) {
+            printf("droped");
+            switch (dropedItem[i].getType()) {
                 /*
                 * 0 = boost
                 * 1 = health
                 * 2 = rocket
                 */
                 case 0:
-                    
+                    player->addSpeed(true);
                     break;
                 case 1:
-
+                    player->setHealth(player->getHealth() + 5);
                     break;
                 case 2:
-
+                    player->setRockets(player->getRockets() + 10);
                     break;
             }
-
-
-
+            dropedItem[i].reset();
 
         }
 
+
     }
-
-
 
 
 

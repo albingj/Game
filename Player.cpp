@@ -6,8 +6,8 @@
 #include "Singleton.h"
 
 Player::~Player() {
-    setHealth(10);
-    setRockets(100);
+    setHealth(20);
+    setIsPlayer(true);
 }
 
 
@@ -76,8 +76,20 @@ void Player::SetReaction(int reaction){
 
 }
 
-void Player::shoot(bool b){
 
 
+void Player::goUp(bool key){
+    if(key) {
+        if (getMPosY() > 100) {
+            setMPosY(getMPosY() - 10);
+        }
+    }
 
+}
+void Player::goDown(bool key){
+    if(key) {
+        if (getMPosY()+getHeight() < 900) {
+            setMPosY(getMPosY() + 10);
+        }
+    }
 }

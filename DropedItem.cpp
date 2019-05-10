@@ -29,10 +29,10 @@ void DropedItem::reset(){
             break;
     }
 
-    setMPosY(-(rand() % 1000)-200);
+    setMPosY(-(rand() % 500)-200);
 
 
-    type = (rand() % 3);
+    type = (rand() % 10);
     /*
      * 0 = boost
      * 1 = health
