@@ -11,11 +11,14 @@
 
 #include <SDL2/SDL_rect.h>
 #include "Entity.h"
-#include "Rocket.h"
+#include "cmake-build-debug/SDL/SDLRocket.h"
+#include <list>
 
 class Car :public Entity{
 
     int rockets;
+
+
     int health;
     int mVelX, mVelY;
 
@@ -68,7 +71,7 @@ public:
 
 
     void update();
-
+    void FireRocket(bool);
 
     //For Renderer / SDL
     virtual void Visualize()=0;

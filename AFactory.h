@@ -30,6 +30,7 @@ public:
     virtual bool Input()=0;
     virtual void CreateItems()=0;
     virtual void close()=0;
+    virtual void shootRocket (bool playerCar, int posX, int posY, int car)=0;
 };
 
 #endif //GAME_AFACTORY_H

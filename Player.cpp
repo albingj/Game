@@ -7,7 +7,7 @@
 
 Player::~Player() {
     setHealth(10);
-
+    setRockets(100);
 }
 
 

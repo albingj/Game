@@ -7,16 +7,11 @@
 
 
 Rocket::Rocket() {
-    int aantal = 0;
+
     velocity=2;
 };
 
-int Rocket::getAantal(){
-    return aantal;
-}
-void Rocket::setAantal(int t){
-    aantal = aantal + t;
-}
+
 
 void Rocket::setWidth(int w){
     Width = w;
@@ -33,7 +28,45 @@ int Rocket::getHeight(){
 }
 
 void Rocket::update(){
-    setMPosY(getMPosY()+ velocity + Singleton::getInstance()->getPlayerSpeed());
+
+    if (direction){//if true then player shot it
+
+        setMPosY(getMPosY()- velocity - Singleton::getInstance()->getPlayerSpeed());
+
+    }else{
+
+        setMPosY(getMPosY()+ velocity + Singleton::getInstance()->getPlayerSpeed());
+
+    }
+
+
+}
+
+bool Rocket::isDirection() const {
+    return direction;
+}
+
+void Rocket::setDirection(bool direction) {
+    Rocket::direction = direction;
+}
+
+int Rocket::getVelocity() const {
+    return velocity;
+}
+
+void Rocket::setVelocity(int velocity) {
+    Rocket::velocity = velocity;
 }
 
 
+int* Rocket::getCollisionBox(){
+    int* collisionBox = new int[4]; //zet in heap anders zijn we het kwijt
+
+    collisionBox[0] = getMPosX();
+    collisionBox[1] = getMPosY();
+    collisionBox[2] = getHeight();
+    collisionBox[3] = getWidth();
+
+
+    return collisionBox;
+}

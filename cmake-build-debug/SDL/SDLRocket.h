@@ -16,6 +16,7 @@ public:
     SDLRocket();
 
 
+
     void Visualize();
     void LoadImage();
     void Free();

@@ -16,7 +16,11 @@ void SDLRocket::Visualize(){
     texture->renderDebug(getMPosX() , getMPosY());
 }
 void SDLRocket::LoadImage(){
-    texture->loadFromFile("image/rocket.png");
+    if(isDirection()) {
+        texture->loadFromFile("image/rocket.png");
+    }else{
+        texture->loadFromFile("image/rocket2.png");
+    }
     setWidth(texture->getWidth());
     setHeight(texture->getHeight());
 
@@ -24,3 +28,4 @@ void SDLRocket::LoadImage(){
  void SDLRocket::Free(){
      texture->free();
 }
+

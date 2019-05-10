@@ -26,9 +26,7 @@ SDLBackground* background = new SDLBackground();
 
 //Create 10 enemies
 //SDLcar* car = new SDLcar();
-SDLcar* cars = new SDLcar[9];
-SDLRocket* pRocket = new SDLRocket[10]; //player rockets
-SDLRocket* cRocket = new SDLRocket[4];  //enemy car rockets (max 4)
+SDLcar* cars = new SDLcar[4];
 SDLDropedItem* dropedItem = new SDLDropedItem[4];
 
 
@@ -198,16 +196,45 @@ void SDLFactory::Draw() {
     for(int i =0 ; i < 4; i++){
 
         if(cars[i].getMPosY() > Singleton::getInstance()->getScreenBottom()){
-            //std::cout << ">>>>>> SDL FREE car" << std::endl;
+            dropedItem[i].reset();
             cars[i].ResetCar();
         }else if(cars[i].getMPosY() > -1000){
             cars[i].Visualize();
+            dropedItem[i].Visualize();
+        }
+
+    }
+
+
+    for(std::list<SDLRocket*>::iterator it = lstRocket.begin(); it != lstRocket.end();) {
+
+    if ( (*it)->getMPosY() < Singleton::getInstance()->getScreenTop() || (*it)->getMPosY() > Singleton::getInstance()->getScreenBottom()){
+            delete (*it);
+            lstRocket.erase(it++);
+        }else {
+            (*it)->Visualize();
+            ++it; //take next object
+        }
+
+
+
+    }
+
+    for(int i =0 ; i < 4; i++){
+
+        if(dropedItem[i].getMPosY() > Singleton::getInstance()->getScreenBottom()){
+            //std::cout << ">>>>>> SDL FREE car" << std::endl;
+            dropedItem[i].reset();
+        }else if(dropedItem[i].getMPosY() > -1000){
+            dropedItem[i].Visualize();
         }else{
 
         }
 
 
     }
+
+
 
 
     player->Visualize();
@@ -223,18 +250,67 @@ void SDLFactory::Update(){
 
     for(int i =0 ; i < 4; i++){
         cars[i].update();
+        dropedItem[i].update();
+
+        if (cars[i].getMPosY() > 20){
+            shootRocket(false,cars[i].getMPosX(),cars[i].getMPosY(),i);
+
+        }
     }
 
 
 
+    //printf("listSize: %d\n", lstRocket.size());
+    for(std::list<SDLRocket*>::iterator it = lstRocket.begin(); it != lstRocket.end();) {
+        (*it)->update();
+        ++it; //take next object
+    }
 
 
-
+    if(player->getHealth()<1){
+        close();
+    }
 
     SDL_RenderPresent(gRenderer);
 }
 
 
+void SDLFactory::shootRocket(bool playerCar,int posX, int posY,int car){
+
+    if (playerCar){
+        if (player->getRockets()>0){
+            player->setRockets(player->getRockets()-1);
+            SDLRocket* toShoot = new SDLRocket();
+            toShoot->setDirection(playerCar);
+            toShoot->setVelocity(Singleton::getInstance()->getPlayerSpeed() + 7);
+            toShoot->setMPosX(posX + 30);
+            toShoot->setMPosY(posY);
+            toShoot->LoadImage();
+            lstRocket.push_back(toShoot);
+
+        }
+
+    }else{
+        if (cars[car].getRockets()>0){
+            cars[car].setRockets(cars[car].getRockets()-1);
+            SDLRocket* toShoot = new SDLRocket();
+            toShoot->setDirection(playerCar);
+            toShoot->setVelocity(Singleton::getInstance()->getPlayerSpeed() + 5);
+            toShoot->setMPosX(posX + 30);
+            toShoot->setMPosY(posY + 200);
+            toShoot->LoadImage();
+            try {
+                lstRocket.push_back(toShoot);
+            }catch (const char *e) { printf((const char *) e); }
+
+
+            printf("car fire\n");
+
+        }
+
+    }
+
+}
 
 
 //Zolang stop op false blijft gaan we alles blijven loopen.
@@ -293,7 +369,7 @@ bool SDLFactory::Input()
                         playerRight= true;
                         break;
                     case SDLK_SPACE:
-                        player->shoot(true);
+                        shootRocket(true,player->getMPosX(),player->getMPosY(),NULL);
                         break;
                     default:
                         break;
@@ -320,7 +396,7 @@ bool SDLFactory::Input()
                         playerRight= false;
                         break;
                     case SDLK_SPACE:
-                        player->shoot(false);
+
 
 
                         break;
@@ -461,13 +537,64 @@ void SDLFactory::Collision() {
 
     for(int i = 0 ; i < 4; i++) {
 
-
         if (checkCollision(cars[i].getCollisionBox(),player->getCollisionBox())){
            cars[i].ResetCar();
+           player->setHealth(player->getHealth()-3);
+        }
+
+        for(std::list<SDLRocket*>::iterator it = lstRocket.begin(); it != lstRocket.end();) {
+
+            //check if player fired
+            if((*it)->isDirection()){
+                if (checkCollision(cars[i].getCollisionBox(),(*it)->getCollisionBox())){
+                    cars[i].ResetCar();
+                    delete (*it);
+                    lstRocket.erase(it++);
+                }else{
+                    ++it; //take next object
+                }
+            }else{
+
+                if (checkCollision(player->getCollisionBox(), (*it)->getCollisionBox())) {
+                    player->setHealth(player->getHealth() - 1);
+                    delete (*it);
+                    lstRocket.erase(it++);
+                } else {
+                    ++it; //take next object
+                }
+
+            }
         }
 
 
+
+        if(checkCollision(dropedItem[i].getCollisionBox(),player->getCollisionBox())){
+            switch(dropedItem[i].getType()){
+                /*
+                * 0 = boost
+                * 1 = health
+                * 2 = rocket
+                */
+                case 0:
+                    
+                    break;
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+            }
+
+
+
+
+        }
+
     }
+
+
+
 
 
 

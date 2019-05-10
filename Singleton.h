@@ -4,6 +4,13 @@ private:
 
     int PlayerSpeed;
     int ScreenBottom;
+    int ScreenTop;
+public:
+    int getScreenTop() const;
+
+    void setScreenTop(int screenTop);
+
+private:
     int Rocket;
 public:
     int getRocket() const;

@@ -48,7 +48,7 @@ void Game::start(){
             pFactory->ClearScreen();
 
             //Check for collisions
-            pFactory->Collision(); //returned collisionboxes are the same :(
+            pFactory->Collision();
 
             //locaties van entities updaten
             pFactory->Draw();

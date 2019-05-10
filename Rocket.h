@@ -9,9 +9,21 @@
 #include "Entity.h"
 
 class Rocket : public Entity{
-    int aantal;
+
     int Width, Height;
     int velocity;
+public:
+    int getVelocity() const;
+
+    void setVelocity(int velocity);
+
+private:
+    bool direction;
+public:
+    bool isDirection() const;
+
+    void setDirection(bool direction);
+
 public:
     Rocket();
     int getAantal();
@@ -21,6 +33,7 @@ public:
     void setWidth(int);
     void setHeight(int);
     void update();
+    int *getCollisionBox();
 
 private:
     virtual void Visualize() = 0;
@@ -28,6 +41,7 @@ private:
     virtual void LoadImage() = 0 ;
 
     virtual void Free() = 0;
+
 
 
 };

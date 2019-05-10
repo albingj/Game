@@ -4,22 +4,13 @@
 
 #include <cstdlib>
 #include "DropedItem.h"
+#include "Singleton.h"
 
 
 void DropedItem::reset(){
-    setMPosY(0);
-    type = (rand() % 3);
-    /*
-     * 0 = boost
-     * 1 = health
-     * 2 = rocket
-     */
-
-    LoadImage();
 
 
-    int road = (rand() % 4);
-
+    road = rand() % 4; //randomize on which road it will be rendered
     switch(road){
         case 0:
             setMPosX(35);
@@ -38,7 +29,17 @@ void DropedItem::reset(){
             break;
     }
 
+    setMPosY(-(rand() % 1000)-200);
 
+
+    type = (rand() % 3);
+    /*
+     * 0 = boost
+     * 1 = health
+     * 2 = rocket
+     */
+
+    LoadImage();
 
 
 
@@ -50,4 +51,23 @@ int DropedItem::getType() const {
 
 void DropedItem::setType(int type) {
     DropedItem::type = type;
+}
+
+
+void DropedItem::update(){
+
+    setMPosY(getMPosY() + Singleton::getInstance()->getPlayerSpeed() + 2 );
+
+    }
+
+int* DropedItem::getCollisionBox(){
+    int* collisionBox = new int[4]; //zet in heap anders zijn we het kwijt
+
+    collisionBox[0] = getMPosX();
+    collisionBox[1] = getMPosY();
+    collisionBox[2] = getHeight();
+    collisionBox[3] = getWidth();
+
+
+    return collisionBox;
 }

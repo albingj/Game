@@ -9,7 +9,7 @@
 #include "Entity.h"
 
 class DropedItem : public Entity {
-
+int road;
     int type;
 public:
     int getType() const;
@@ -29,6 +29,10 @@ public:
     virtual void Visualize()=0;
     virtual void LoadImage()=0;
     virtual void Free()=0;
+
+    void update();
+
+    int *getCollisionBox();
 };
 
 

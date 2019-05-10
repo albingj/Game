@@ -5,14 +5,18 @@
 #include "Car.h"
 #include  <iostream>
 #include "Singleton.h"
+#include "cmake-build-debug/SDL/SDLRocket.h"
 
 
 Car::Car() {
 //Initialize the velocity
 
     mVelX = 1;  //dit is reaction, hoe snel de auto reageert
-    rockets=0;
-health = 2;
+    rockets=100;
+    health = 2;
+
+
+
 
 }
 
@@ -88,8 +92,8 @@ void Car::ResetCar(){
     //setMVelY((rand() % 5)) ;
     setMVelY(2);
 
-    this->setRockets(rand() % 1); //of het een raket kan vuren
-
+    //this->setRockets(rand() % 1); //of het een raket kan vuren
+    this->setRockets(1);
 }
 
 void Car::setVelY(int speed){
@@ -120,7 +124,7 @@ void Car::setHealth(int health) {
 
 
 
-//to do Fix get collision
+
 int* Car::getCollisionBox(){
     int* collisionBox = new int[4]; //zet in heap anders zijn we het kwijt
 
@@ -136,6 +140,14 @@ int* Car::getCollisionBox(){
 void Car::update() {
 
     setMPosY(getMPosY()+ getMVelY() + Singleton::getInstance()->getPlayerSpeed() );
+
+
+}
+
+
+void Car::FireRocket(bool direction){
+
+
 
 
 }

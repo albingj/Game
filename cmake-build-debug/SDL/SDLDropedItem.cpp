@@ -15,7 +15,7 @@ SDLDropedItem::SDLDropedItem() {
 void SDLDropedItem::LoadImage() {
     switch (getType()){
         case 0:
-            texture->loadFromFile("image/Audi.png");
+            texture->loadFromFile("image/speed.png");
             break;
 
         case 1:
@@ -23,7 +23,7 @@ void SDLDropedItem::LoadImage() {
             break;
 
         case 2:
-            texture->loadFromFile("image/rocket.png");
+            texture->loadFromFile("image/ammo.png");
             break;
 
     }

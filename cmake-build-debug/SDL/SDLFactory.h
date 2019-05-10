@@ -27,6 +27,9 @@ public:
     //The window we'll be rendering to
     SDL_Window* gWindow = nullptr;
 
+    std::list<SDLRocket*> lstRocket;
+
+
     void CreateWindow() override;
 
     void LoadBackground();
@@ -40,6 +43,8 @@ public:
     void CreateCars();
     void CreateItems();
     void close();
+    void shootRocket(bool playerCar, int posX, int posY, int car);
+
 
 private:
 
