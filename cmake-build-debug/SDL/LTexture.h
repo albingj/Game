@@ -37,7 +37,9 @@ public:
     //Renders texture at given point
     void render(int x, int y);
     void renderDebug(int x, int y);
-    void renderHealth(int x, int y, int health);
+    void renderHealth(int health);
+    void renderItem(int rockets);
+    void renderScore(int score);
     //Gets image dimensions
     int getWidth();
     int getHeight();
@@ -52,7 +54,10 @@ private:
     int mWidth;
     int mHeight;
     //Globally used font
-    TTF_Font *gFont=NULL;
+
+
+
+
 };
 
 

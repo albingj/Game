@@ -13,7 +13,7 @@ Car::Car() {
 
     mVelX = 1;  //dit is reaction, hoe snel de auto reageert
     rockets=1;
-    health = 2;
+    health = 1;
     isPlayer=false;
 
 
@@ -92,8 +92,8 @@ void Car::ResetCar(){
     //setMVelY((rand() % 5)) ;
     setMVelY(2);
 
-    //this->setRockets(rand() % 1); //of het een raket kan vuren
-    this->setRockets(1);
+    this->setRockets(rand() % 2); //of het een raket kan vuren
+
 }
 
 void Car::setVelY(int speed){
@@ -119,6 +119,10 @@ int Car::getHealth() const {
 }
 void Car::setHealth(int health) {
     Car::health = health;
+
+    if (this->health>20){
+        this->health=20;
+    }
 }
 
 

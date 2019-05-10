@@ -48,8 +48,9 @@ void SDLPlayer::Visualize()
 
     setWidth(texture->getWidth());
     setHeight(texture->getHeight());
-    texture->renderHealth(getMPosX(),getMPosY()+getHeight(), getWidth()/10*getHealth());
-
+    texture->renderHealth( getHealth());
+    texture->renderItem(getRockets());
+    texture->renderScore(getScore());
 
 
 

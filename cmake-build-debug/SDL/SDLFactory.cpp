@@ -47,7 +47,8 @@ const int SCREEN_TICKS_PER_FRAME = 1000/SCREEN_FPS;
 
 
 SDLFactory::SDLFactory() {
-
+player->setHealth(20);
+player->setRockets(10);
 
 }
 
@@ -58,7 +59,7 @@ void SDLFactory::CreateWindow() {
 void SDLFactory::init(){
 
     std::cout << ">>>>>> SDL init() <<<<<<" << std::endl;
-
+    TTF_Init();
     //Initialize SDL
     if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
     {
@@ -169,6 +170,8 @@ void SDLFactory::close()
     gRenderer = NULL;
 
     //Quit SDL subsystems
+
+    TTF_Quit();
     IMG_Quit();
     SDL_Quit();
 }
@@ -537,6 +540,32 @@ bool checkCollision( int* collisionBoxA, int* collisionBoxB ) {
 void SDLFactory::Collision() {
 
 
+    for(int i = 0 ; i < 4; i++) {
+        if(checkCollision(dropedItem[i].getCollisionBox(),player->getCollisionBox())) {
+            printf("droped");
+            switch (dropedItem[i].getType()) {
+                /*
+                * 0 = boost
+                * 1 = health
+                * 2 = rocket
+                */
+                case 0:
+                    player->addSpeed(true);
+                    break;
+                case 1:
+                    player->setHealth(player->getHealth() + 10);
+                    break;
+                case 2:
+                    player->setRockets(player->getRockets() + 20);
+                    break;
+            }
+            dropedItem[i].reset();
+
+        }
+
+
+    }
+
 
     for(int i = 0 ; i < 4; i++) {
 
@@ -553,6 +582,8 @@ void SDLFactory::Collision() {
                     cars[i].ResetCar();
                     delete (*it);
                     lstRocket.erase(it++);
+                    player->setScore(5);
+
                 }else{
                     ++it; //take next object
                 }
@@ -574,34 +605,41 @@ void SDLFactory::Collision() {
 
 
     }
-    for(int i = 0 ; i < 4; i++) {
-        if(checkCollision(dropedItem[i].getCollisionBox(),player->getCollisionBox())) {
-            printf("droped");
-            switch (dropedItem[i].getType()) {
-                /*
-                * 0 = boost
-                * 1 = health
-                * 2 = rocket
-                */
-                case 0:
-                    player->addSpeed(true);
-                    break;
-                case 1:
-                    player->setHealth(player->getHealth() + 5);
-                    break;
-                case 2:
-                    player->setRockets(player->getRockets() + 10);
-                    break;
-            }
-            dropedItem[i].reset();
 
+
+
+    for(std::list<SDLRocket*>::iterator itPlayer = lstRocket.begin(); itPlayer != lstRocket.end();) {
+
+        //check if player fired
+        if ((*itPlayer)->isDirection()) { //if fired by player then check for collision with enemy rocket
+
+                for(std::list<SDLRocket*>::iterator itCar = lstRocket.begin(); itCar != lstRocket.end();) {
+
+                    //check if car fired
+                    if(!(*itCar)->isDirection()){ //if fired by car (enemy) continue // False = car and True is from player
+                        if(checkCollision((*itPlayer)->getCollisionBox(),(*itCar)->getCollisionBox())){
+                            delete (*itPlayer);
+                            lstRocket.erase(itPlayer++);
+                            delete (*itCar);
+                            lstRocket.erase(itCar++);
+                            break;
+                        }else{
+
+                            ++itCar;
+                        }
+                    }else{
+                        ++itCar;
+                    }
+
+                }
+
+            ++itPlayer;
+
+        }else {
+            ++itPlayer;
         }
 
-
     }
-
-
-
 
 
 }

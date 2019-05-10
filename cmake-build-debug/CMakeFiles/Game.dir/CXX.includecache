@@ -6,19 +6,47 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/bini/CLionProjects/Game/DropedItem.cpp
-cstdlib
+C:/Users/bini/CLionProjects/Game/Car.cpp
+Car.h
+C:/Users/bini/CLionProjects/Game/Car.h
+iostream
 -
-DropedItem.h
-C:/Users/bini/CLionProjects/Game/DropedItem.h
 Singleton.h
 C:/Users/bini/CLionProjects/Game/Singleton.h
+cmake-build-debug/SDL/SDLRocket.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h
 
-C:/Users/bini/CLionProjects/Game/DropedItem.h
+C:/Users/bini/CLionProjects/Game/Car.h
+SDL2/SDL_rect.h
+-
+Entity.h
+C:/Users/bini/CLionProjects/Game/Entity.h
+cmake-build-debug/SDL/SDLRocket.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h
+list
+-
+
+C:/Users/bini/CLionProjects/Game/Entity.h
+
+C:/Users/bini/CLionProjects/Game/Rocket.h
 Entity.h
 C:/Users/bini/CLionProjects/Game/Entity.h
 
-C:/Users/bini/CLionProjects/Game/Entity.h
-
 C:/Users/bini/CLionProjects/Game/Singleton.h
+
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
+SDL2/SDL.h
+-
+SDL2/SDL_image.h
+-
+SDL2/SDL_ttf.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDL2/SDL_ttf.h
+string
+-
+
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h
+../../Rocket.h
+C:/Users/bini/CLionProjects/Game/Rocket.h
+LTexture.h
+C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
 

@@ -6,6 +6,8 @@
 #include "SDLFactory.h"
 #include "../../Game.h"
 
+#include <SDL2/SDL_ttf.h>
+
 
 LTexture::LTexture(){
 
@@ -88,23 +90,95 @@ void LTexture::renderDebug(int x, int y) {
 
 
 
-
-
-
 }
-void LTexture::renderHealth(int x, int y, int health) {
+void LTexture::renderHealth( int health) {
     //Set rendering space and render to screen
-    SDL_Rect renderQuad = {x, y, 100, 10};
+    SDL_Rect renderQuad = {10, 10, 100, 10};
     SDL_SetRenderDrawColor(gRenderer, 255 , 255 , 255, 255);
     SDL_RenderDrawRect(gRenderer, &renderQuad);
 
-    renderQuad = {x+1, y+1, health-2, 10-2};
+    renderQuad = {10+1, 10+1, 100/20*health-2, 10-2};
 
     SDL_SetRenderDrawColor(gRenderer, 255 , 0 , 0, 0);
     SDL_RenderFillRect(gRenderer, &renderQuad);
     SDL_RenderDrawRect(gRenderer, &renderQuad);
 
+//------------------------------------------------------------------
+
+    TTF_Font * font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
+    if (font==NULL){
+        printf("font error");
+    }
+
+    std::string score_text = "health: " + std::to_string(health);
+    SDL_Color textColor = { 255, 255, 255, 0 };
+    SDL_Surface* textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
+    SDL_Texture* text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
+
+
+    SDL_Rect Message_rect; //create a rect
+    Message_rect.x = 120;  //controls the rect's x coordinate
+    Message_rect.y = 5; // controls the rect's y coordinte
+    Message_rect.w = 100; // controls the width of the rect
+    Message_rect.h = 20; // controls the height of the rect
+
+    SDL_RenderCopy(gRenderer, text, NULL, &Message_rect);
+    SDL_DestroyTexture(text);
+    SDL_FreeSurface(textSurface);
 }
+void LTexture::renderItem( int rockets){
+
+    TTF_Font * font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
+    if (font==NULL){
+        printf("font error");
+    }
+
+    std::string score_text = "Rockets: " + std::to_string(rockets);
+    SDL_Color textColor = { 255, 255, 255, 0 };
+    SDL_Surface* textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
+    SDL_Texture* text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
+
+
+    SDL_Rect Message_rect; //create a rect
+    Message_rect.x = 5;  //controls the rect's x coordinate
+    Message_rect.y = 15; // controls the rect's y coordinte
+    Message_rect.w = 100; // controls the width of the rect
+    Message_rect.h = 20; // controls the height of the rect
+
+    SDL_RenderCopy(gRenderer, text, NULL, &Message_rect);
+    SDL_DestroyTexture(text);
+    SDL_FreeSurface(textSurface);
+
+
+}
+
+void LTexture::renderScore( int score){
+
+    TTF_Font * font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
+    if (font==NULL){
+        printf("font error");
+    }
+
+    std::string score_text = "Your score: " + std::to_string(score);
+    SDL_Color textColor = { 255, 255, 255, 0 };
+    SDL_Surface* textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
+    SDL_Texture* text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
+
+
+    SDL_Rect Message_rect; //create a rect
+    Message_rect.x = 5;  //controls the rect's x coordinate
+    Message_rect.y = 30; // controls the rect's y coordinte
+    Message_rect.w = 100; // controls the width of the rect
+    Message_rect.h = 20; // controls the height of the rect
+
+    SDL_RenderCopy(gRenderer, text, NULL, &Message_rect);
+    SDL_DestroyTexture(text);
+    SDL_FreeSurface(textSurface);
+
+
+}
+
+
 
 
 

@@ -93,3 +93,11 @@ void Player::goDown(bool key){
         }
     }
 }
+
+int Player::getScore() const {
+    return score;
+}
+
+void Player::setScore(int score) {
+    Player::score += score;
+}

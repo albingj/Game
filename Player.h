@@ -12,6 +12,11 @@
 
 class Player : public Car{
     int speed=0;
+    int score=0;
+public:
+    int getScore() const;
+
+    void setScore(int score);
 
 
 public:
