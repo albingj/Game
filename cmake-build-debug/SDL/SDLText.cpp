@@ -9,19 +9,19 @@ SDLText:: SDLText(){
 
 };
 
+SDLText::~SDLText() {
+    free();
+}
+
 
 
 void SDLText::free(){
     //Free texture if it exists
     if( text != NULL )
     {
-
         SDL_FreeSurface(textSurface);
         SDL_DestroyTexture(text);
         text = NULL;
-
-
-
     }
 }
 
@@ -35,8 +35,8 @@ void SDLText::renderHealth( int health) {
 
     std::string score_text = "health: " + std::to_string(health);
     SDL_Color textColor = {255, 255, 255, 0};
-    SDL_Surface *textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
-    SDL_Texture *text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
+    textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
+    text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
 
 
     SDL_Rect Message_rect; //create a rect
@@ -47,6 +47,8 @@ void SDLText::renderHealth( int health) {
 
     SDL_RenderCopy(gRenderer, text, NULL, &Message_rect);
 
+    SDL_FreeSurface(textSurface);
+    SDL_DestroyTexture(text);
 
 
 }
@@ -61,8 +63,8 @@ void SDLText::renderItem( int rockets){
 
     std::string score_text = "Rockets: " + std::to_string(rockets);
     SDL_Color textColor = { 255, 255, 255, 0 };
-    SDL_Surface* textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
-    SDL_Texture* text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
+    textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
+    text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
 
 
     SDL_Rect Message_rect; //create a rect
@@ -80,7 +82,6 @@ void SDLText::renderItem( int rockets){
 }
 
 void SDLText::renderScore( int score){
-
     font = TTF_OpenFont("fonts/OpenSans-Regular.ttf", 80);
     if (font==NULL){
         printf("font error");
@@ -88,8 +89,8 @@ void SDLText::renderScore( int score){
 
     std::string score_text = "Your score: " + std::to_string(score);
     SDL_Color textColor = { 255, 255, 255, 0 };
-    SDL_Surface* textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
-    SDL_Texture* text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
+    textSurface = TTF_RenderText_Solid(font, score_text.c_str(), textColor);
+    text = SDL_CreateTextureFromSurface(gRenderer, textSurface);
 
 
     SDL_Rect Message_rect; //create a rect

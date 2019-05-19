@@ -162,7 +162,9 @@ void SDLFactory::close()
     //Free loaded images
 
     background->Free();
-
+    player->Free();
+    cars->Free();
+    dropedItem->Free();
     //Destroy window
     SDL_DestroyRenderer( gRenderer );
     SDL_DestroyWindow( gWindow );
@@ -183,6 +185,9 @@ void SDLFactory::ClearScreen(){
             SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
             SDL_RenderClear(gRenderer);
             //std::cout << ">>>>>> SDL ClearScreen()" << std::endl;
+
+
+
 
 
 }

@@ -16,6 +16,7 @@ class SDLText {
     TTF_Font * font;
 
 
+
 public:
     SDLText();
     ~SDLText();

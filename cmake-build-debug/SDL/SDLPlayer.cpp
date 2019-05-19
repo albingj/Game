@@ -52,9 +52,9 @@ void SDLPlayer::Visualize()
 
     texture->renderHealth( getHealth());
 
-    //text->renderHealth( getHealth());
-    //text->renderItem(getRockets());
-    //text->renderScore(getScore());
+    text->renderHealth( getHealth());
+    text->renderItem(getRockets());
+    text->renderScore(getScore());
 
 
 
@@ -62,7 +62,7 @@ void SDLPlayer::Visualize()
 
 void SDLPlayer::Free(){
     texture->free();
-    //text->free();
+    text->free();
 }
 
 
