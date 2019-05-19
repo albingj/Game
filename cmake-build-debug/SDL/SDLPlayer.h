@@ -8,11 +8,13 @@
 #include "../../Entity.h"
 #include "../../Player.h"
 #include "LTexture.h"
+#include "SDLText.h"
 #include "SDLcar.h"
 
 class SDLPlayer :  public Player  {
     LTexture* texture;
-    Rocket* rocket;
+    SDLText* text;
+
 
 public:
     SDLPlayer();

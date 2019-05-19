@@ -500,6 +500,33 @@ SDL/SDLRocket.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLRocket.cpp.s
 .PHONY : SDL/SDLRocket.cpp.s
 
+SDL/SDLText.obj: SDL/SDLText.cpp.obj
+
+.PHONY : SDL/SDLText.obj
+
+# target to build an object file
+SDL/SDLText.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLText.cpp.obj
+.PHONY : SDL/SDLText.cpp.obj
+
+SDL/SDLText.i: SDL/SDLText.cpp.i
+
+.PHONY : SDL/SDLText.i
+
+# target to preprocess a source file
+SDL/SDLText.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLText.cpp.i
+.PHONY : SDL/SDLText.cpp.i
+
+SDL/SDLText.s: SDL/SDLText.cpp.s
+
+.PHONY : SDL/SDLText.s
+
+# target to generate assembly for a file
+SDL/SDLText.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLText.cpp.s
+.PHONY : SDL/SDLText.cpp.s
+
 SDL/SDLTimer.obj: SDL/SDLTimer.cpp.obj
 
 .PHONY : SDL/SDLTimer.obj
@@ -686,6 +713,9 @@ help:
 	@echo ... SDL/SDLRocket.obj
 	@echo ... SDL/SDLRocket.i
 	@echo ... SDL/SDLRocket.s
+	@echo ... SDL/SDLText.obj
+	@echo ... SDL/SDLText.i
+	@echo ... SDL/SDLText.s
 	@echo ... SDL/SDLTimer.obj
 	@echo ... SDL/SDLTimer.i
 	@echo ... SDL/SDLTimer.s

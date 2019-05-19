@@ -94,6 +94,7 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLText.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h
@@ -105,9 +106,11 @@ CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj
  C:/Users/bini/CLionProjects/Game/Rocket.h
  C:/Users/bini/CLionProjects/Game/Singleton.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.cpp
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLText.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h
 CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj
  C:/Users/bini/CLionProjects/Game/Entity.h
@@ -115,6 +118,16 @@ CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.cpp
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj
+ C:/Users/bini/CLionProjects/Game/AFactory.h
+ C:/Users/bini/CLionProjects/Game/Car.h
+ C:/Users/bini/CLionProjects/Game/Entity.h
+ C:/Users/bini/CLionProjects/Game/Rocket.h
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/LTexture.h
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.h
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLText.cpp
+ C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLText.h
 CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.cpp
  C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.h

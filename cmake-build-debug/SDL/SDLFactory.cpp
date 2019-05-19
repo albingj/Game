@@ -141,7 +141,7 @@ void SDLFactory::CreatePlayer(){
     std::cout << ">>>>>> loadImageFromFile car - done <<<<<<" << std::endl;
 }
 void SDLFactory::CreateCars(){
-    for(int i = 0 ; i < 4; i++) {
+    for(int i = 0 ; i < sizeof(cars); i++) {
 
         cars[i].LoadImage();
 
@@ -149,7 +149,7 @@ void SDLFactory::CreateCars(){
 }
 void SDLFactory::CreateItems() {
 
-    for(int i = 0 ; i < 4; i++) {
+    for(int i = 0 ; i < sizeof(dropedItem); i++) {
         dropedItem[i].reset();  //randomize item and relocate above to be reused.
      }
 
@@ -206,10 +206,10 @@ void SDLFactory::Draw() {
 
     }
 
-    for(int i =0 ; i < 4; i++){
+    for(int i =0 ; i < sizeof(dropedItem); i++){
         if(dropedItem[i].getMPosY() > Singleton::getInstance()->getScreenBottom()){
             dropedItem[i].reset();
-        }else if(dropedItem[i].getMPosY() > -1000 && dropedItem[i].getType()<4 && dropedItem->getType()<3){ // als type groter dan 3 is niets doen
+        }else if(dropedItem[i].getMPosY() > -1000 && dropedItem[i].getType()<4 ){ // als type groter dan 3 is niets doen
             dropedItem[i].Visualize();
         }
 
@@ -478,65 +478,68 @@ bool SDLFactory::Input()
 
 bool checkCollision( int* collisionBoxA, int* collisionBoxB ) {
 
+    //Colission idee van Lazyfoo
+    // http://lazyfoo.net/SDL_tutorials/lesson17/index.php
+    SDL_Rect A;
+    SDL_Rect B;
+    A.x = collisionBoxA[0];
+    A.y = collisionBoxA[1];
+    A.h = collisionBoxA[2];
+    A.w = collisionBoxA[3];
 
-
-    SDL_Rect objectA;
-    SDL_Rect objectB;
-
-
-
-    objectA.x = collisionBoxA[0];
-    objectA.y = collisionBoxA[1];
-    objectA.h = collisionBoxA[2];
-    objectA.w = collisionBoxA[3];
-
-    objectB.x = collisionBoxB[0];
-    objectB.y = collisionBoxB[1];
-    objectB.h = collisionBoxB[2];
-    objectB.w = collisionBoxB[3];
+    B.x = collisionBoxB[0];
+    B.y = collisionBoxB[1];
+    B.h = collisionBoxB[2];
+    B.w = collisionBoxB[3];
 
     delete[] collisionBoxA; //Delete uit heap
     delete[] collisionBoxB;
 
-
-    /*
-
-     elke object heeft 4 hoeken
-     a - b
-     |   |
-     c - d
-
-     Als een andere object zijn hoekpunt in de andere komt wordt dit beschoud als een botsing
-
-     */
-
 //The sides of the rectangles
+    int leftA, leftB;
+    int rightA, rightB;
+    int topA, topB;
+    int bottomA, bottomB;
 
+    //Calculate the sides of rect A
+    //ik ga de collission box met 5% langs elke zijde verkleinen zodat je niet direct een collision hebt als je er juist tegen bent.
+    leftA = A.x + ((A.y - A.w)*0,05 );
+    rightA = A.x + A.w - ((A.y - A.x)*0,5 );
+    topA = A.y + ((A.h-A.y)* 0,05);
+    bottomA = A.y + A.h - ((A.h-A.y)* 0,05);
 
-    if (
-            //objectB.y < objectA.y && objectB.y > objectA.x+objectA.h
-
-            //check of object B zijn lengte langs de Yas objectA overlapt
-            ( objectB.y < objectA.y+objectA.h && objectB.y > objectA.y  //By tussen Ay+h en Ay  ??
-             || objectB.y +objectB.h < objectA.y+objectA.h && objectB.y +objectB.h > objectA.y)
-
-
-             &&  // By+h tussen Ay+h en Ay ??
-
-
-             (objectB.x < objectA.x+objectA.w && objectB.x > objectA.x
-             ||(objectB.x+objectB.w) < objectA.x+objectA.w && objectB.x+objectB.w > objectA.x)
-
-
-
-            ){
-        //printf("true\n");
-        return true;
+    //Calculate the sides of rect B
+    leftB = B.x + ((A.y - A.w)*0,05 );
+    rightB = B.x + B.w - ((A.y - A.x)*0,5 );
+    topB = B.y + ((A.h-A.y)* 0,05);
+    bottomB = B.y + B.h - ((A.h-A.y)* 0,05);
+    //If any of the sides from A are outside of B
+    if( bottomA <= topB )
+    {
+        return false;
     }
 
+    if( topA >= bottomB )
+    {
+        return false;
+    }
 
-   // printf("false\n");
-    return false;
+    if( rightA <= leftB )
+    {
+        return false;
+    }
+
+    if( leftA >= rightB )
+    {
+        return false;
+    }
+
+    //If none of the sides from A are outside B
+    return true;
+
+
+
+
  }
 
 void SDLFactory::Collision() {
@@ -544,7 +547,7 @@ void SDLFactory::Collision() {
 
     for(int i = 0 ; i < 4; i++) {
         if(checkCollision(dropedItem[i].getCollisionBox(),player->getCollisionBox())) {
-            printf("droped");
+            //printf("droped");
             switch (dropedItem[i].getType()) {
                 /*
                 * 0 = boost
@@ -559,6 +562,9 @@ void SDLFactory::Collision() {
                     break;
                 case 2:
                     player->setRockets(player->getRockets() + 20);
+                    break;
+                case 3:
+                    player->removeSpeed(true);
                     break;
             }
             dropedItem[i].reset();

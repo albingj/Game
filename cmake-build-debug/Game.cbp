@@ -170,6 +170,12 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLText.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLText.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.cpp">
 			<Option target="Game"/>
 		</Unit>

@@ -93,6 +93,7 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLFactory.cpp
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLFactory.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLPlayer.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLRocket.h
+CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLText.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLTimer.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLcar.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLinput.h
@@ -104,9 +105,11 @@ CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Player.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/LTexture.h
+CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLFactory.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.cpp
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLPlayer.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLRocket.h
+CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLText.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: SDL/SDLcar.h
 
 CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: ../Entity.h
@@ -114,6 +117,16 @@ CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: ../Rocket.h
 CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: SDL/LTexture.h
 CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: SDL/SDLRocket.cpp
 CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj: SDL/SDLRocket.h
+
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: ../AFactory.h
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: ../Car.h
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: ../Entity.h
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: ../Rocket.h
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: SDL/LTexture.h
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: SDL/SDLFactory.h
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: SDL/SDLRocket.h
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: SDL/SDLText.cpp
+CMakeFiles/Game.dir/SDL/SDLText.cpp.obj: SDL/SDLText.h
 
 CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj: SDL/SDLTimer.cpp
 CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj: SDL/SDLTimer.h

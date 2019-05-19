@@ -21,11 +21,11 @@ void DropedItem::reset(){
             break;
 
         case 1:
-            setMPosX(140);
+            setMPosX(160);
             break;
 
         case 2:
-            setMPosX(280);
+            setMPosX(300);
             break;
 
         case 3:
@@ -33,14 +33,15 @@ void DropedItem::reset(){
             break;
     }
 
-    setMPosY(-(rand() % 500)-200);
+    setMPosY(-1 * (rand() % 1000) - 200);
 
 
-    type = (rand() % 10);
+    type = (rand() % 4);
     /*
      * 0 = boost
      * 1 = health
      * 2 = rocket
+     * 3 = slow
      */
 
     LoadImage();

@@ -25,6 +25,9 @@ void SDLDropedItem::LoadImage() {
         case 2:
             texture->loadFromFile("image/ammo.png");
             break;
+        case 3:
+            texture->loadFromFile("image/slow.png");
+            break;
 
     }
 
@@ -35,7 +38,7 @@ void SDLDropedItem::LoadImage() {
 void SDLDropedItem::Visualize()
 {
     texture->render( getMPosX(), getMPosY());
-    texture->renderDebug(getMPosX(), getMPosY());
+    //texture->renderDebug(getMPosX(), getMPosY());
 
 }
 

@@ -13,7 +13,7 @@ SDLRocket::SDLRocket(){
 
 void SDLRocket::Visualize(){
     texture->render( getMPosX() , getMPosY());
-    texture->renderDebug(getMPosX() , getMPosY());
+    //texture->renderDebug(getMPosX() , getMPosY());
 }
 void SDLRocket::LoadImage(){
     if(isDirection()) {

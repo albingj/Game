@@ -7,10 +7,11 @@
 #include "SDLRocket.h"
 
 
+
 SDLPlayer::SDLPlayer() {
 
     texture = new LTexture();
-    rocket = new SDLRocket();
+    text = new SDLText();
 
 
     setHealth(10);
@@ -44,13 +45,16 @@ void SDLPlayer::LoadImage() {
 void SDLPlayer::Visualize()
 {
     texture->render( getMPosX(), getMPosY());
-    texture->renderDebug(getMPosX(), getMPosY());
+    //texture->renderDebug(getMPosX(), getMPosY());
 
     setWidth(texture->getWidth());
     setHeight(texture->getHeight());
+
     texture->renderHealth( getHealth());
-    texture->renderItem(getRockets());
-    texture->renderScore(getScore());
+
+    //text->renderHealth( getHealth());
+    //text->renderItem(getRockets());
+    //text->renderScore(getScore());
 
 
 
@@ -58,6 +62,7 @@ void SDLPlayer::Visualize()
 
 void SDLPlayer::Free(){
     texture->free();
+    //text->free();
 }
 
 

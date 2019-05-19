@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLFactory.cpp" "C:/Users/bini/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj"
   "C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLPlayer.cpp" "C:/Users/bini/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj"
   "C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLRocket.cpp" "C:/Users/bini/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game.dir/SDL/SDLRocket.cpp.obj"
+  "C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLText.cpp" "C:/Users/bini/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game.dir/SDL/SDLText.cpp.obj"
   "C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLTimer.cpp" "C:/Users/bini/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game.dir/SDL/SDLTimer.cpp.obj"
   "C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.cpp" "C:/Users/bini/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game.dir/SDL/SDLcar.cpp.obj"
   "C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.cpp" "C:/Users/bini/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj"

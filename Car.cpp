@@ -69,19 +69,19 @@ void Car::ResetCar(){
     switch(this->getRoad()){
 
         case 0:
-            setMPosX(35);
+            setMPosX(25);
             break;
 
         case 1:
-            setMPosX(140);
+            setMPosX(160);
             break;
 
         case 2:
-            setMPosX(280);
+            setMPosX(300);
             break;
 
         case 3:
-            setMPosX(420);
+            setMPosX(450);
             break;
 
     }
