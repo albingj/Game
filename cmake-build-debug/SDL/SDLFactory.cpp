@@ -12,6 +12,7 @@
 #include "../SDL/SDLTimer.h"
 #include "SDLRocket.h"
 #include "SDLDropedItem.h"
+#include "SDLMenu.h"
 
 
 //Using SDL and standard IO
@@ -22,7 +23,7 @@
 
 //Scene textures
 SDLBackground* background = new SDLBackground();
-
+SDLMenu* menu = new SDLMenu();
 
 //Create 10 enemies
 //SDLcar* car = new SDLcar();
@@ -49,10 +50,17 @@ const int SCREEN_TICKS_PER_FRAME = 1000/SCREEN_FPS;
 SDLFactory::SDLFactory() {
 player->setHealth(20);
 player->setRockets(10);
+STOPGAME = false;
+
+}
+void SDLFactory::Reset() {
+
+    player->Reset();
 
 }
 
-void SDLFactory::CreateWindow() {
+
+void SDLFactory::CreateSDLWindow() {
     init();
 }
 
@@ -125,13 +133,16 @@ void SDLFactory::init(){
     std::cout << ">>>>>> SDL init - done <<<<<<" << std::endl;
 
 }
-
-
-
 void SDLFactory::LoadBackground(){
 
     background->LoadImage();
     std::cout << ">>>>>> loadImageFromFile Background - done <<<<<<" << std::endl;
+}
+void SDLFactory::LoadMenu(){
+
+    menu->LoadImage();
+    menu->Visualize();
+
 }
 
 void SDLFactory::CreatePlayer(){
@@ -154,9 +165,6 @@ void SDLFactory::CreateItems() {
      }
 
 }
-
-
-
 void SDLFactory::close()
 {
     //Free loaded images
@@ -165,6 +173,7 @@ void SDLFactory::close()
     player->Free();
     cars->Free();
     dropedItem->Free();
+
     //Destroy window
     SDL_DestroyRenderer( gRenderer );
     SDL_DestroyWindow( gWindow );
@@ -177,8 +186,6 @@ void SDLFactory::close()
     IMG_Quit();
     SDL_Quit();
 }
-
-
 void SDLFactory::ClearScreen(){
 
             //Clear screen
@@ -186,12 +193,7 @@ void SDLFactory::ClearScreen(){
             SDL_RenderClear(gRenderer);
             //std::cout << ">>>>>> SDL ClearScreen()" << std::endl;
 
-
-
-
-
 }
-
 void SDLFactory::Draw() {
 
     //Render background texture to screen
@@ -246,8 +248,6 @@ void SDLFactory::Draw() {
 
 
 }
-
-
 void SDLFactory::Update(){
     //Update screen, alles op scherm tekenen.
 
@@ -275,6 +275,8 @@ void SDLFactory::Update(){
 
     if(player->getHealth()<1){
         //close();
+        STOPGAME = true;
+        Singleton::getInstance()->setMenu(true);
     }
 
     SDL_RenderPresent(gRenderer);
@@ -349,6 +351,7 @@ bool SDLFactory::Input()
         {
             case SDL_QUIT:  // press X
                 stop=true;
+                Singleton::getInstance()->setCloseGame(true);
                 break;
 
             case SDLK_ESCAPE:
@@ -380,6 +383,12 @@ bool SDLFactory::Input()
                     case SDLK_SPACE:
                         shootRocket(true,player->getMPosX(),player->getMPosY(),0);
                         break;
+
+                    case SDLK_RETURN:
+                        printf("Enter pressed");
+                        Singleton::getInstance()->setMenu(false);
+                        break;
+
                     default:
                         break;
 
@@ -444,10 +453,6 @@ bool SDLFactory::Input()
     player->goUp(playerGoUp);
     player->goDown(playerGoDown);
 
-    std::ostringstream oss;
-    //oss << "player x:" << player->getX() << " y:" << player->getY() << " speed:" << Singleton::getInstance()->getPlayerSpeed();
-    //std::cout << oss.str() << std::endl;
-
 
 
 
@@ -470,15 +475,12 @@ bool SDLFactory::Input()
         SDL_Delay( SCREEN_TICKS_PER_FRAME - frameTicks );
     }
 
-
+    if(STOPGAME){
+        stop=true;  //als close() is opgeroepen dan stoppen we met spelen
+        STOPGAME=false;
+    }
     return stop;
 }
-
-
-
-
-
-
 
 
 bool checkCollision( int* collisionBoxA, int* collisionBoxB ) {
@@ -544,12 +546,11 @@ bool checkCollision( int* collisionBoxA, int* collisionBoxB ) {
 
 
 
-
  }
 
 void SDLFactory::Collision() {
 
-
+   //check if user has collision with droped item
     for(int i = 0 ; i < 4; i++) {
         if(checkCollision(dropedItem[i].getCollisionBox(),player->getCollisionBox())) {
             //printf("droped");
@@ -561,15 +562,18 @@ void SDLFactory::Collision() {
                 */
                 case 0:
                     player->addSpeed(true);
+                    player->setScore(1);
                     break;
                 case 1:
                     player->setHealth(player->getHealth() + 10);
+                    player->setScore(-3);
                     break;
                 case 2:
                     player->setRockets(player->getRockets() + 20);
                     break;
                 case 3:
                     player->removeSpeed(true);
+                    player->setScore(-1) ;
                     break;
             }
             dropedItem[i].reset();
@@ -579,14 +583,17 @@ void SDLFactory::Collision() {
 
     }
 
+//check if user has collision with cars
 
     for(int i = 0 ; i < 4; i++) {
 
         if (checkCollision(cars[i].getCollisionBox(),player->getCollisionBox())){
            cars[i].ResetCar();
            player->setHealth(player->getHealth()-3);
+            player->setScore(-3);
         }
 
+        //check if the rockets collisions with user or car
         for(std::list<SDLRocket*>::iterator it = lstRocket.begin(); it != lstRocket.end();) {
 
             //check if player fired
@@ -595,7 +602,7 @@ void SDLFactory::Collision() {
                     cars[i].ResetCar();
                     delete (*it);
                     lstRocket.erase(it++);
-                    player->setScore(5);
+                    player->setScore(2);
 
                 }else{
                     ++it; //take next object
@@ -606,6 +613,7 @@ void SDLFactory::Collision() {
                     player->setHealth(player->getHealth() - 1);
                     delete (*it);
                     lstRocket.erase(it++);
+                    player->setScore(-1);
                 } else {
                     ++it; //take next object
                 }

@@ -29,7 +29,7 @@ public:
     void goLeft(bool);
     void goRight(bool);
     void shoot(bool);
-
+    void Reset();
     void goUp(bool);
     void goDown(bool);
 

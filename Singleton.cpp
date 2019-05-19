@@ -27,7 +27,8 @@ Singleton::Singleton()
     ScreenTop = 0;
     PlayerSpeed=0;
     Rocket= 100;
-
+    menu=true;
+    CloseGame=false;
 
 }
 
@@ -57,3 +58,20 @@ int Singleton::getScreenTop() const {
 void Singleton::setScreenTop(int screenTop) {
     ScreenTop = screenTop;
 }
+
+bool Singleton::isMenu() const {
+    return menu;
+}
+
+void Singleton::setMenu(bool menu) {
+    Singleton::menu = menu;
+}
+
+bool Singleton::isCloseGame() const {
+    return CloseGame;
+}
+
+void Singleton::setCloseGame(bool closeGame) {
+    CloseGame = closeGame;
+}
+

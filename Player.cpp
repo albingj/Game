@@ -8,6 +8,7 @@
 Player::~Player() {
     setHealth(20);
     setIsPlayer(true);
+
 }
 
 
@@ -100,4 +101,14 @@ int Player::getScore() const {
 
 void Player::setScore(int score) {
     Player::score += score;
+}
+
+void Player::Reset() {
+    this->speed=0;
+    Singleton::getInstance()->setPlayerSpeed(this->speed);
+    score=0;
+    setHealth(20);
+    setRockets(10);
+    setMPosX(180);
+    setMPosY(560);
 }

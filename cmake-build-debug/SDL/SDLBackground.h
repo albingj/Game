@@ -13,7 +13,6 @@ class SDLBackground:  public Background, public Entity{
     LTexture* texture;
     //The X and Y offsets of the dot
     int mPosX, mPosY;
-
     //The velocity of the dot
     int mVelX, mVelY;
     int scrollingOffset;
@@ -28,7 +27,6 @@ public:
     void setPosY(int y);
     void SetSpeed(int velocity);
     void VisualizeSpeed();
-
 
 };
 

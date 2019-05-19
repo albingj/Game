@@ -18,7 +18,7 @@ class SDLFactory : public AFactory {
 //keypress booleans
     bool playerLeft=false,playerRight=false,playerAddSpeed=false,playerRemoveSpeed=false,playerGoUp=false,playerGoDown=false;
 
-
+bool STOPGAME;
 
 
 
@@ -32,15 +32,15 @@ public:
     std::list<SDLRocket*> lstRocket;
 
 
-    void CreateWindow() override;
-
+    void CreateSDLWindow() override;
+    void LoadMenu();
     void LoadBackground();
     void CreatePlayer();
     void ClearScreen();
     void Update();
     void Draw();
     bool Input();
-
+    void Reset();
     void Collision();
     void CreateCars();
     void CreateItems();

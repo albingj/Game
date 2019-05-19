@@ -14,8 +14,6 @@ SDLPlayer::SDLPlayer() {
     text = new SDLText();
 
 
-    setHealth(10);
-    //Initialize the offsets
     setMPosX(180);
     setMPosY(560);
 
@@ -62,6 +60,7 @@ void SDLPlayer::Visualize()
 
 void SDLPlayer::Free(){
     texture->free();
+    printf("free text");
     text->free();
 }
 

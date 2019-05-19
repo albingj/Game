@@ -5,6 +5,21 @@ private:
     int PlayerSpeed;
     int ScreenBottom;
     int ScreenTop;
+    bool menu;
+    bool CloseGame;
+public:
+    bool isCloseGame() const;
+
+    void setCloseGame(bool closeGame);
+
+public:
+
+
+public:
+    bool isMenu() const;
+
+    void setMenu(bool menu);
+
 public:
     int getScreenTop() const;
 

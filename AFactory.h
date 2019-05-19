@@ -19,8 +19,10 @@ public:
 
    //virtual Car* CreateCar() =0;
 
-    virtual void CreateWindow()=0;
+    virtual void Reset()=0;
+    virtual void CreateSDLWindow()=0;
     virtual void LoadBackground()=0;
+    virtual void LoadMenu()=0;
     virtual void CreatePlayer()=0;
     virtual void ClearScreen()=0;
     virtual void CreateCars()=0;

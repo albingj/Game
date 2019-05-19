@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/DropedItem.cpp.obj"
   "CMakeFiles/Game.dir/SDL/SDLDropedItem.cpp.obj"
   "CMakeFiles/Game.dir/SDL/SDLText.cpp.obj"
+  "CMakeFiles/Game.dir/Menu.cpp.obj"
+  "CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj"
   "Game.pdb"
   "Game.exe"
   "Game.exe.manifest"

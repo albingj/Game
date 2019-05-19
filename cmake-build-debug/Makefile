@@ -284,6 +284,33 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+Menu.obj: Menu.cpp.obj
+
+.PHONY : Menu.obj
+
+# target to build an object file
+Menu.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Menu.cpp.obj
+.PHONY : Menu.cpp.obj
+
+Menu.i: Menu.cpp.i
+
+.PHONY : Menu.i
+
+# target to preprocess a source file
+Menu.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Menu.cpp.i
+.PHONY : Menu.cpp.i
+
+Menu.s: Menu.cpp.s
+
+.PHONY : Menu.s
+
+# target to generate assembly for a file
+Menu.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/Menu.cpp.s
+.PHONY : Menu.cpp.s
+
 Player.obj: Player.cpp.obj
 
 .PHONY : Player.obj
@@ -445,6 +472,33 @@ SDL/SDLFactory.s: SDL/SDLFactory.cpp.s
 SDL/SDLFactory.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLFactory.cpp.s
 .PHONY : SDL/SDLFactory.cpp.s
+
+SDL/SDLMenu.obj: SDL/SDLMenu.cpp.obj
+
+.PHONY : SDL/SDLMenu.obj
+
+# target to build an object file
+SDL/SDLMenu.cpp.obj:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj
+.PHONY : SDL/SDLMenu.cpp.obj
+
+SDL/SDLMenu.i: SDL/SDLMenu.cpp.i
+
+.PHONY : SDL/SDLMenu.i
+
+# target to preprocess a source file
+SDL/SDLMenu.cpp.i:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLMenu.cpp.i
+.PHONY : SDL/SDLMenu.cpp.i
+
+SDL/SDLMenu.s: SDL/SDLMenu.cpp.s
+
+.PHONY : SDL/SDLMenu.s
+
+# target to generate assembly for a file
+SDL/SDLMenu.cpp.s:
+	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLMenu.cpp.s
+.PHONY : SDL/SDLMenu.cpp.s
 
 SDL/SDLPlayer.obj: SDL/SDLPlayer.cpp.obj
 
@@ -689,6 +743,9 @@ help:
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
+	@echo ... Menu.obj
+	@echo ... Menu.i
+	@echo ... Menu.s
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s
@@ -707,6 +764,9 @@ help:
 	@echo ... SDL/SDLFactory.obj
 	@echo ... SDL/SDLFactory.i
 	@echo ... SDL/SDLFactory.s
+	@echo ... SDL/SDLMenu.obj
+	@echo ... SDL/SDLMenu.i
+	@echo ... SDL/SDLMenu.s
 	@echo ... SDL/SDLPlayer.obj
 	@echo ... SDL/SDLPlayer.i
 	@echo ... SDL/SDLPlayer.s

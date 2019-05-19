@@ -6,11 +6,11 @@
 #include <zconf.h>
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_timer.h>
+#include <fibersapi.h>
 #include "Game.h"
 #include "Car.h"
 #include "Singleton.h"
-
-
+using namespace std;
 Game::Game(AFactory *pFactory) {
     this->pFactory = pFactory;
 
@@ -21,7 +21,11 @@ Game::Game(AFactory *pFactory) {
 void Game::start(){
 
     std::cout << ">>>>>> Start <<<<<<" << std::endl;
-    pFactory->CreateWindow();  //initialisatie van SDL
+    pFactory->CreateSDLWindow();  //initialisatie van SDL
+
+
+
+
 
 
 
@@ -38,11 +42,24 @@ void Game::start(){
 
 
 
-    //zolang er niet op X gedrukt wordt in de loop blijven
-    //Input update ook user input voor Player
-    while(!pFactory->Input()) {
 
-        //Handle events on queue
+
+while (!Singleton::getInstance()->isCloseGame()) {
+
+    //Input update ook user input voor Player
+    while (!pFactory->Input()) {
+
+        //Menu
+        if (Singleton::getInstance()->isMenu()) {
+            pFactory->LoadMenu();
+        } else {
+
+
+
+
+
+
+            //Handle events on queue
 
             //oude items weg doen van scherm
             pFactory->ClearScreen();
@@ -58,16 +75,41 @@ void Game::start(){
 
 
 
-        //SDL_Delay(30);
+            //SDL_Delay(30);
+        }
     }
+    pFactory->Reset();
 
-
-   pFactory->close();
-
-
-
-    std::cout << ">>>>>> END <<<<<<" << std::endl;
 
 
 
 }
+
+
+
+    pFactory->close();
+    std::cout << ">>>>>> END <<<<<<" << std::endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

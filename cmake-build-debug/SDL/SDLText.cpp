@@ -22,6 +22,7 @@ void SDLText::free(){
         SDL_FreeSurface(textSurface);
         SDL_DestroyTexture(text);
         text = NULL;
+        font = NULL;
     }
 }
 
