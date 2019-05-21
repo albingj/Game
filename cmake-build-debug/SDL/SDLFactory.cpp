@@ -29,7 +29,7 @@ SDLMenu* menu = new SDLMenu();
 //SDLcar* car = new SDLcar();
 SDLcar* cars = new SDLcar[4];
 SDLDropedItem* dropedItem = new SDLDropedItem[4];
-
+int EndScore;
 
 
 //Car** cars = new Car[9];
@@ -134,14 +134,17 @@ void SDLFactory::init(){
 
 }
 void SDLFactory::LoadBackground(){
-
+    menu->LoadImage();
     background->LoadImage();
     std::cout << ">>>>>> loadImageFromFile Background - done <<<<<<" << std::endl;
 }
 void SDLFactory::LoadMenu(){
 
-    menu->LoadImage();
+
+    Singleton::getInstance()->setScore(player->getScore());
     menu->Visualize();
+
+
 
 }
 

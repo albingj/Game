@@ -7,6 +7,12 @@ private:
     int ScreenTop;
     bool menu;
     bool CloseGame;
+    int Score;
+public:
+    int getScore() const;
+
+    void setScore(int score);
+
 public:
     bool isCloseGame() const;
 

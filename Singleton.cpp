@@ -29,7 +29,6 @@ Singleton::Singleton()
     Rocket= 100;
     menu=true;
     CloseGame=false;
-
 }
 
 void Singleton::setPlayerSpeed(int Speed){
@@ -73,5 +72,13 @@ bool Singleton::isCloseGame() const {
 
 void Singleton::setCloseGame(bool closeGame) {
     CloseGame = closeGame;
+}
+
+int Singleton::getScore() const {
+    return Score;
+}
+
+void Singleton::setScore(int score) {
+    Score = score;
 }
 

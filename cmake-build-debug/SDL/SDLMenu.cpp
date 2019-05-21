@@ -3,11 +3,12 @@
 //
 
 #include "SDLMenu.h"
+#include "../../Singleton.h"
 
 
 SDLMenu::SDLMenu() {
     texture = new LTexture();
-
+    text = new SDLText();
 }
 
 
@@ -19,6 +20,9 @@ void SDLMenu::Visualize()
 {
 
     texture->render( 0, 0 );
+    text->renderTopScore( Singleton::getInstance()->getScore());
+
+
 
 }
 void SDLMenu::Free(){

@@ -9,11 +9,12 @@
 #include "../../Menu.h"
 #include "../../Entity.h"
 #include "LTexture.h"
+#include "SDLText.h"
 
 class SDLMenu : public Menu, public Entity {
 
     LTexture* texture;
-
+    SDLText* text;
 
 
 public:

@@ -103,11 +103,18 @@ CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLTimer.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLcar.h
 CMakeFiles/Game.dir/SDL/SDLFactory.cpp.obj: SDL/SDLinput.h
 
+CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: ../AFactory.h
+CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: ../Car.h
 CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: ../Entity.h
 CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: ../Menu.h
+CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: ../Rocket.h
+CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: ../Singleton.h
 CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: SDL/LTexture.h
+CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: SDL/SDLFactory.h
 CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: SDL/SDLMenu.cpp
 CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: SDL/SDLMenu.h
+CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: SDL/SDLRocket.h
+CMakeFiles/Game.dir/SDL/SDLMenu.cpp.obj: SDL/SDLText.h
 
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../AFactory.h
 CMakeFiles/Game.dir/SDL/SDLPlayer.cpp.obj: ../Car.h

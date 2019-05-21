@@ -23,7 +23,7 @@ public:
     void renderHealth(int health);
     void renderItem(int rockets);
     void renderScore(int score);
-
+void renderTopScore(int score);
 //Deallocates texture
     void free();
 
