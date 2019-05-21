@@ -15,7 +15,7 @@ class SDLcar : public Car{
 
 private:
     LTexture* texture;
-    LTexture* healthBar;
+
 public:
 
 public:

@@ -11,7 +11,7 @@
 SDLcar::SDLcar() {
 
     texture = new LTexture();
-    healthBar = new LTexture;
+
     SDLcar::ResetCar();
 
 }

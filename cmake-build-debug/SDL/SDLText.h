@@ -13,7 +13,7 @@ class SDLText {
 
     SDL_Surface* textSurface;
     SDL_Texture* text;
-    TTF_Font * font;
+    TTF_Font* font ;
 
 
 

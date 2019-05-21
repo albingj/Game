@@ -23,6 +23,7 @@ void SDLText::free(){
         SDL_DestroyTexture(text);
         text = NULL;
         font = NULL;
+        TTF_CloseFont(font);
     }
 }
 
@@ -50,7 +51,7 @@ void SDLText::renderHealth( int health) {
 
     SDL_FreeSurface(textSurface);
     SDL_DestroyTexture(text);
-
+    TTF_CloseFont(font);
 
 }
 
@@ -77,7 +78,7 @@ void SDLText::renderItem( int rockets){
     SDL_RenderCopy(gRenderer, text, NULL, &Message_rect);
     SDL_DestroyTexture(text);
     SDL_FreeSurface(textSurface);
-
+    TTF_CloseFont(font);
 
 
 }
@@ -103,7 +104,7 @@ void SDLText::renderScore( int score){
     SDL_RenderCopy(gRenderer, text, NULL, &Message_rect);
     SDL_DestroyTexture(text);
     SDL_FreeSurface(textSurface);
-
+    TTF_CloseFont(font);
 
 
 }
