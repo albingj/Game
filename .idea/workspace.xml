@@ -25,14 +25,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLFactory.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+            <state relative-caret-position="1037">
+              <caret line="281" column="126" selection-start-line="281" selection-start-column="126" selection-end-line="281" selection-end-column="126" />
               <folding>
                 <element signature="e#41#58#0" expanded="true" />
-                <element signature="e#1049#3078#0" />
+                <element signature="e#1062#3091#0" />
+                <element signature="e#3384#3520#0" />
+                <element signature="e#3521#3635#0" />
+                <element signature="e#3636#3812#0" />
+                <element signature="e#3813#4165#0" />
+                <element signature="e#4166#4407#0" />
+                <element signature="e#4408#5529#0" />
+                <element signature="e#6203#7294#0" />
+                <element signature="e#11012#12525#0" />
+                <element signature="e#12527#15967#0" />
               </folding>
             </state>
           </provider>
@@ -41,17 +50,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Singleton.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLText.cpp">
+        <entry file="file://$PROJECT_DIR$/Player.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+            <state relative-caret-position="1666">
+              <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+              <folding>
+                <element signature="e#40#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://C:/MinGW/i686-w64-mingw32/include/SDL2/SDL_ttf.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="4029">
               <caret line="237" column="38" selection-start-line="237" selection-start-column="38" selection-end-line="237" selection-end-column="38" />
             </state>
           </provider>
@@ -69,12 +81,12 @@
         <entry file="file://$PROJECT_DIR$/Singleton.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLMenu.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -82,6 +94,15 @@
               <folding>
                 <element signature="e#40#60#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AFactory.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -113,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-408">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="153">
+              <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
               <folding>
                 <element signature="e#41#60#0" expanded="true" />
               </folding>
@@ -126,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>box.y</find>
       <find>inpu</find>
       <find>reset</find>
       <find>printf</find>
@@ -156,6 +176,7 @@
       <find>free()</find>
       <find>dropedItem</find>
       <find>singl</find>
+      <find>score</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -212,18 +233,18 @@
         <option value="$PROJECT_DIR$/Singleton.h" />
         <option value="$PROJECT_DIR$/Singleton.cpp" />
         <option value="$PROJECT_DIR$/cmake-build-debug/SDL/SDLText.h" />
-        <option value="$PROJECT_DIR$/cmake-build-debug/SDL/SDLFactory.cpp" />
         <option value="$PROJECT_DIR$/cmake-build-debug/SDL/SDLText.cpp" />
         <option value="$PROJECT_DIR$/cmake-build-debug/SDL/SDLMenu.cpp" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/SDL/SDLFactory.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="856" />
-    <option name="y" value="40" />
-    <option name="width" value="1302" />
-    <option name="height" value="1392" />
+    <option name="x" value="527" />
+    <option name="y" value="-1365" />
+    <option name="width" value="1085" />
+    <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -355,27 +376,31 @@
       <workItem from="1558280995254" duration="703000" />
       <workItem from="1558287734389" duration="7496000" />
       <workItem from="1558420819086" duration="2746000" />
+      <workItem from="1558437852346" duration="152000" />
+      <workItem from="1560511570262" duration="115000" />
+      <workItem from="1560511762111" duration="1172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237670000" />
+    <option name="totallyTimeSpent" value="239109000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <frame x="-7" y="-1447" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20349187" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17482518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.0373599" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.17559153" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40099627" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1750503" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40040243" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.39601496" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.39537224" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -555,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AFactory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLRocket.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -713,16 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLMenu.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="e#88#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLPlayer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-389">
@@ -753,20 +761,31 @@
     <entry file="file://$PROJECT_DIR$/Menu.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Player.cpp">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLText.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2006">
+          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/i686-w64-mingw32/include/SDL2/SDL_ttf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4029">
+          <caret line="237" column="38" selection-start-line="237" selection-start-column="38" selection-end-line="237" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Singleton.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AFactory.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -780,44 +799,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/MinGW/i686-w64-mingw32/include/SDL2/SDL_ttf.h">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLMenu.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="237" column="38" selection-start-line="237" selection-start-column="38" selection-end-line="237" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Singleton.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        <state relative-caret-position="272">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="e#88#111#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="153">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLText.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLFactory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
-          <folding>
-            <element signature="e#41#58#0" expanded="true" />
-            <element signature="e#1049#3078#0" />
           </folding>
         </state>
       </provider>
@@ -828,6 +825,43 @@
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#40#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Singleton.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/SDL/SDLFactory.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="281" column="126" selection-start-line="281" selection-start-column="126" selection-end-line="281" selection-end-column="126" />
+          <folding>
+            <element signature="e#41#58#0" expanded="true" />
+            <element signature="e#1062#3091#0" />
+            <element signature="e#3384#3520#0" />
+            <element signature="e#3521#3635#0" />
+            <element signature="e#3636#3812#0" />
+            <element signature="e#3813#4165#0" />
+            <element signature="e#4166#4407#0" />
+            <element signature="e#4408#5529#0" />
+            <element signature="e#6203#7294#0" />
+            <element signature="e#11012#12525#0" />
+            <element signature="e#12527#15967#0" />
           </folding>
         </state>
       </provider>

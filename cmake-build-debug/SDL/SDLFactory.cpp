@@ -141,7 +141,7 @@ void SDLFactory::LoadBackground(){
 void SDLFactory::LoadMenu(){
 
 
-    Singleton::getInstance()->setScore(player->getScore());
+    //Singleton::getInstance()->setScore(player->getScore());
     menu->Visualize();
 
 
@@ -278,11 +278,16 @@ void SDLFactory::Update(){
 
     if(player->getHealth()<1){
         //close();
+
+        //save player score in singleton so we can use it on the menu screen because player stats will be erased when he dies.
+        Singleton::getInstance()->setScore(player->getScore());
         STOPGAME = true;
         Singleton::getInstance()->setMenu(true);
+    }else{
+        SDL_RenderPresent(gRenderer);
     }
 
-    SDL_RenderPresent(gRenderer);
+
 }
 
 
