@@ -3,6 +3,7 @@
 //
 
 #include "SDLText.h"
+#include "SDLFactory.h"
 
 
 SDLText:: SDLText(){

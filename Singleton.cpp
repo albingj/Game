@@ -26,6 +26,7 @@ Singleton::Singleton()
     ScreenBottom = 800;
     ScreenTop = 0;
     PlayerSpeed=0;
+    Score = 0;
     Rocket= 100;
     menu=true;
     CloseGame=false;

@@ -8,77 +8,28 @@
 
 #include <string>
 #include <SDL2/SDL_render.h>
-#include "../../AFactory.h"
 #include "LTexture.h"
+#include "../../AFactory.h"
+
 extern SDL_Renderer* gRenderer;
 
-
-
 class SDLFactory : public AFactory {
+
 //keypress booleans
     bool playerLeft=false,playerRight=false,playerAddSpeed=false,playerRemoveSpeed=false,playerGoUp=false,playerGoDown=false;
-
-bool STOPGAME;
-
-
-
-public:
-
-//The window renderer
-    SDLFactory();
-    //The window we'll be rendering to
-    SDL_Window* gWindow = nullptr;
-
-    std::list<SDLRocket*> lstRocket;
-
-
-    void CreateSDLWindow() override;
-    void LoadMenu();
-    void LoadBackground();
-    void CreatePlayer();
-    void ClearScreen();
-    void Update();
-    void Draw();
-    bool Input();
-    void Reset();
-    void Collision();
-    void CreateCars();
-    void CreateItems();
-    void close();
-    void shootRocket(bool playerCar, int posX, int posY, int car);
-
-
-private:
-
     void init();
 
-
-
+public:
+//The window renderer
+    SDLFactory();
+    ~SDLFactory();
+    //The window we'll be rendering to
+    SDL_Window* gWindow = nullptr;
+    void CreateSDLWindow();
+    void ClearScreen();
+    bool Input();
+    void close();
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -635,33 +635,6 @@ SDL/SDLcar.cpp.s:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLcar.cpp.s
 .PHONY : SDL/SDLcar.cpp.s
 
-SDL/SDLinput.obj: SDL/SDLinput.cpp.obj
-
-.PHONY : SDL/SDLinput.obj
-
-# target to build an object file
-SDL/SDLinput.cpp.obj:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLinput.cpp.obj
-.PHONY : SDL/SDLinput.cpp.obj
-
-SDL/SDLinput.i: SDL/SDLinput.cpp.i
-
-.PHONY : SDL/SDLinput.i
-
-# target to preprocess a source file
-SDL/SDLinput.cpp.i:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLinput.cpp.i
-.PHONY : SDL/SDLinput.cpp.i
-
-SDL/SDLinput.s: SDL/SDLinput.cpp.s
-
-.PHONY : SDL/SDLinput.s
-
-# target to generate assembly for a file
-SDL/SDLinput.cpp.s:
-	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/SDL/SDLinput.cpp.s
-.PHONY : SDL/SDLinput.cpp.s
-
 Singleton.obj: Singleton.cpp.obj
 
 .PHONY : Singleton.obj
@@ -782,9 +755,6 @@ help:
 	@echo ... SDL/SDLcar.obj
 	@echo ... SDL/SDLcar.i
 	@echo ... SDL/SDLcar.s
-	@echo ... SDL/SDLinput.obj
-	@echo ... SDL/SDLinput.i
-	@echo ... SDL/SDLinput.s
 	@echo ... Singleton.obj
 	@echo ... Singleton.i
 	@echo ... Singleton.s

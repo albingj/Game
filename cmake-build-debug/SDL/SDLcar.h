@@ -8,7 +8,6 @@
 #include <SDL2/SDL_render.h>
 
 #include "../../Car.h"
-#include "../../AFactory.h"
 #include "LTexture.h"
 
 class SDLcar : public Car{

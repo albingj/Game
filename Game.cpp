@@ -55,10 +55,6 @@ while (!Singleton::getInstance()->isCloseGame()) {
         } else {
 
 
-
-
-
-
             //Handle events on queue
 
             //oude items weg doen van scherm

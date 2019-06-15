@@ -6,8 +6,6 @@
 
 
 #include "AFactory.h"
-#include "cmake-build-debug/SDL/SDLinput.h"
-
 
 class Game {
     AFactory *pFactory = nullptr;

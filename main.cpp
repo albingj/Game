@@ -15,6 +15,9 @@ int main( int argc, char* args[]) {
     Game* game = new Game(aFactory);
     game->start();
 
+    delete game;
+    delete aFactory;
+
 
     return 0;
 }

@@ -200,12 +200,6 @@
 		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLcar.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.cpp">
-			<Option target="Game"/>
-		</Unit>
-		<Unit filename="C:/Users/bini/CLionProjects/Game/cmake-build-debug/SDL/SDLinput.h">
-			<Option target="Game"/>
-		</Unit>
 		<Unit filename="C:/Users/bini/CLionProjects/Game/main.cpp">
 			<Option target="Game"/>
 		</Unit>
